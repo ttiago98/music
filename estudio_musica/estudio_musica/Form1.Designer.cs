@@ -74,7 +74,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Estúdio de Música";
+            this.Text = "Estúdio_Música";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
