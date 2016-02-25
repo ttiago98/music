@@ -31,7 +31,7 @@ namespace estudio_musica
 
         private void Leitor_Radio_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); 
         }
     }
 }
