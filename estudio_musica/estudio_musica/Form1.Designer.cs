@@ -36,9 +36,9 @@
             // 
             // button_leitor_musica
             // 
-            this.button_leitor_musica.Location = new System.Drawing.Point(186, 129);
+            this.button_leitor_musica.Location = new System.Drawing.Point(197, 116);
             this.button_leitor_musica.Name = "button_leitor_musica";
-            this.button_leitor_musica.Size = new System.Drawing.Size(152, 71);
+            this.button_leitor_musica.Size = new System.Drawing.Size(166, 85);
             this.button_leitor_musica.TabIndex = 0;
             this.button_leitor_musica.Text = "Leitor de Música";
             this.button_leitor_musica.UseVisualStyleBackColor = true;
@@ -46,9 +46,9 @@
             // 
             // button_leitor_radio
             // 
-            this.button_leitor_radio.Location = new System.Drawing.Point(186, 274);
+            this.button_leitor_radio.Location = new System.Drawing.Point(186, 263);
             this.button_leitor_radio.Name = "button_leitor_radio";
-            this.button_leitor_radio.Size = new System.Drawing.Size(152, 71);
+            this.button_leitor_radio.Size = new System.Drawing.Size(177, 85);
             this.button_leitor_radio.TabIndex = 1;
             this.button_leitor_radio.Text = "Leitor de Rádio";
             this.button_leitor_radio.UseVisualStyleBackColor = true;

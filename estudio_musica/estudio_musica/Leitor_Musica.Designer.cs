@@ -68,7 +68,7 @@
             this.button_play.BackColor = System.Drawing.Color.Transparent;
             this.button_play.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_play.BackgroundImage")));
             this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_play.Location = new System.Drawing.Point(198, 260);
+            this.button_play.Location = new System.Drawing.Point(172, 260);
             this.button_play.Name = "button_play";
             this.button_play.Size = new System.Drawing.Size(55, 45);
             this.button_play.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.button_pausa.BackColor = System.Drawing.Color.Transparent;
             this.button_pausa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_pausa.BackgroundImage")));
             this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_pausa.Location = new System.Drawing.Point(279, 260);
+            this.button_pausa.Location = new System.Drawing.Point(247, 260);
             this.button_pausa.Name = "button_pausa";
             this.button_pausa.Size = new System.Drawing.Size(55, 45);
             this.button_pausa.TabIndex = 3;
@@ -105,21 +105,25 @@
             // 
             // button_mais_volume
             // 
-            this.button_mais_volume.Location = new System.Drawing.Point(360, 201);
+            this.button_mais_volume.BackColor = System.Drawing.Color.Transparent;
+            this.button_mais_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_mais_volume.BackgroundImage")));
+            this.button_mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_mais_volume.Location = new System.Drawing.Point(327, 260);
             this.button_mais_volume.Name = "button_mais_volume";
-            this.button_mais_volume.Size = new System.Drawing.Size(75, 23);
+            this.button_mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button_mais_volume.TabIndex = 6;
-            this.button_mais_volume.Text = "button7";
-            this.button_mais_volume.UseVisualStyleBackColor = true;
+            this.button_mais_volume.UseVisualStyleBackColor = false;
             // 
             // button_menos_volume
             // 
-            this.button_menos_volume.Location = new System.Drawing.Point(441, 201);
+            this.button_menos_volume.BackColor = System.Drawing.Color.Transparent;
+            this.button_menos_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.BackgroundImage")));
+            this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_menos_volume.Location = new System.Drawing.Point(399, 260);
             this.button_menos_volume.Name = "button_menos_volume";
-            this.button_menos_volume.Size = new System.Drawing.Size(75, 23);
+            this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
             this.button_menos_volume.TabIndex = 7;
-            this.button_menos_volume.Text = "button8";
-            this.button_menos_volume.UseVisualStyleBackColor = true;
+            this.button_menos_volume.UseVisualStyleBackColor = false;
             // 
             // Leitor_Musica
             // 
