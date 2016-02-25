@@ -17,12 +17,23 @@ namespace estudio_musica
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button_leitor_musica_Click(object sender, EventArgs e)
         {
-            
+
+            this.Hide();
+            Leitor_Musica frm = new Leitor_Musica();
+            frm.Show();
+
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_leitor_radio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Leitor_Radio frm = new Leitor_Radio();
+            frm.Show();
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
         {
             Close();
         }

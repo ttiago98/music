@@ -29,38 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_leitor_musica = new System.Windows.Forms.Button();
+            this.button_leitor_radio = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // button_leitor_musica
             // 
-            this.button1.Location = new System.Drawing.Point(29, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Leitor de Música";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_leitor_musica.Location = new System.Drawing.Point(44, 64);
+            this.button_leitor_musica.Name = "button_leitor_musica";
+            this.button_leitor_musica.Size = new System.Drawing.Size(113, 53);
+            this.button_leitor_musica.TabIndex = 0;
+            this.button_leitor_musica.Text = "Leitor de Música";
+            this.button_leitor_musica.UseVisualStyleBackColor = true;
+            this.button_leitor_musica.Click += new System.EventHandler(this.button_leitor_musica_Click);
             // 
-            // button2
+            // button_leitor_radio
             // 
-            this.button2.Location = new System.Drawing.Point(219, 28);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 36);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Leitor de Rádio";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_leitor_radio.Location = new System.Drawing.Point(231, 64);
+            this.button_leitor_radio.Name = "button_leitor_radio";
+            this.button_leitor_radio.Size = new System.Drawing.Size(113, 53);
+            this.button_leitor_radio.TabIndex = 1;
+            this.button_leitor_radio.Text = "Leitor de Rádio";
+            this.button_leitor_radio.UseVisualStyleBackColor = true;
+            this.button_leitor_radio.Click += new System.EventHandler(this.button_leitor_radio_Click);
             // 
-            // button3
+            // button_sair
             // 
-            this.button3.Location = new System.Drawing.Point(130, 135);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Sair";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_sair.Location = new System.Drawing.Point(149, 199);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button_sair.Size = new System.Drawing.Size(75, 23);
+            this.button_sair.TabIndex = 2;
+            this.button_sair.Text = "Sair";
+            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // Form1
             // 
@@ -68,23 +71,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(348, 207);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(374, 260);
+            this.Controls.Add(this.button_sair);
+            this.Controls.Add(this.button_leitor_radio);
+            this.Controls.Add(this.button_leitor_musica);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Estúdio_Música";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Estúdio Música";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_leitor_musica;
+        private System.Windows.Forms.Button button_leitor_radio;
+        private System.Windows.Forms.Button button_sair;
     }
 }
 
