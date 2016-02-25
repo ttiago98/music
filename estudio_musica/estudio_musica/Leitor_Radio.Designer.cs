@@ -35,26 +35,31 @@
             this.button_pausa = new System.Windows.Forms.Button();
             this.button__mais_volume = new System.Windows.Forms.Button();
             this.button_menos_volume = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button_sair
             // 
-            this.button_sair.Location = new System.Drawing.Point(393, 330);
+            this.button_sair.BackColor = System.Drawing.Color.Transparent;
+            this.button_sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_sair.BackgroundImage")));
+            this.button_sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_sair.Location = new System.Drawing.Point(393, 312);
             this.button_sair.Name = "button_sair";
-            this.button_sair.Size = new System.Drawing.Size(75, 23);
+            this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.TabIndex = 0;
-            this.button_sair.Text = "Sair";
-            this.button_sair.UseVisualStyleBackColor = true;
+            this.button_sair.UseVisualStyleBackColor = false;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_voltar
             // 
-            this.button_voltar.Location = new System.Drawing.Point(12, 330);
+            this.button_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.button_voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_voltar.BackgroundImage")));
+            this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_voltar.Location = new System.Drawing.Point(12, 312);
             this.button_voltar.Name = "button_voltar";
-            this.button_voltar.Size = new System.Drawing.Size(75, 23);
+            this.button_voltar.Size = new System.Drawing.Size(70, 41);
             this.button_voltar.TabIndex = 1;
-            this.button_voltar.Text = "Voltar Atrás";
-            this.button_voltar.UseVisualStyleBackColor = true;
+            this.button_voltar.UseVisualStyleBackColor = false;
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // button_play
@@ -84,7 +89,7 @@
             this.button__mais_volume.BackColor = System.Drawing.Color.Transparent;
             this.button__mais_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button__mais_volume.BackgroundImage")));
             this.button__mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button__mais_volume.Location = new System.Drawing.Point(256, 243);
+            this.button__mais_volume.Location = new System.Drawing.Point(257, 243);
             this.button__mais_volume.Name = "button__mais_volume";
             this.button__mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button__mais_volume.TabIndex = 4;
@@ -95,17 +100,26 @@
             this.button_menos_volume.BackColor = System.Drawing.Color.Transparent;
             this.button_menos_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.BackgroundImage")));
             this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_menos_volume.Location = new System.Drawing.Point(153, 243);
+            this.button_menos_volume.Location = new System.Drawing.Point(150, 243);
             this.button_menos_volume.Name = "button_menos_volume";
             this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
             this.button_menos_volume.TabIndex = 5;
             this.button_menos_volume.UseVisualStyleBackColor = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(456, 160);
+            this.listBox1.TabIndex = 6;
             // 
             // Leitor_Radio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 365);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button_menos_volume);
             this.Controls.Add(this.button__mais_volume);
             this.Controls.Add(this.button_pausa);
@@ -115,6 +129,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Leitor_Radio";
             this.Text = "Leitor de Rádio";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Radio_FormClosing);
             this.ResumeLayout(false);
 
         }
@@ -127,5 +142,6 @@
         private System.Windows.Forms.Button button_pausa;
         private System.Windows.Forms.Button button__mais_volume;
         private System.Windows.Forms.Button button_menos_volume;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
