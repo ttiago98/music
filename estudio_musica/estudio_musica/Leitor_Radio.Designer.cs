@@ -59,39 +59,47 @@
             // 
             // button_play
             // 
-            this.button_play.Location = new System.Drawing.Point(70, 273);
+            this.button_play.BackColor = System.Drawing.Color.Transparent;
+            this.button_play.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_play.BackgroundImage")));
+            this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_play.Location = new System.Drawing.Point(204, 192);
             this.button_play.Name = "button_play";
-            this.button_play.Size = new System.Drawing.Size(75, 23);
+            this.button_play.Size = new System.Drawing.Size(55, 45);
             this.button_play.TabIndex = 2;
-            this.button_play.Text = "button1";
-            this.button_play.UseVisualStyleBackColor = true;
+            this.button_play.UseVisualStyleBackColor = false;
             // 
             // button_pausa
             // 
-            this.button_pausa.Location = new System.Drawing.Point(151, 273);
+            this.button_pausa.BackColor = System.Drawing.Color.Transparent;
+            this.button_pausa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_pausa.BackgroundImage")));
+            this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_pausa.Location = new System.Drawing.Point(204, 294);
             this.button_pausa.Name = "button_pausa";
-            this.button_pausa.Size = new System.Drawing.Size(75, 23);
+            this.button_pausa.Size = new System.Drawing.Size(55, 45);
             this.button_pausa.TabIndex = 3;
-            this.button_pausa.Text = "button2";
-            this.button_pausa.UseVisualStyleBackColor = true;
+            this.button_pausa.UseVisualStyleBackColor = false;
             // 
             // button__mais_volume
             // 
-            this.button__mais_volume.Location = new System.Drawing.Point(250, 273);
+            this.button__mais_volume.BackColor = System.Drawing.Color.Transparent;
+            this.button__mais_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button__mais_volume.BackgroundImage")));
+            this.button__mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button__mais_volume.Location = new System.Drawing.Point(256, 243);
             this.button__mais_volume.Name = "button__mais_volume";
-            this.button__mais_volume.Size = new System.Drawing.Size(75, 23);
+            this.button__mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button__mais_volume.TabIndex = 4;
-            this.button__mais_volume.Text = "button3";
-            this.button__mais_volume.UseVisualStyleBackColor = true;
+            this.button__mais_volume.UseVisualStyleBackColor = false;
             // 
             // button_menos_volume
             // 
-            this.button_menos_volume.Location = new System.Drawing.Point(331, 273);
+            this.button_menos_volume.BackColor = System.Drawing.Color.Transparent;
+            this.button_menos_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.BackgroundImage")));
+            this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_menos_volume.Location = new System.Drawing.Point(153, 243);
             this.button_menos_volume.Name = "button_menos_volume";
-            this.button_menos_volume.Size = new System.Drawing.Size(75, 23);
+            this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
             this.button_menos_volume.TabIndex = 5;
-            this.button_menos_volume.Text = "button4";
-            this.button_menos_volume.UseVisualStyleBackColor = true;
+            this.button_menos_volume.UseVisualStyleBackColor = false;
             // 
             // Leitor_Radio
             // 
