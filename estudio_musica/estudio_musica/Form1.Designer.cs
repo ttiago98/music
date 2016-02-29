@@ -36,9 +36,9 @@
             // 
             // button_leitor_musica
             // 
-            this.button_leitor_musica.Location = new System.Drawing.Point(197, 116);
+            this.button_leitor_musica.Location = new System.Drawing.Point(186, 110);
             this.button_leitor_musica.Name = "button_leitor_musica";
-            this.button_leitor_musica.Size = new System.Drawing.Size(166, 85);
+            this.button_leitor_musica.Size = new System.Drawing.Size(177, 85);
             this.button_leitor_musica.TabIndex = 0;
             this.button_leitor_musica.Text = "Leitor de Música";
             this.button_leitor_musica.UseVisualStyleBackColor = true;
