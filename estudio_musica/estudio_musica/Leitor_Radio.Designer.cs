@@ -89,7 +89,7 @@
             this.button__mais_volume.BackColor = System.Drawing.Color.Transparent;
             this.button__mais_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button__mais_volume.BackgroundImage")));
             this.button__mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button__mais_volume.Location = new System.Drawing.Point(257, 243);
+            this.button__mais_volume.Location = new System.Drawing.Point(256, 243);
             this.button__mais_volume.Name = "button__mais_volume";
             this.button__mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button__mais_volume.TabIndex = 4;
@@ -118,6 +118,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(480, 365);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button_menos_volume);
@@ -126,6 +128,7 @@
             this.Controls.Add(this.button_play);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_sair);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Leitor_Radio";
             this.Text = "Leitor de Rádio";
