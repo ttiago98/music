@@ -137,6 +137,7 @@
             this.Name = "Leitor_Radio";
             this.Text = "Leitor de Rádio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Radio_FormClosing);
+            this.Load += new System.EventHandler(this.Leitor_Radio_Load);
             this.ResumeLayout(false);
 
         }

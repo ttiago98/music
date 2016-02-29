@@ -33,5 +33,10 @@ namespace estudio_musica
         {
             Application.Exit(); 
         }
+
+        private void Leitor_Radio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

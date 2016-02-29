@@ -37,5 +37,12 @@ namespace estudio_musica
         {
             Close();
         }
+
+        private void button_leitor_video_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Leitor_video frm = new Leitor_video();
+            frm.Show();
+        }
     }
 }
