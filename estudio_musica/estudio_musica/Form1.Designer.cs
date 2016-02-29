@@ -46,7 +46,7 @@
             // 
             // button_leitor_radio
             // 
-            this.button_leitor_radio.Location = new System.Drawing.Point(186, 263);
+            this.button_leitor_radio.Location = new System.Drawing.Point(186, 266);
             this.button_leitor_radio.Name = "button_leitor_radio";
             this.button_leitor_radio.Size = new System.Drawing.Size(177, 85);
             this.button_leitor_radio.TabIndex = 1;
