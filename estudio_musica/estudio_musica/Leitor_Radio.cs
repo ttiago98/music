@@ -50,7 +50,7 @@ namespace estudio_musica
             switch (lista_radios.SelectedIndex)
             {
                 case 0:
-                    URL = "mms://195.23.102.196/cidadecbr48";
+                    URL = "mms://195.23.102.196/cidadecbr48 ";
                     break;
                 case 1:
                     URL = "http://centova.radios.pt:9440/stream";

@@ -144,6 +144,7 @@
             this.Name = "Leitor_Musica";
             this.Text = "Leitor de Música";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Musica_FormClosing);
+            this.Load += new System.EventHandler(this.Leitor_Musica_Load);
             this.ResumeLayout(false);
 
         }
