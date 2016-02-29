@@ -26,7 +26,7 @@ namespace estudio_musica
 
         private void button_sair_Click(object sender, EventArgs e)
         {
-            Close();
+            Close(); 
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
