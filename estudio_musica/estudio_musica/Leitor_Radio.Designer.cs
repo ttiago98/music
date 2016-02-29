@@ -89,7 +89,7 @@
             this.button__mais_volume.BackColor = System.Drawing.Color.Transparent;
             this.button__mais_volume.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button__mais_volume.BackgroundImage")));
             this.button__mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button__mais_volume.Location = new System.Drawing.Point(257, 243);
+            this.button__mais_volume.Location = new System.Drawing.Point(256, 243);
             this.button__mais_volume.Name = "button__mais_volume";
             this.button__mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button__mais_volume.TabIndex = 4;
