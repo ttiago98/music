@@ -44,5 +44,17 @@ namespace estudio_musica
             Leitor_video frm = new Leitor_video();
             frm.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_artistas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ficha_tecnica frm = new ficha_tecnica();
+            frm.Show();
+        }
     }
 }
