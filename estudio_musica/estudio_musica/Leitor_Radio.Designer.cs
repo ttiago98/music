@@ -35,7 +35,9 @@
             this.button_pausa = new System.Windows.Forms.Button();
             this.button__mais_volume = new System.Windows.Forms.Button();
             this.button_menos_volume = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lista_radios = new System.Windows.Forms.ListBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_sair
@@ -72,6 +74,7 @@
             this.button_play.Size = new System.Drawing.Size(55, 45);
             this.button_play.TabIndex = 2;
             this.button_play.UseVisualStyleBackColor = false;
+            this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
             // button_pausa
             // 
@@ -106,17 +109,26 @@
             this.button_menos_volume.TabIndex = 5;
             this.button_menos_volume.UseVisualStyleBackColor = false;
             // 
-            // listBox1
+            // lista_radios
             // 
-            this.listBox1.BackColor = System.Drawing.Color.Black;
-            this.listBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(456, 154);
-            this.listBox1.TabIndex = 6;
+            this.lista_radios.BackColor = System.Drawing.Color.Black;
+            this.lista_radios.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lista_radios.ForeColor = System.Drawing.Color.White;
+            this.lista_radios.FormattingEnabled = true;
+            this.lista_radios.ItemHeight = 15;
+            this.lista_radios.Location = new System.Drawing.Point(12, 12);
+            this.lista_radios.Name = "lista_radios";
+            this.lista_radios.Size = new System.Drawing.Size(456, 154);
+            this.lista_radios.TabIndex = 6;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(318, 172);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(150, 51);
+            this.axWindowsMediaPlayer1.TabIndex = 7;
             // 
             // Leitor_Radio
             // 
@@ -125,7 +137,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(480, 365);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.lista_radios);
             this.Controls.Add(this.button_menos_volume);
             this.Controls.Add(this.button__mais_volume);
             this.Controls.Add(this.button_pausa);
@@ -138,6 +151,7 @@
             this.Text = "Leitor de Rádio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Radio_FormClosing);
             this.Load += new System.EventHandler(this.Leitor_Radio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,6 +164,7 @@
         private System.Windows.Forms.Button button_pausa;
         private System.Windows.Forms.Button button__mais_volume;
         private System.Windows.Forms.Button button_menos_volume;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lista_radios;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }

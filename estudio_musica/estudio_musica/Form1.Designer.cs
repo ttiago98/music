@@ -33,13 +33,14 @@
             this.button_leitor_radio = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
             this.button_leitor_video = new System.Windows.Forms.Button();
+            this.button_artistas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_leitor_musica
             // 
-            this.button_leitor_musica.Location = new System.Drawing.Point(197, 28);
+            this.button_leitor_musica.Location = new System.Drawing.Point(197, 12);
             this.button_leitor_musica.Name = "button_leitor_musica";
-            this.button_leitor_musica.Size = new System.Drawing.Size(166, 52);
+            this.button_leitor_musica.Size = new System.Drawing.Size(177, 85);
             this.button_leitor_musica.TabIndex = 0;
             this.button_leitor_musica.Text = "Leitor de Música";
             this.button_leitor_musica.UseVisualStyleBackColor = true;
@@ -76,6 +77,16 @@
             this.button_leitor_video.UseVisualStyleBackColor = true;
             this.button_leitor_video.Click += new System.EventHandler(this.button_leitor_video_Click);
             // 
+            // button_artistas
+            // 
+            this.button_artistas.Location = new System.Drawing.Point(197, 277);
+            this.button_artistas.Name = "button_artistas";
+            this.button_artistas.Size = new System.Drawing.Size(166, 52);
+            this.button_artistas.TabIndex = 4;
+            this.button_artistas.Text = "Artistas";
+            this.button_artistas.UseVisualStyleBackColor = true;
+            this.button_artistas.Click += new System.EventHandler(this.button_artistas_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -83,6 +94,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(548, 431);
+            this.Controls.Add(this.button_artistas);
             this.Controls.Add(this.button_leitor_video);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_leitor_radio);
@@ -90,6 +102,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Estúdio Música";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -100,6 +113,7 @@
         private System.Windows.Forms.Button button_leitor_radio;
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Button button_leitor_video;
+        private System.Windows.Forms.Button button_artistas;
     }
 }
 

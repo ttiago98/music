@@ -16,5 +16,12 @@ namespace estudio_musica
         protected string musica;
         protected string genero;
 
+        public void ficha_tecnica()
+        {
+
+
+
+        }
+
     }
 }
