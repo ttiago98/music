@@ -108,10 +108,14 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(456, 160);
+            this.listBox1.Size = new System.Drawing.Size(456, 154);
             this.listBox1.TabIndex = 6;
             // 
             // Leitor_Radio
