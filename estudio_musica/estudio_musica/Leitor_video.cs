@@ -33,5 +33,21 @@ namespace estudio_musica
         {
             Application.Exit();
         }
+
+        private void button_rihanna_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/pa14VNsdSYM&list=RDEMaFGiAZ4Nb5ktVatP3wi-Dw&index=1";
+        }
+
+        private void button_metalica_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/Tj75Arhq5ho&list=RDEMAkKpoB62G5Wmtp0nQxfrDg";
+        }
+
+        private void button_richie_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/pRmQyN8CU8Q&list=RDEM_ieGoko8ewCal5_Og5B-OA";
+        }
+
     }
 }
