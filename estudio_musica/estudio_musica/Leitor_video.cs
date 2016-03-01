@@ -17,16 +17,21 @@ namespace estudio_musica
             InitializeComponent();
         }
 
-        private void button_voltar_Click(object sender, EventArgs e)
+        private void button_voltar_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
         }
 
-        private void button_sair_Click(object sender, EventArgs e)
+        private void button_sair_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Leitor_video_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
