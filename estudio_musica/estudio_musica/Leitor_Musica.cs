@@ -17,6 +17,16 @@ namespace estudio_musica
             InitializeComponent();
         }
 
+        private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void button_voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -24,17 +34,12 @@ namespace estudio_musica
             frm.Show();
         }
 
-        private void button_sair_Click(object sender, EventArgs e)
+        private void button_pausa_Click(object sender, EventArgs e)
         {
-            Close(); 
+
         }
 
-        private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Leitor_Musica_Load(object sender, EventArgs e)
+        private void button_play_Click(object sender, EventArgs e)
         {
 
         }

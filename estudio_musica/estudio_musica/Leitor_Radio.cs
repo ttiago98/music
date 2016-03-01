@@ -17,18 +17,6 @@ namespace estudio_musica
             InitializeComponent();
         }
 
-        private void button_voltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 frm = new Form1();
-            frm.Show();
-        }
-
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void Leitor_Radio_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit(); 
@@ -72,6 +60,18 @@ namespace estudio_musica
                     break;
             }
             if (!URL.Equals("")) axWindowsMediaPlayer1.URL = URL;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button_voltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 frm = new Form1();
+            frm.Show();
         }
     }
 }
