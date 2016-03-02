@@ -34,10 +34,10 @@
             this.button_arctic_monkeys = new System.Windows.Forms.Button();
             this.button_metalica = new System.Windows.Forms.Button();
             this.button_richie_campbell = new System.Windows.Forms.Button();
+            this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.button_ice_cube = new System.Windows.Forms.Button();
             this.button_ed_sheeran = new System.Windows.Forms.Button();
             this.button_red_hot_chili_peppers = new System.Windows.Forms.Button();
-            this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
@@ -98,6 +98,15 @@
             this.button_richie_campbell.UseVisualStyleBackColor = true;
             this.button_richie_campbell.Click += new System.EventHandler(this.button_richie_campbell_Click);
             // 
+            // youtube_player
+            // 
+            this.youtube_player.Enabled = true;
+            this.youtube_player.Location = new System.Drawing.Point(139, 12);
+            this.youtube_player.Name = "youtube_player";
+            this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
+            this.youtube_player.Size = new System.Drawing.Size(534, 300);
+            this.youtube_player.TabIndex = 22;
+            // 
             // button_ice_cube
             // 
             this.button_ice_cube.Location = new System.Drawing.Point(12, 147);
@@ -127,15 +136,6 @@
             this.button_red_hot_chili_peppers.Text = "Red Hot Chili Peppers";
             this.button_red_hot_chili_peppers.UseVisualStyleBackColor = true;
             this.button_red_hot_chili_peppers.Click += new System.EventHandler(this.button_red_hot_chili_peppers_Click);
-            // 
-            // youtube_player
-            // 
-            this.youtube_player.Enabled = true;
-            this.youtube_player.Location = new System.Drawing.Point(139, 12);
-            this.youtube_player.Name = "youtube_player";
-            this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
-            this.youtube_player.Size = new System.Drawing.Size(534, 300);
-            this.youtube_player.TabIndex = 22;
             // 
             // Leitor_video
             // 
@@ -169,9 +169,9 @@
         private System.Windows.Forms.Button button_arctic_monkeys;
         private System.Windows.Forms.Button button_metalica;
         private System.Windows.Forms.Button button_richie_campbell;
+        private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
         private System.Windows.Forms.Button button_ice_cube;
         private System.Windows.Forms.Button button_ed_sheeran;
         private System.Windows.Forms.Button button_red_hot_chili_peppers;
-        private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
     }
 }
