@@ -29,15 +29,21 @@ namespace estudio_musica
             // TODO: This line of code loads data into the 'estudi_musicaDataSet.album' table. You can move, or remove it, as needed.
             this.albumTableAdapter.Fill(this.estudi_musicaDataSet.album);
 
+
+
         }
 
-        private void button_mostrar_Click(object sender, EventArgs e)
+
+        private void ficha_tecnica_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-
-
-
-
+            Application.Exit();
         }
     }
-}
+
+
+        }
+
+
+
+    
+
