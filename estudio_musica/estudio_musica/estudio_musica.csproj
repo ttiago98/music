@@ -72,6 +72,12 @@
     <Compile Include="Leitor_Radio.Designer.cs">
       <DependentUpon>Leitor_Radio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Leitor_video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Leitor_video.Designer.cs">
+      <DependentUpon>Leitor_video.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ficha_tecnica.resx">
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Leitor_Radio.resx">
       <DependentUpon>Leitor_Radio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Leitor_video.resx">
+      <DependentUpon>Leitor_video.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
