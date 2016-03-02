@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leitor_Musica));
             this.button_play = new System.Windows.Forms.PictureBox();
             this.button_musica_anterior = new System.Windows.Forms.PictureBox();
@@ -37,6 +38,15 @@
             this.button_mais_volume = new System.Windows.Forms.PictureBox();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.lista_musicas = new System.Windows.Forms.ListBox();
+            this.button_importar = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button_stop = new System.Windows.Forms.PictureBox();
+            this.button_mute = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.checkBox_reproduzir_tudo = new System.Windows.Forms.CheckBox();
+            this.button_limpar_musica = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).BeginInit();
@@ -45,6 +55,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_importar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).BeginInit();
             this.SuspendLayout();
             // 
             // button_play
@@ -53,7 +68,7 @@
             this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_play.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_play.Image = ((System.Drawing.Image)(resources.GetObject("button_play.Image")));
-            this.button_play.Location = new System.Drawing.Point(269, 280);
+            this.button_play.Location = new System.Drawing.Point(300, 312);
             this.button_play.Name = "button_play";
             this.button_play.Size = new System.Drawing.Size(55, 45);
             this.button_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -67,12 +82,13 @@
             this.button_musica_anterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_musica_anterior.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_musica_anterior.Image = ((System.Drawing.Image)(resources.GetObject("button_musica_anterior.Image")));
-            this.button_musica_anterior.Location = new System.Drawing.Point(191, 341);
+            this.button_musica_anterior.Location = new System.Drawing.Point(239, 363);
             this.button_musica_anterior.Name = "button_musica_anterior";
             this.button_musica_anterior.Size = new System.Drawing.Size(55, 45);
             this.button_musica_anterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_musica_anterior.TabIndex = 11;
             this.button_musica_anterior.TabStop = false;
+            this.button_musica_anterior.Click += new System.EventHandler(this.button_musica_anterior_Click);
             // 
             // button_proxima_musica
             // 
@@ -80,12 +96,13 @@
             this.button_proxima_musica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_proxima_musica.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_proxima_musica.Image = ((System.Drawing.Image)(resources.GetObject("button_proxima_musica.Image")));
-            this.button_proxima_musica.Location = new System.Drawing.Point(350, 341);
+            this.button_proxima_musica.Location = new System.Drawing.Point(362, 363);
             this.button_proxima_musica.Name = "button_proxima_musica";
             this.button_proxima_musica.Size = new System.Drawing.Size(55, 45);
             this.button_proxima_musica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_proxima_musica.TabIndex = 12;
             this.button_proxima_musica.TabStop = false;
+            this.button_proxima_musica.Click += new System.EventHandler(this.button_proxima_musica_Click);
             // 
             // button_pausa
             // 
@@ -93,7 +110,7 @@
             this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_pausa.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_pausa.Image = ((System.Drawing.Image)(resources.GetObject("button_pausa.Image")));
-            this.button_pausa.Location = new System.Drawing.Point(269, 341);
+            this.button_pausa.Location = new System.Drawing.Point(300, 414);
             this.button_pausa.Name = "button_pausa";
             this.button_pausa.Size = new System.Drawing.Size(55, 45);
             this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,12 +124,13 @@
             this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_menos_volume.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_menos_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.Image")));
-            this.button_menos_volume.Location = new System.Drawing.Point(521, 239);
+            this.button_menos_volume.Location = new System.Drawing.Point(591, 203);
             this.button_menos_volume.Name = "button_menos_volume";
             this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
             this.button_menos_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_menos_volume.TabIndex = 14;
             this.button_menos_volume.TabStop = false;
+            this.button_menos_volume.Click += new System.EventHandler(this.button_menos_volume_Click);
             // 
             // button_mais_volume
             // 
@@ -120,18 +138,19 @@
             this.button_mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_mais_volume.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_mais_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_mais_volume.Image")));
-            this.button_mais_volume.Location = new System.Drawing.Point(521, 140);
+            this.button_mais_volume.Location = new System.Drawing.Point(591, 137);
             this.button_mais_volume.Name = "button_mais_volume";
             this.button_mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button_mais_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mais_volume.TabIndex = 15;
             this.button_mais_volume.TabStop = false;
+            this.button_mais_volume.Click += new System.EventHandler(this.button_mais_volume_Click);
             // 
             // button_sair
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
-            this.button_sair.Location = new System.Drawing.Point(492, 355);
+            this.button_sair.Location = new System.Drawing.Point(582, 428);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +163,7 @@
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 351);
+            this.button_voltar.Location = new System.Drawing.Point(12, 424);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(79, 45);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,13 +171,113 @@
             this.button_voltar.TabStop = false;
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(191, 12);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(226, 64);
+            this.axWindowsMediaPlayer1.TabIndex = 18;
+            this.axWindowsMediaPlayer1.Visible = false;
+            // 
+            // lista_musicas
+            // 
+            this.lista_musicas.FormattingEnabled = true;
+            this.lista_musicas.Location = new System.Drawing.Point(111, 36);
+            this.lista_musicas.Name = "lista_musicas";
+            this.lista_musicas.Size = new System.Drawing.Size(433, 251);
+            this.lista_musicas.TabIndex = 19;
+            // 
+            // button_importar
+            // 
+            this.button_importar.BackColor = System.Drawing.Color.Transparent;
+            this.button_importar.Image = ((System.Drawing.Image)(resources.GetObject("button_importar.Image")));
+            this.button_importar.Location = new System.Drawing.Point(12, 25);
+            this.button_importar.Name = "button_importar";
+            this.button_importar.Size = new System.Drawing.Size(60, 51);
+            this.button_importar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_importar.TabIndex = 20;
+            this.button_importar.TabStop = false;
+            this.button_importar.Click += new System.EventHandler(this.button_importar_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "MP3 files|*.mp3|WAV files|*.wav";
+            this.openFileDialog1.Multiselect = true;
+            // 
+            // button_stop
+            // 
+            this.button_stop.BackColor = System.Drawing.Color.Transparent;
+            this.button_stop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_stop.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_stop.Image = ((System.Drawing.Image)(resources.GetObject("button_stop.Image")));
+            this.button_stop.Location = new System.Drawing.Point(300, 363);
+            this.button_stop.Name = "button_stop";
+            this.button_stop.Size = new System.Drawing.Size(55, 45);
+            this.button_stop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_stop.TabIndex = 21;
+            this.button_stop.TabStop = false;
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
+            // 
+            // button_mute
+            // 
+            this.button_mute.BackColor = System.Drawing.Color.Transparent;
+            this.button_mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_mute.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_mute.Image = ((System.Drawing.Image)(resources.GetObject("button_mute.Image")));
+            this.button_mute.Location = new System.Drawing.Point(591, 264);
+            this.button_mute.Name = "button_mute";
+            this.button_mute.Size = new System.Drawing.Size(55, 45);
+            this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_mute.TabIndex = 22;
+            this.button_mute.TabStop = false;
+            this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // checkBox_reproduzir_tudo
+            // 
+            this.checkBox_reproduzir_tudo.AutoSize = true;
+            this.checkBox_reproduzir_tudo.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox_reproduzir_tudo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_reproduzir_tudo.Location = new System.Drawing.Point(111, 293);
+            this.checkBox_reproduzir_tudo.Name = "checkBox_reproduzir_tudo";
+            this.checkBox_reproduzir_tudo.Size = new System.Drawing.Size(119, 19);
+            this.checkBox_reproduzir_tudo.TabIndex = 23;
+            this.checkBox_reproduzir_tudo.Text = "Reproduzir Todas";
+            this.checkBox_reproduzir_tudo.UseVisualStyleBackColor = false;
+            this.checkBox_reproduzir_tudo.CheckedChanged += new System.EventHandler(this.checkBox_reproduzir_tudo_CheckedChanged);
+            // 
+            // button_limpar_musica
+            // 
+            this.button_limpar_musica.BackColor = System.Drawing.Color.Transparent;
+            this.button_limpar_musica.Image = ((System.Drawing.Image)(resources.GetObject("button_limpar_musica.Image")));
+            this.button_limpar_musica.Location = new System.Drawing.Point(12, 115);
+            this.button_limpar_musica.Name = "button_limpar_musica";
+            this.button_limpar_musica.Size = new System.Drawing.Size(60, 50);
+            this.button_limpar_musica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_limpar_musica.TabIndex = 24;
+            this.button_limpar_musica.TabStop = false;
+            this.button_limpar_musica.Click += new System.EventHandler(this.button_limpar_Click);
+            // 
             // Leitor_Musica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(588, 408);
+            this.ClientSize = new System.Drawing.Size(669, 481);
+            this.Controls.Add(this.button_limpar_musica);
+            this.Controls.Add(this.checkBox_reproduzir_tudo);
+            this.Controls.Add(this.button_mute);
+            this.Controls.Add(this.button_stop);
+            this.Controls.Add(this.button_importar);
+            this.Controls.Add(this.lista_musicas);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_mais_volume);
@@ -179,7 +298,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_importar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,5 +317,14 @@
         private System.Windows.Forms.PictureBox button_mais_volume;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_voltar;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.ListBox lista_musicas;
+        private System.Windows.Forms.PictureBox button_importar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox button_stop;
+        private System.Windows.Forms.PictureBox button_mute;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.CheckBox checkBox_reproduzir_tudo;
+        private System.Windows.Forms.PictureBox button_limpar_musica;
     }
 }

@@ -61,10 +61,10 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(318, 172);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 172);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(150, 51);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(456, 28);
             this.axWindowsMediaPlayer1.TabIndex = 7;
             // 
             // button_sair
@@ -89,6 +89,7 @@
             this.button_play.Size = new System.Drawing.Size(55, 45);
             this.button_play.TabIndex = 9;
             this.button_play.TabStop = false;
+            this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
             // button_pausa
             // 

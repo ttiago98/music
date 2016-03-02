@@ -38,7 +38,7 @@
             // 
             // button_leitor_musica
             // 
-            this.button_leitor_musica.Location = new System.Drawing.Point(12, 12);
+            this.button_leitor_musica.Location = new System.Drawing.Point(64, 87);
             this.button_leitor_musica.Name = "button_leitor_musica";
             this.button_leitor_musica.Size = new System.Drawing.Size(166, 52);
             this.button_leitor_musica.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // button_leitor_radio
             // 
-            this.button_leitor_radio.Location = new System.Drawing.Point(404, 12);
+            this.button_leitor_radio.Location = new System.Drawing.Point(339, 87);
             this.button_leitor_radio.Name = "button_leitor_radio";
             this.button_leitor_radio.Size = new System.Drawing.Size(166, 52);
             this.button_leitor_radio.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             // button_leitor_video
             // 
-            this.button_leitor_video.Location = new System.Drawing.Point(12, 123);
+            this.button_leitor_video.Location = new System.Drawing.Point(64, 253);
             this.button_leitor_video.Name = "button_leitor_video";
             this.button_leitor_video.Size = new System.Drawing.Size(166, 52);
             this.button_leitor_video.TabIndex = 3;
@@ -79,7 +79,7 @@
             // 
             // button_artistas
             // 
-            this.button_artistas.Location = new System.Drawing.Point(404, 123);
+            this.button_artistas.Location = new System.Drawing.Point(339, 253);
             this.button_artistas.Name = "button_artistas";
             this.button_artistas.Size = new System.Drawing.Size(166, 52);
             this.button_artistas.TabIndex = 4;
