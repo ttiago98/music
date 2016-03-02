@@ -54,29 +54,34 @@
             // 
             // button_arctic_monkeys
             // 
-            this.button_arctic_monkeys.Location = new System.Drawing.Point(565, 133);
+            this.button_arctic_monkeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_arctic_monkeys.BackgroundImage")));
+            this.button_arctic_monkeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_arctic_monkeys.Location = new System.Drawing.Point(565, 226);
             this.button_arctic_monkeys.Name = "button_arctic_monkeys";
-            this.button_arctic_monkeys.Size = new System.Drawing.Size(121, 38);
+            this.button_arctic_monkeys.Size = new System.Drawing.Size(121, 73);
             this.button_arctic_monkeys.TabIndex = 16;
-            this.button_arctic_monkeys.Text = "Arctic Monkeys";
             this.button_arctic_monkeys.UseVisualStyleBackColor = true;
             this.button_arctic_monkeys.Click += new System.EventHandler(this.button_arctic_monkeys_Click);
             // 
             // button_metalica
             // 
-            this.button_metalica.Location = new System.Drawing.Point(565, 70);
+            this.button_metalica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_metalica.BackgroundImage")));
+            this.button_metalica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_metalica.Location = new System.Drawing.Point(565, 118);
             this.button_metalica.Name = "button_metalica";
-            this.button_metalica.Size = new System.Drawing.Size(121, 38);
+            this.button_metalica.Size = new System.Drawing.Size(121, 73);
             this.button_metalica.TabIndex = 17;
-            this.button_metalica.Text = "Metalica";
             this.button_metalica.UseVisualStyleBackColor = true;
             this.button_metalica.Click += new System.EventHandler(this.button_metalica_Click);
             // 
             // button_richie_campbell
             // 
+            this.button_richie_campbell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_richie_campbell.BackgroundImage")));
+            this.button_richie_campbell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_richie_campbell.ForeColor = System.Drawing.Color.White;
             this.button_richie_campbell.Location = new System.Drawing.Point(565, 12);
             this.button_richie_campbell.Name = "button_richie_campbell";
-            this.button_richie_campbell.Size = new System.Drawing.Size(121, 37);
+            this.button_richie_campbell.Size = new System.Drawing.Size(121, 73);
             this.button_richie_campbell.TabIndex = 18;
             this.button_richie_campbell.Text = "Richie Campbell";
             this.button_richie_campbell.UseVisualStyleBackColor = true;
