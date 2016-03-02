@@ -29,35 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leitor_video));
-            this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.button_sair = new System.Windows.Forms.PictureBox();
-            this.button_charli_xcx = new System.Windows.Forms.Button();
+            this.button_arctic_monkeys = new System.Windows.Forms.Button();
             this.button_metalica = new System.Windows.Forms.Button();
             this.button_richie_campbell = new System.Windows.Forms.Button();
-            this.button_eminem = new System.Windows.Forms.Button();
+            this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
+            this.button_ice_cube = new System.Windows.Forms.Button();
             this.button_ed_sheeran = new System.Windows.Forms.Button();
-            this.button_imagine_dragons = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
+            this.button_red_hot_chili_peppers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             this.SuspendLayout();
-            // 
-            // youtube_player
-            // 
-            this.youtube_player.Enabled = true;
-            this.youtube_player.Location = new System.Drawing.Point(125, 12);
-            this.youtube_player.Name = "youtube_player";
-            this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
-            this.youtube_player.Size = new System.Drawing.Size(411, 204);
-            this.youtube_player.TabIndex = 0;
             // 
             // button_voltar
             // 
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 281);
+            this.button_voltar.Location = new System.Drawing.Point(12, 349);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(65, 41);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +60,7 @@
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
-            this.button_sair.Location = new System.Drawing.Point(461, 281);
+            this.button_sair.Location = new System.Drawing.Point(611, 349);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,21 +68,21 @@
             this.button_sair.TabStop = false;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
-            // button_charli_xcx
+            // button_arctic_monkeys
             // 
-            this.button_charli_xcx.Location = new System.Drawing.Point(12, 12);
-            this.button_charli_xcx.Name = "button_charli_xcx";
-            this.button_charli_xcx.Size = new System.Drawing.Size(96, 23);
-            this.button_charli_xcx.TabIndex = 16;
-            this.button_charli_xcx.Text = "Charli XCX";
-            this.button_charli_xcx.UseVisualStyleBackColor = true;
-            this.button_charli_xcx.Click += new System.EventHandler(this.button_charli_xcx_Click);
+            this.button_arctic_monkeys.Location = new System.Drawing.Point(12, 12);
+            this.button_arctic_monkeys.Name = "button_arctic_monkeys";
+            this.button_arctic_monkeys.Size = new System.Drawing.Size(121, 38);
+            this.button_arctic_monkeys.TabIndex = 16;
+            this.button_arctic_monkeys.Text = "Arctic Monkeys";
+            this.button_arctic_monkeys.UseVisualStyleBackColor = true;
+            this.button_arctic_monkeys.Click += new System.EventHandler(this.button_arctic_monkeys_Click);
             // 
             // button_metalica
             // 
-            this.button_metalica.Location = new System.Drawing.Point(12, 41);
+            this.button_metalica.Location = new System.Drawing.Point(12, 56);
             this.button_metalica.Name = "button_metalica";
-            this.button_metalica.Size = new System.Drawing.Size(96, 23);
+            this.button_metalica.Size = new System.Drawing.Size(121, 40);
             this.button_metalica.TabIndex = 17;
             this.button_metalica.Text = "Metalica";
             this.button_metalica.UseVisualStyleBackColor = true;
@@ -99,43 +90,52 @@
             // 
             // button_richie_campbell
             // 
-            this.button_richie_campbell.Location = new System.Drawing.Point(12, 70);
+            this.button_richie_campbell.Location = new System.Drawing.Point(12, 102);
             this.button_richie_campbell.Name = "button_richie_campbell";
-            this.button_richie_campbell.Size = new System.Drawing.Size(96, 23);
+            this.button_richie_campbell.Size = new System.Drawing.Size(121, 39);
             this.button_richie_campbell.TabIndex = 18;
             this.button_richie_campbell.Text = "Richie Campbell";
             this.button_richie_campbell.UseVisualStyleBackColor = true;
             this.button_richie_campbell.Click += new System.EventHandler(this.button_richie_campbell_Click);
             // 
-            // button_eminem
+            // youtube_player
             // 
-            this.button_eminem.Location = new System.Drawing.Point(12, 99);
-            this.button_eminem.Name = "button_eminem";
-            this.button_eminem.Size = new System.Drawing.Size(96, 23);
-            this.button_eminem.TabIndex = 19;
-            this.button_eminem.Text = "Eminem";
-            this.button_eminem.UseVisualStyleBackColor = true;
-            this.button_eminem.Click += new System.EventHandler(this.button_eminem_Click);
+            this.youtube_player.Enabled = true;
+            this.youtube_player.Location = new System.Drawing.Point(139, 12);
+            this.youtube_player.Name = "youtube_player";
+            this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
+            this.youtube_player.Size = new System.Drawing.Size(534, 300);
+            this.youtube_player.TabIndex = 22;
+            // 
+            // button_ice_cube
+            // 
+            this.button_ice_cube.Location = new System.Drawing.Point(12, 147);
+            this.button_ice_cube.Name = "button_ice_cube";
+            this.button_ice_cube.Size = new System.Drawing.Size(121, 36);
+            this.button_ice_cube.TabIndex = 19;
+            this.button_ice_cube.Text = "Ice Cube";
+            this.button_ice_cube.UseVisualStyleBackColor = true;
+            this.button_ice_cube.Click += new System.EventHandler(this.button_ice_cube_Click);
             // 
             // button_ed_sheeran
             // 
-            this.button_ed_sheeran.Location = new System.Drawing.Point(12, 128);
+            this.button_ed_sheeran.Location = new System.Drawing.Point(12, 189);
             this.button_ed_sheeran.Name = "button_ed_sheeran";
-            this.button_ed_sheeran.Size = new System.Drawing.Size(96, 23);
+            this.button_ed_sheeran.Size = new System.Drawing.Size(121, 35);
             this.button_ed_sheeran.TabIndex = 20;
             this.button_ed_sheeran.Text = "Ed Sheeran";
             this.button_ed_sheeran.UseVisualStyleBackColor = true;
             this.button_ed_sheeran.Click += new System.EventHandler(this.button_ed_sheeran_Click);
             // 
-            // button_imagine_dragons
+            // button_red_hot_chili_peppers
             // 
-            this.button_imagine_dragons.Location = new System.Drawing.Point(12, 157);
-            this.button_imagine_dragons.Name = "button_imagine_dragons";
-            this.button_imagine_dragons.Size = new System.Drawing.Size(96, 23);
-            this.button_imagine_dragons.TabIndex = 21;
-            this.button_imagine_dragons.Text = "Imagine Dragons";
-            this.button_imagine_dragons.UseVisualStyleBackColor = true;
-            this.button_imagine_dragons.Click += new System.EventHandler(this.button_imagine_dragons_Click);
+            this.button_red_hot_chili_peppers.Location = new System.Drawing.Point(12, 230);
+            this.button_red_hot_chili_peppers.Name = "button_red_hot_chili_peppers";
+            this.button_red_hot_chili_peppers.Size = new System.Drawing.Size(121, 37);
+            this.button_red_hot_chili_peppers.TabIndex = 21;
+            this.button_red_hot_chili_peppers.Text = "Red Hot Chili Peppers";
+            this.button_red_hot_chili_peppers.UseVisualStyleBackColor = true;
+            this.button_red_hot_chili_peppers.Click += new System.EventHandler(this.button_red_hot_chili_peppers_Click);
             // 
             // Leitor_video
             // 
@@ -143,36 +143,35 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(548, 334);
-            this.Controls.Add(this.button_imagine_dragons);
+            this.ClientSize = new System.Drawing.Size(698, 402);
+            this.Controls.Add(this.youtube_player);
+            this.Controls.Add(this.button_red_hot_chili_peppers);
             this.Controls.Add(this.button_ed_sheeran);
-            this.Controls.Add(this.button_eminem);
+            this.Controls.Add(this.button_ice_cube);
             this.Controls.Add(this.button_richie_campbell);
             this.Controls.Add(this.button_metalica);
-            this.Controls.Add(this.button_charli_xcx);
+            this.Controls.Add(this.button_arctic_monkeys);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_voltar);
-            this.Controls.Add(this.youtube_player);
             this.Name = "Leitor_video";
             this.Text = "Leitor de Vídeo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_video_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
         private System.Windows.Forms.PictureBox button_voltar;
         private System.Windows.Forms.PictureBox button_sair;
-        private System.Windows.Forms.Button button_charli_xcx;
+        private System.Windows.Forms.Button button_arctic_monkeys;
         private System.Windows.Forms.Button button_metalica;
         private System.Windows.Forms.Button button_richie_campbell;
-        private System.Windows.Forms.Button button_eminem;
+        private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
+        private System.Windows.Forms.Button button_ice_cube;
         private System.Windows.Forms.Button button_ed_sheeran;
-        private System.Windows.Forms.Button button_imagine_dragons;
+        private System.Windows.Forms.Button button_red_hot_chili_peppers;
     }
 }

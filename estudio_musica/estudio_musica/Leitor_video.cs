@@ -34,11 +34,6 @@ namespace estudio_musica
             Application.Exit();
         }
 
-        private void button_charli_xcx_Click(object sender, EventArgs e)
-        {
-            youtube_player.Movie = "https://www.youtube.com/v/AOPMlIIg_38&list=RDEMqB6GN03U2YuNBEN7d9EqVw";
-        }
-
         private void button_metalica_Click(object sender, EventArgs e)
         {
             youtube_player.Movie = "https://www.youtube.com/v/Tj75Arhq5ho&list=RDEMAkKpoB62G5Wmtp0nQxfrDg";
@@ -46,22 +41,27 @@ namespace estudio_musica
 
         private void button_richie_campbell_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button_eminem_Click(object sender, EventArgs e)
-        {
-
+            youtube_player.Movie = "https://www.youtube.com/v/pRmQyN8CU8Q&list=RDEM_ieGoko8ewCal5_Og5B-OA";
         }
 
         private void button_ed_sheeran_Click(object sender, EventArgs e)
         {
-
+            youtube_player.Movie = "https://www.youtube.com/v/lp-EO5I60KA&list=RDEM_Ktu-TilkxtLvmc9wX1MLQ";
         }
 
-        private void button_imagine_dragons_Click(object sender, EventArgs e)
+        private void button_arctic_monkeys_Click(object sender, EventArgs e)
         {
+            youtube_player.Movie = "https://www.youtube.com/v/bpOSxM0rNPM&list=RDEMThYJ2VcXXNp3GM7AwT24UQ";
+        }
 
+        private void button_ice_cube_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/8CPlF-IEkXQ&list=RDEMU8O1ngHTam_RPtve_gY5fA";
+        }
+
+        private void button_red_hot_chili_peppers_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/YlUKcNNmywk&list=RDEMf5I_WGknwqULRz9t7aGnjw";
         }
     }
 }
