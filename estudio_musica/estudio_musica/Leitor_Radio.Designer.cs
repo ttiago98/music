@@ -37,6 +37,7 @@
             this.button_mais_volume = new System.Windows.Forms.PictureBox();
             this.button_menos_volume = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
+            this.button_mute = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
@@ -44,6 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_menos_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
             this.SuspendLayout();
             // 
             // lista_radios
@@ -55,7 +57,7 @@
             this.lista_radios.ItemHeight = 15;
             this.lista_radios.Location = new System.Drawing.Point(12, 12);
             this.lista_radios.Name = "lista_radios";
-            this.lista_radios.Size = new System.Drawing.Size(456, 154);
+            this.lista_radios.Size = new System.Drawing.Size(556, 154);
             this.lista_radios.TabIndex = 6;
             // 
             // axWindowsMediaPlayer1
@@ -64,29 +66,29 @@
             this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 172);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(456, 28);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(556, 28);
             this.axWindowsMediaPlayer1.TabIndex = 7;
             // 
             // button_sair
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
-            this.button_sair.Location = new System.Drawing.Point(393, 312);
+            this.button_sair.Location = new System.Drawing.Point(493, 312);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 8;
             this.button_sair.TabStop = false;
-            this.button_sair.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_play
             // 
             this.button_play.BackColor = System.Drawing.Color.Transparent;
             this.button_play.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_play.BackgroundImage")));
             this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_play.Location = new System.Drawing.Point(204, 219);
+            this.button_play.Location = new System.Drawing.Point(120, 245);
             this.button_play.Name = "button_play";
-            this.button_play.Size = new System.Drawing.Size(55, 45);
+            this.button_play.Size = new System.Drawing.Size(100, 89);
             this.button_play.TabIndex = 9;
             this.button_play.TabStop = false;
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
@@ -96,35 +98,38 @@
             this.button_pausa.BackColor = System.Drawing.Color.Transparent;
             this.button_pausa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_pausa.BackgroundImage")));
             this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_pausa.Location = new System.Drawing.Point(204, 308);
+            this.button_pausa.Location = new System.Drawing.Point(236, 267);
             this.button_pausa.Name = "button_pausa";
-            this.button_pausa.Size = new System.Drawing.Size(55, 45);
+            this.button_pausa.Size = new System.Drawing.Size(67, 54);
             this.button_pausa.TabIndex = 10;
             this.button_pausa.TabStop = false;
+            this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
             // 
             // button_mais_volume
             // 
             this.button_mais_volume.BackColor = System.Drawing.Color.Transparent;
             this.button_mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_mais_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_mais_volume.Image")));
-            this.button_mais_volume.Location = new System.Drawing.Point(265, 262);
+            this.button_mais_volume.Location = new System.Drawing.Point(513, 245);
             this.button_mais_volume.Name = "button_mais_volume";
             this.button_mais_volume.Size = new System.Drawing.Size(55, 45);
             this.button_mais_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mais_volume.TabIndex = 11;
             this.button_mais_volume.TabStop = false;
+            this.button_mais_volume.Click += new System.EventHandler(this.button_mais_volume_Click);
             // 
             // button_menos_volume
             // 
             this.button_menos_volume.BackColor = System.Drawing.Color.Transparent;
             this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_menos_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.Image")));
-            this.button_menos_volume.Location = new System.Drawing.Point(143, 262);
+            this.button_menos_volume.Location = new System.Drawing.Point(445, 245);
             this.button_menos_volume.Name = "button_menos_volume";
             this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
             this.button_menos_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_menos_volume.TabIndex = 12;
             this.button_menos_volume.TabStop = false;
+            this.button_menos_volume.Click += new System.EventHandler(this.button_menos_volume_Click);
             // 
             // button_voltar
             // 
@@ -139,13 +144,27 @@
             this.button_voltar.TabStop = false;
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
+            // button_mute
+            // 
+            this.button_mute.BackColor = System.Drawing.Color.Transparent;
+            this.button_mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_mute.Image = ((System.Drawing.Image)(resources.GetObject("button_mute.Image")));
+            this.button_mute.Location = new System.Drawing.Point(375, 245);
+            this.button_mute.Name = "button_mute";
+            this.button_mute.Size = new System.Drawing.Size(55, 45);
+            this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_mute.TabIndex = 14;
+            this.button_mute.TabStop = false;
+            this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
+            // 
             // Leitor_Radio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(480, 365);
+            this.ClientSize = new System.Drawing.Size(580, 365);
+            this.Controls.Add(this.button_mute);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_menos_volume);
             this.Controls.Add(this.button_mais_volume);
@@ -167,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_menos_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +200,6 @@
         private System.Windows.Forms.PictureBox button_mais_volume;
         private System.Windows.Forms.PictureBox button_menos_volume;
         private System.Windows.Forms.PictureBox button_voltar;
+        private System.Windows.Forms.PictureBox button_mute;
     }
 }

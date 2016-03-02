@@ -47,6 +47,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBox_reproduzir_tudo = new System.Windows.Forms.CheckBox();
             this.button_limpar_musica = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).BeginInit();
@@ -174,20 +175,22 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(191, 12);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(441, 330);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(226, 64);
             this.axWindowsMediaPlayer1.TabIndex = 18;
             this.axWindowsMediaPlayer1.Visible = false;
+            this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
             // 
             // lista_musicas
             // 
             this.lista_musicas.FormattingEnabled = true;
-            this.lista_musicas.Location = new System.Drawing.Point(111, 36);
+            this.lista_musicas.Location = new System.Drawing.Point(111, 25);
             this.lista_musicas.Name = "lista_musicas";
-            this.lista_musicas.Size = new System.Drawing.Size(433, 251);
+            this.lista_musicas.Size = new System.Drawing.Size(433, 238);
             this.lista_musicas.TabIndex = 19;
+            this.lista_musicas.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lista_musicas_MouseDoubleClick);
             // 
             // button_importar
             // 
@@ -237,6 +240,7 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // checkBox_reproduzir_tudo
@@ -244,7 +248,7 @@
             this.checkBox_reproduzir_tudo.AutoSize = true;
             this.checkBox_reproduzir_tudo.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_reproduzir_tudo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_reproduzir_tudo.Location = new System.Drawing.Point(111, 293);
+            this.checkBox_reproduzir_tudo.Location = new System.Drawing.Point(111, 285);
             this.checkBox_reproduzir_tudo.Name = "checkBox_reproduzir_tudo";
             this.checkBox_reproduzir_tudo.Size = new System.Drawing.Size(119, 19);
             this.checkBox_reproduzir_tudo.TabIndex = 23;
@@ -264,6 +268,13 @@
             this.button_limpar_musica.TabStop = false;
             this.button_limpar_musica.Click += new System.EventHandler(this.button_limpar_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(111, 269);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(433, 10);
+            this.progressBar1.TabIndex = 25;
+            // 
             // Leitor_Musica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +282,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(669, 481);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button_limpar_musica);
             this.Controls.Add(this.checkBox_reproduzir_tudo);
             this.Controls.Add(this.button_mute);
@@ -326,5 +338,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.CheckBox checkBox_reproduzir_tudo;
         private System.Windows.Forms.PictureBox button_limpar_musica;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

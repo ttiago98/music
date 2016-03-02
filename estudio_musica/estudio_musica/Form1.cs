@@ -33,11 +33,6 @@ namespace estudio_musica
             frm.Show();
         }
 
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void button_leitor_video_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -45,16 +40,21 @@ namespace estudio_musica
             frm.Show();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_artistas_Click(object sender, EventArgs e)
         {
             this.Hide();
             ficha_tecnica frm = new ficha_tecnica();
             frm.Show();
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -17,6 +17,8 @@ namespace estudio_musica
             InitializeComponent();
         }
 
+        int vol;
+
         private void Leitor_Radio_Load(object sender, EventArgs e)
         {
             lista_radios.Items.Add("RFM");
@@ -38,7 +40,7 @@ namespace estudio_musica
                     URL = "http://rfm.sapo.pt/live/stream_rfm_stw.asx";
                     break;
                 case 1:
-                    URL = " ";
+                    URL = "";
                     break;
                 case 2:
                     URL = "";
@@ -65,14 +67,44 @@ namespace estudio_musica
             if (!URL.Equals("")) axWindowsMediaPlayer1.URL = URL;
         }
 
+        private void button_pausa_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.pause();
+        }
+
+        private void button_mais_volume_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 20;
+        }
+
+        private void button_menos_volume_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume - 20;
+        }
+
+        private void button_mute_Click(object sender, EventArgs e)
+        {
+            if (vol == 0)
+            {
+                axWindowsMediaPlayer1.settings.mute = true;
+                vol = 1;
+            }
+            else if (vol == 1)
+            {
+                axWindowsMediaPlayer1.settings.mute = false;
+                vol = 0;
+            }
+        }
+
         private void button_voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button_sair_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -81,5 +113,6 @@ namespace estudio_musica
         {
             Application.Exit();
         }
+
     }
 }

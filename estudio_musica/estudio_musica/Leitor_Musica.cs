@@ -23,7 +23,6 @@ namespace estudio_musica
         private void button_importar_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            openFileDialog1.Filter = ("MP3 Files| *.mp3|Wave Files| *.wav|WMA Files|*.wma|All Files|*.*");
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog1.SafeFileNames;
@@ -35,18 +34,14 @@ namespace estudio_musica
             }
         }
 
+        private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+        }
+
         private void button_play_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.play();
-            try
-            {
-                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-            }
-            catch (Exception)
-            {
-
-            }
-                axWindowsMediaPlayer1.Ctlcontrols.pause();
+            axWindowsMediaPlayer1.Ctlcontrols.play();     
         }
 
         private void button_pausa_Click(object sender, EventArgs e)
@@ -132,6 +127,7 @@ namespace estudio_musica
                     {
                         lista_musicas.SelectedIndex = lista_musicas.SelectedIndex = -1; 
                     }
+                progressBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
             }
             catch (Exception)
             {
@@ -164,6 +160,19 @@ namespace estudio_musica
         private void button_sair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            if (e.newState == 3)
+
+            {
+
+                double dur = axWindowsMediaPlayer1.currentMedia.duration;
+
+                progressBar1.Maximum = (int)dur;
+
+            }
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
