@@ -59,6 +59,7 @@
             this.lista_radios.Name = "lista_radios";
             this.lista_radios.Size = new System.Drawing.Size(556, 154);
             this.lista_radios.TabIndex = 6;
+            this.lista_radios.SelectedIndexChanged += new System.EventHandler(this.lista_radios_SelectedIndexChanged);
             // 
             // axWindowsMediaPlayer1
             // 

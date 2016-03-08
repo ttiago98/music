@@ -33,5 +33,28 @@ namespace estudio_musica.Properties {
                 return ((string)(this["estudi_musicaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\estudi_musica.accdb" +
+            "")]
+        public string estudi_musicaConnectionString1 {
+            get {
+                return ((string)(this["estudi_musicaConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"Z:\\2ºAno\\PSI\\Módulo XI - Programaç" +
+            "ão Orientada a Objectos Avançada\\Trabalho gestao estudio musica\\estudio_musica\\e" +
+            "studi_musica.accdb\"")]
+        public string estudi_musicaConnectionString2 {
+            get {
+                return ((string)(this["estudi_musicaConnectionString2"]));
+            }
+        }
     }
 }

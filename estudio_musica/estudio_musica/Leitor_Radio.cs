@@ -114,5 +114,9 @@ namespace estudio_musica
             Application.Exit();
         }
 
+        private void lista_radios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
