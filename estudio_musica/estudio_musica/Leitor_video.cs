@@ -49,9 +49,9 @@ namespace estudio_musica
             frm.Show();
         }
 
-        private void button_search_Click(object sender, EventArgs e)
+        private void button_pesquisar_Click(object sender, EventArgs e)
         {
-            youtube_player.Movie = textBox_search.Text;
+            youtube_player.Movie = textBox_pesquisar.Text;
         }
     }
 }

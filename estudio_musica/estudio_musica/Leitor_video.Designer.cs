@@ -35,8 +35,8 @@
             this.button_richie_campbell = new System.Windows.Forms.Button();
             this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.button_voltar = new System.Windows.Forms.PictureBox();
-            this.textBox_search = new System.Windows.Forms.TextBox();
-            this.button_search = new System.Windows.Forms.Button();
+            this.textBox_pesquisar = new System.Windows.Forms.TextBox();
+            this.button_pesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
@@ -46,7 +46,7 @@
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
-            this.button_sair.Location = new System.Drawing.Point(714, 386);
+            this.button_sair.Location = new System.Drawing.Point(859, 437);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -58,7 +58,7 @@
             // 
             this.button_arctic_monkeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_arctic_monkeys.BackgroundImage")));
             this.button_arctic_monkeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_arctic_monkeys.Location = new System.Drawing.Point(658, 12);
+            this.button_arctic_monkeys.Location = new System.Drawing.Point(635, 60);
             this.button_arctic_monkeys.Name = "button_arctic_monkeys";
             this.button_arctic_monkeys.Size = new System.Drawing.Size(121, 57);
             this.button_arctic_monkeys.TabIndex = 16;
@@ -69,7 +69,7 @@
             // 
             this.button_metalica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_metalica.BackgroundImage")));
             this.button_metalica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_metalica.Location = new System.Drawing.Point(658, 75);
+            this.button_metalica.Location = new System.Drawing.Point(783, 60);
             this.button_metalica.Name = "button_metalica";
             this.button_metalica.Size = new System.Drawing.Size(121, 57);
             this.button_metalica.TabIndex = 17;
@@ -82,7 +82,7 @@
             this.button_richie_campbell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_richie_campbell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_richie_campbell.ForeColor = System.Drawing.Color.White;
-            this.button_richie_campbell.Location = new System.Drawing.Point(658, 138);
+            this.button_richie_campbell.Location = new System.Drawing.Point(635, 147);
             this.button_richie_campbell.Name = "button_richie_campbell";
             this.button_richie_campbell.Size = new System.Drawing.Size(121, 57);
             this.button_richie_campbell.TabIndex = 18;
@@ -93,10 +93,10 @@
             // youtube_player
             // 
             this.youtube_player.Enabled = true;
-            this.youtube_player.Location = new System.Drawing.Point(27, 12);
+            this.youtube_player.Location = new System.Drawing.Point(55, 42);
             this.youtube_player.Name = "youtube_player";
             this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
-            this.youtube_player.Size = new System.Drawing.Size(562, 287);
+            this.youtube_player.Size = new System.Drawing.Size(562, 374);
             this.youtube_player.TabIndex = 22;
             // 
             // button_voltar
@@ -104,7 +104,7 @@
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 386);
+            this.button_voltar.Location = new System.Drawing.Point(12, 437);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(65, 41);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,24 +112,24 @@
             this.button_voltar.TabStop = false;
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
-            // textBox_search
+            // textBox_pesquisar
             // 
-            this.textBox_search.Location = new System.Drawing.Point(595, 249);
-            this.textBox_search.Multiline = true;
-            this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(240, 34);
-            this.textBox_search.TabIndex = 24;
+            this.textBox_pesquisar.Location = new System.Drawing.Point(646, 321);
+            this.textBox_pesquisar.Multiline = true;
+            this.textBox_pesquisar.Name = "textBox_pesquisar";
+            this.textBox_pesquisar.Size = new System.Drawing.Size(269, 34);
+            this.textBox_pesquisar.TabIndex = 24;
             // 
-            // button_search
+            // button_pesquisar
             // 
-            this.button_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_search.Location = new System.Drawing.Point(658, 314);
-            this.button_search.Name = "button_search";
-            this.button_search.Size = new System.Drawing.Size(121, 34);
-            this.button_search.TabIndex = 25;
-            this.button_search.Text = "Search";
-            this.button_search.UseVisualStyleBackColor = true;
-            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            this.button_pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_pesquisar.Location = new System.Drawing.Point(727, 382);
+            this.button_pesquisar.Name = "button_pesquisar";
+            this.button_pesquisar.Size = new System.Drawing.Size(121, 34);
+            this.button_pesquisar.TabIndex = 25;
+            this.button_pesquisar.Text = "Pesquisar";
+            this.button_pesquisar.UseVisualStyleBackColor = true;
+            this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
             // 
             // Leitor_video
             // 
@@ -137,9 +137,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(856, 439);
-            this.Controls.Add(this.button_search);
-            this.Controls.Add(this.textBox_search);
+            this.ClientSize = new System.Drawing.Size(946, 490);
+            this.Controls.Add(this.button_pesquisar);
+            this.Controls.Add(this.textBox_pesquisar);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.youtube_player);
             this.Controls.Add(this.button_richie_campbell);
@@ -167,7 +167,7 @@
         private System.Windows.Forms.Button button_richie_campbell;
         private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
         private System.Windows.Forms.PictureBox button_voltar;
-        private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.Button button_search;
+        private System.Windows.Forms.TextBox textBox_pesquisar;
+        private System.Windows.Forms.Button button_pesquisar;
     }
 }
