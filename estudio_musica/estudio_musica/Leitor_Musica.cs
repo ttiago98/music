@@ -104,6 +104,8 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
             }
+            trackBar1.Value = 0;
+            label1.Text = trackBar1.Value.ToString() + "%";
         }
 
         private void button_limpar_Click(object sender, EventArgs e)
@@ -172,7 +174,25 @@ namespace estudio_musica
 
                 progressBar1.Maximum = (int)dur;
 
+                trackBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+
             }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            label1.Text = trackBar1.Value.ToString() + "%";
+        }
+
+        private void trackBar1_MouseUp(object sender, MouseEventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 1;
+
+        }
+
+        private void trackBar1_MouseDown(object sender, MouseEventArgs e)
+        {
+            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume - 1;
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)

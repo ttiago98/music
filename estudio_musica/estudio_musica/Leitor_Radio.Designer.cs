@@ -176,6 +176,8 @@
             this.Controls.Add(this.lista_radios);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Leitor_Radio";
             this.Text = "Leitor de Rádio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Radio_FormClosing);

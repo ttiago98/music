@@ -100,6 +100,8 @@
             this.Controls.Add(this.button_leitor_radio);
             this.Controls.Add(this.button_leitor_musica);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Estúdio Música";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
