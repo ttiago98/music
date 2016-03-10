@@ -194,7 +194,7 @@ namespace estudio_musica
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            label1.Text = trackBar1.Value.ToString() + "%";
+            label1.Text = trackBar1.Value.ToString() + "%" ;
             axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 20;
         }
 
