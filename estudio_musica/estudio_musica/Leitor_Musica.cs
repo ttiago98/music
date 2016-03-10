@@ -36,7 +36,15 @@ namespace estudio_musica
 
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+            try {
+                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                trackBar1.Value = 50;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Introduza uma musica");
+            }
+
         }
 
         private void button_play_Click(object sender, EventArgs e)
@@ -173,15 +181,27 @@ namespace estudio_musica
                 double dur = axWindowsMediaPlayer1.currentMedia.duration;
 
                 progressBar1.Maximum = (int)dur;
+                try {
 
-                trackBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+                    trackBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+                }
+                catch (Exception)
+                {
 
+                }
             }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label1.Text = trackBar1.Value.ToString() + "%";
+            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 20;
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            if (axWindowsMediaPlayer1 != null && trackBar1 != null)
+                axWindowsMediaPlayer1.settings.volume = trackBar1.Value * 1;
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
