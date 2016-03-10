@@ -34,8 +34,6 @@
             this.button_musica_anterior = new System.Windows.Forms.PictureBox();
             this.button_proxima_musica = new System.Windows.Forms.PictureBox();
             this.button_pausa = new System.Windows.Forms.PictureBox();
-            this.button_menos_volume = new System.Windows.Forms.PictureBox();
-            this.button_mais_volume = new System.Windows.Forms.PictureBox();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -48,14 +46,12 @@
             this.checkBox_reproduzir_tudo = new System.Windows.Forms.CheckBox();
             this.button_limpar_musica = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trackBar_volume = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_menos_volume)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
@@ -63,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).BeginInit();
             this.SuspendLayout();
             // 
             // button_play
@@ -121,34 +117,6 @@
             this.button_pausa.TabIndex = 13;
             this.button_pausa.TabStop = false;
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
-            // 
-            // button_menos_volume
-            // 
-            this.button_menos_volume.BackColor = System.Drawing.Color.Transparent;
-            this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_menos_volume.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button_menos_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.Image")));
-            this.button_menos_volume.Location = new System.Drawing.Point(477, 424);
-            this.button_menos_volume.Name = "button_menos_volume";
-            this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
-            this.button_menos_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_menos_volume.TabIndex = 14;
-            this.button_menos_volume.TabStop = false;
-            this.button_menos_volume.Click += new System.EventHandler(this.button_menos_volume_Click);
-            // 
-            // button_mais_volume
-            // 
-            this.button_mais_volume.BackColor = System.Drawing.Color.Transparent;
-            this.button_mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_mais_volume.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button_mais_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_mais_volume.Image")));
-            this.button_mais_volume.Location = new System.Drawing.Point(401, 424);
-            this.button_mais_volume.Name = "button_mais_volume";
-            this.button_mais_volume.Size = new System.Drawing.Size(55, 45);
-            this.button_mais_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_mais_volume.TabIndex = 15;
-            this.button_mais_volume.TabStop = false;
-            this.button_mais_volume.Click += new System.EventHandler(this.button_mais_volume_Click);
             // 
             // button_sair
             // 
@@ -278,19 +246,19 @@
             this.progressBar1.Size = new System.Drawing.Size(433, 10);
             this.progressBar1.TabIndex = 25;
             // 
-            // trackBar1
+            // trackBar_volume
             // 
-            this.trackBar1.BackColor = System.Drawing.Color.Black;
-            this.trackBar1.Location = new System.Drawing.Point(601, 66);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 139);
-            this.trackBar1.TabIndex = 26;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBar1.Value = 50;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+            this.trackBar_volume.AutoSize = false;
+            this.trackBar_volume.BackColor = System.Drawing.Color.Black;
+            this.trackBar_volume.Location = new System.Drawing.Point(608, 59);
+            this.trackBar_volume.Maximum = 100;
+            this.trackBar_volume.Name = "trackBar_volume";
+            this.trackBar_volume.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBar_volume.Size = new System.Drawing.Size(27, 139);
+            this.trackBar_volume.TabIndex = 26;
+            this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar_volume.Value = 50;
+            this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
             // 
             // label1
             // 
@@ -298,7 +266,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(607, 208);
+            this.label1.Location = new System.Drawing.Point(605, 201);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 15);
             this.label1.TabIndex = 27;
@@ -312,7 +280,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(669, 481);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.trackBar_volume);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button_limpar_musica);
             this.Controls.Add(this.checkBox_reproduzir_tudo);
@@ -323,8 +291,6 @@
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_sair);
-            this.Controls.Add(this.button_mais_volume);
-            this.Controls.Add(this.button_menos_volume);
             this.Controls.Add(this.button_pausa);
             this.Controls.Add(this.button_proxima_musica);
             this.Controls.Add(this.button_musica_anterior);
@@ -339,8 +305,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_menos_volume)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
@@ -348,7 +312,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,8 +323,6 @@
         private System.Windows.Forms.PictureBox button_musica_anterior;
         private System.Windows.Forms.PictureBox button_proxima_musica;
         private System.Windows.Forms.PictureBox button_pausa;
-        private System.Windows.Forms.PictureBox button_menos_volume;
-        private System.Windows.Forms.PictureBox button_mais_volume;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_voltar;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
@@ -373,7 +335,7 @@
         private System.Windows.Forms.CheckBox checkBox_reproduzir_tudo;
         private System.Windows.Forms.PictureBox button_limpar_musica;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar trackBar_volume;
         private System.Windows.Forms.Label label1;
     }
 }

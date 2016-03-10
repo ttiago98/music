@@ -34,18 +34,17 @@
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_play = new System.Windows.Forms.PictureBox();
             this.button_pausa = new System.Windows.Forms.PictureBox();
-            this.button_mais_volume = new System.Windows.Forms.PictureBox();
-            this.button_menos_volume = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.button_mute = new System.Windows.Forms.PictureBox();
+            this.trackBar_volume = new System.Windows.Forms.TrackBar();
+            this.label_volume = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_menos_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).BeginInit();
             this.SuspendLayout();
             // 
             // lista_radios
@@ -59,7 +58,6 @@
             this.lista_radios.Name = "lista_radios";
             this.lista_radios.Size = new System.Drawing.Size(556, 154);
             this.lista_radios.TabIndex = 6;
-            this.lista_radios.SelectedIndexChanged += new System.EventHandler(this.lista_radios_SelectedIndexChanged);
             // 
             // axWindowsMediaPlayer1
             // 
@@ -69,6 +67,7 @@
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(556, 28);
             this.axWindowsMediaPlayer1.TabIndex = 7;
+            this.axWindowsMediaPlayer1.Visible = false;
             // 
             // button_sair
             // 
@@ -106,32 +105,6 @@
             this.button_pausa.TabStop = false;
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
             // 
-            // button_mais_volume
-            // 
-            this.button_mais_volume.BackColor = System.Drawing.Color.Transparent;
-            this.button_mais_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_mais_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_mais_volume.Image")));
-            this.button_mais_volume.Location = new System.Drawing.Point(513, 245);
-            this.button_mais_volume.Name = "button_mais_volume";
-            this.button_mais_volume.Size = new System.Drawing.Size(55, 45);
-            this.button_mais_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_mais_volume.TabIndex = 11;
-            this.button_mais_volume.TabStop = false;
-            this.button_mais_volume.Click += new System.EventHandler(this.button_mais_volume_Click);
-            // 
-            // button_menos_volume
-            // 
-            this.button_menos_volume.BackColor = System.Drawing.Color.Transparent;
-            this.button_menos_volume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_menos_volume.Image = ((System.Drawing.Image)(resources.GetObject("button_menos_volume.Image")));
-            this.button_menos_volume.Location = new System.Drawing.Point(445, 245);
-            this.button_menos_volume.Name = "button_menos_volume";
-            this.button_menos_volume.Size = new System.Drawing.Size(55, 45);
-            this.button_menos_volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_menos_volume.TabIndex = 12;
-            this.button_menos_volume.TabStop = false;
-            this.button_menos_volume.Click += new System.EventHandler(this.button_menos_volume_Click);
-            // 
             // button_voltar
             // 
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
@@ -150,13 +123,38 @@
             this.button_mute.BackColor = System.Drawing.Color.Transparent;
             this.button_mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_mute.Image = ((System.Drawing.Image)(resources.GetObject("button_mute.Image")));
-            this.button_mute.Location = new System.Drawing.Point(375, 245);
+            this.button_mute.Location = new System.Drawing.Point(369, 206);
             this.button_mute.Name = "button_mute";
             this.button_mute.Size = new System.Drawing.Size(55, 45);
             this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mute.TabIndex = 14;
             this.button_mute.TabStop = false;
             this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
+            // 
+            // trackBar_volume
+            // 
+            this.trackBar_volume.AutoSize = false;
+            this.trackBar_volume.BackColor = System.Drawing.Color.Black;
+            this.trackBar_volume.Location = new System.Drawing.Point(430, 215);
+            this.trackBar_volume.Maximum = 100;
+            this.trackBar_volume.Name = "trackBar_volume";
+            this.trackBar_volume.Size = new System.Drawing.Size(138, 25);
+            this.trackBar_volume.TabIndex = 15;
+            this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar_volume.Value = 50;
+            this.trackBar_volume.Scroll += new System.EventHandler(this.trackBar_volume_Scroll);
+            // 
+            // label_volume
+            // 
+            this.label_volume.AutoSize = true;
+            this.label_volume.BackColor = System.Drawing.Color.Transparent;
+            this.label_volume.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_volume.ForeColor = System.Drawing.Color.White;
+            this.label_volume.Location = new System.Drawing.Point(481, 243);
+            this.label_volume.Name = "label_volume";
+            this.label_volume.Size = new System.Drawing.Size(30, 15);
+            this.label_volume.TabIndex = 16;
+            this.label_volume.Text = "50%";
             // 
             // Leitor_Radio
             // 
@@ -165,10 +163,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(580, 365);
+            this.Controls.Add(this.label_volume);
+            this.Controls.Add(this.trackBar_volume);
             this.Controls.Add(this.button_mute);
             this.Controls.Add(this.button_voltar);
-            this.Controls.Add(this.button_menos_volume);
-            this.Controls.Add(this.button_mais_volume);
             this.Controls.Add(this.button_pausa);
             this.Controls.Add(this.button_play);
             this.Controls.Add(this.button_sair);
@@ -186,11 +184,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_mais_volume)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_menos_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -200,9 +198,9 @@
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_play;
         private System.Windows.Forms.PictureBox button_pausa;
-        private System.Windows.Forms.PictureBox button_mais_volume;
-        private System.Windows.Forms.PictureBox button_menos_volume;
         private System.Windows.Forms.PictureBox button_voltar;
         private System.Windows.Forms.PictureBox button_mute;
+        private System.Windows.Forms.TrackBar trackBar_volume;
+        private System.Windows.Forms.Label label_volume;
     }
 }

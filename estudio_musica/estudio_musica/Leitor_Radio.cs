@@ -72,14 +72,12 @@ namespace estudio_musica
             axWindowsMediaPlayer1.Ctlcontrols.pause();
         }
 
-        private void button_mais_volume_Click(object sender, EventArgs e)
+        private void trackBar_volume_Scroll(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 20;
-        }
+            label_volume.Text = trackBar_volume.Value.ToString() + "%";
 
-        private void button_menos_volume_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume - 20;
+            if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
+                axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
         }
 
         private void button_mute_Click(object sender, EventArgs e)
@@ -94,6 +92,7 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
             }
+            trackBar_volume.Value = 0;
         }
 
         private void button_voltar_Click(object sender, EventArgs e)
@@ -114,9 +113,6 @@ namespace estudio_musica
             Application.Exit();
         }
 
-        private void lista_radios_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

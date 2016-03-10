@@ -38,7 +38,6 @@ namespace estudio_musica
         {
             try {
                 axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-                trackBar1.Value = 50;
             }
             catch (Exception)
             {
@@ -49,7 +48,7 @@ namespace estudio_musica
 
         private void button_play_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.play();     
+            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
         private void button_pausa_Click(object sender, EventArgs e)
@@ -71,6 +70,7 @@ namespace estudio_musica
                 lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
 
                 axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+
             }
         }
 
@@ -90,14 +90,12 @@ namespace estudio_musica
             }
         }
 
-        private void button_mais_volume_Click(object sender, EventArgs e)
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 20;
-        }
+            label1.Text = trackBar_volume.Value.ToString() + "%";
 
-        private void button_menos_volume_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume - 20;
+            if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
+                axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
         }
 
         private void button_mute_Click(object sender, EventArgs e)
@@ -112,8 +110,7 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
             }
-            trackBar1.Value = 0;
-            label1.Text = trackBar1.Value.ToString() + "%";
+            trackBar_volume.Value = 0;
         }
 
         private void button_limpar_Click(object sender, EventArgs e)
@@ -131,6 +128,7 @@ namespace estudio_musica
                     if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
                     {
                         lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
+
                         axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
                     }
                     else
@@ -183,25 +181,13 @@ namespace estudio_musica
                 progressBar1.Maximum = (int)dur;
                 try {
 
-                    trackBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+                    trackBar_volume.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
                 }
                 catch (Exception)
                 {
 
                 }
             }
-        }
-
-        private void trackBar1_Scroll(object sender, EventArgs e)
-        {
-            label1.Text = trackBar1.Value.ToString() + "%" ;
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 20;
-        }
-
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
-        {
-            if (axWindowsMediaPlayer1 != null && trackBar1 != null)
-                axWindowsMediaPlayer1.settings.volume = trackBar1.Value * 1;
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
