@@ -184,17 +184,6 @@ namespace estudio_musica
             label1.Text = trackBar1.Value.ToString() + "%";
         }
 
-        private void trackBar1_MouseUp(object sender, MouseEventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume + 1;
-
-        }
-
-        private void trackBar1_MouseDown(object sender, MouseEventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.volume = axWindowsMediaPlayer1.settings.volume - 1;
-        }
-
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

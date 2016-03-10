@@ -290,8 +290,6 @@
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar1.Value = 50;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            this.trackBar1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseDown);
-            this.trackBar1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBar1_MouseUp);
             // 
             // label1
             // 
