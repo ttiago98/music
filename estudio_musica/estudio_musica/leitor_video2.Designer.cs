@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(leitor_video2));
             this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_pesquisa = new System.Windows.Forms.TextBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.button_sair = new System.Windows.Forms.PictureBox();
+            this.button_richie_campbell = new System.Windows.Forms.Button();
+            this.button_metalica = new System.Windows.Forms.Button();
+            this.button_arctic_monkeys = new System.Windows.Forms.Button();
+            this.button_pesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
@@ -51,48 +51,12 @@
             this.youtube_player.Size = new System.Drawing.Size(427, 268);
             this.youtube_player.TabIndex = 0;
             // 
-            // button1
+            // textBox_pesquisa
             // 
-            this.button1.Location = new System.Drawing.Point(465, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(592, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 48);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(465, 81);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 48);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(503, 263);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 32);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(465, 237);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBox_pesquisa.Location = new System.Drawing.Point(465, 237);
+            this.textBox_pesquisa.Name = "textBox_pesquisa";
+            this.textBox_pesquisa.Size = new System.Drawing.Size(248, 20);
+            this.textBox_pesquisa.TabIndex = 5;
             // 
             // button_voltar
             // 
@@ -119,6 +83,54 @@
             this.button_sair.TabStop = false;
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
+            // button_richie_campbell
+            // 
+            this.button_richie_campbell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_richie_campbell.BackgroundImage")));
+            this.button_richie_campbell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_richie_campbell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_richie_campbell.ForeColor = System.Drawing.Color.White;
+            this.button_richie_campbell.Location = new System.Drawing.Point(465, 90);
+            this.button_richie_campbell.Name = "button_richie_campbell";
+            this.button_richie_campbell.Size = new System.Drawing.Size(121, 57);
+            this.button_richie_campbell.TabIndex = 21;
+            this.button_richie_campbell.Text = "Richie Campbell";
+            this.button_richie_campbell.UseVisualStyleBackColor = true;
+            this.button_richie_campbell.Click += new System.EventHandler(this.button_richie_campbell_Click);
+            // 
+            // button_metalica
+            // 
+            this.button_metalica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_metalica.BackgroundImage")));
+            this.button_metalica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_metalica.Location = new System.Drawing.Point(592, 27);
+            this.button_metalica.Name = "button_metalica";
+            this.button_metalica.Size = new System.Drawing.Size(121, 57);
+            this.button_metalica.TabIndex = 20;
+            this.button_metalica.UseVisualStyleBackColor = true;
+            this.button_metalica.Click += new System.EventHandler(this.button_metalica_Click);
+            // 
+            // button_arctic_monkeys
+            // 
+            this.button_arctic_monkeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_arctic_monkeys.BackgroundImage")));
+            this.button_arctic_monkeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_arctic_monkeys.Location = new System.Drawing.Point(465, 27);
+            this.button_arctic_monkeys.Name = "button_arctic_monkeys";
+            this.button_arctic_monkeys.Size = new System.Drawing.Size(121, 57);
+            this.button_arctic_monkeys.TabIndex = 19;
+            this.button_arctic_monkeys.UseVisualStyleBackColor = true;
+            this.button_arctic_monkeys.Click += new System.EventHandler(this.button_arctic_monkeys_Click);
+            // 
+            // button_pesquisar
+            // 
+            this.button_pesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_pesquisar.BackgroundImage")));
+            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_pesquisar.Location = new System.Drawing.Point(506, 263);
+            this.button_pesquisar.Name = "button_pesquisar";
+            this.button_pesquisar.Size = new System.Drawing.Size(170, 32);
+            this.button_pesquisar.TabIndex = 26;
+            this.button_pesquisar.UseVisualStyleBackColor = true;
+            this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
+            // 
             // leitor_video2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,13 +138,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(726, 403);
+            this.Controls.Add(this.button_pesquisar);
+            this.Controls.Add(this.button_richie_campbell);
+            this.Controls.Add(this.button_metalica);
+            this.Controls.Add(this.button_arctic_monkeys);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_voltar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox_pesquisa);
             this.Controls.Add(this.youtube_player);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "leitor_video2";
@@ -149,12 +161,12 @@
         #endregion
 
         private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_pesquisa;
         private System.Windows.Forms.PictureBox button_voltar;
         private System.Windows.Forms.PictureBox button_sair;
+        private System.Windows.Forms.Button button_richie_campbell;
+        private System.Windows.Forms.Button button_metalica;
+        private System.Windows.Forms.Button button_arctic_monkeys;
+        private System.Windows.Forms.Button button_pesquisar;
     }
 }

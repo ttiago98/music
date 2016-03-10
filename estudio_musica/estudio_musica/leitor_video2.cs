@@ -33,5 +33,25 @@ namespace estudio_musica
         {
             Close();
         }
+
+        private void button_arctic_monkeys_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/bpOSxM0rNPM&list=PL3s4G5l5nwI99ZyY19i2yFbb7SrM_0yIa";
+        }
+
+        private void button_metalica_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/7iOmo0ZuyNk&list=PL92485BFE5A6F278A";
+        }
+
+        private void button_richie_campbell_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = "https://www.youtube.com/v/QnV8yPkaJAk&list=PLFEFDDEC79CFD99BB&index=1";
+        }
+
+        private void button_pesquisar_Click(object sender, EventArgs e)
+        {
+            youtube_player.Movie = textBox_pesquisa.Text;
+        }
     }
 }
