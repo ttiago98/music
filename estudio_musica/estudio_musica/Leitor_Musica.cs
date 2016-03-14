@@ -36,14 +36,14 @@ namespace estudio_musica
 
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            try {
+            try
+            {
                 axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
             }
             catch (Exception)
             {
                 MessageBox.Show("Introduza uma musica");
             }
-
         }
 
         private void button_play_Click(object sender, EventArgs e)
@@ -90,9 +90,9 @@ namespace estudio_musica
             }
         }
 
-        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        private void trackBar_volume_ValueChanged(object sender, EventArgs e)
         {
-            label1.Text = trackBar_volume.Value.ToString() + "%";
+            label_volume.Text = trackBar_volume.Value.ToString() + "%";
 
             if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
                 axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
@@ -121,6 +121,9 @@ namespace estudio_musica
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
+            //trackBar_musica.Maximum = CInt(axWindowsMediaPlayer1.currentMedia.duration.ToString);
+            //trackBar_musica.Value = cint(axWindowsMediaPlayer1.Ctlcontrols.currentPosition);
             try
             {
                 if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped)
@@ -135,13 +138,16 @@ namespace estudio_musica
                     {
                         lista_musicas.SelectedIndex = lista_musicas.SelectedIndex = -1; 
                     }
+
+                label_tempo.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString();
+                label_duracao.Text = axWindowsMediaPlayer1.currentMedia.durationString;
+                trackBar_musica.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
                 progressBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
             }
             catch (Exception)
             {
 
             }
-
         }
 
         private void checkBox_reproduzir_tudo_CheckedChanged(object sender, EventArgs e)
@@ -175,11 +181,12 @@ namespace estudio_musica
             if (e.newState == 3)
 
             {
-
+                trackBar_musica.Maximum = (int)axWindowsMediaPlayer1.currentMedia.duration;
                 double dur = axWindowsMediaPlayer1.currentMedia.duration;
 
                 progressBar1.Maximum = (int)dur;
-                try {
+                try
+                {
 
                     trackBar_volume.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
                 }
@@ -187,7 +194,20 @@ namespace estudio_musica
                 {
 
                 }
+
             }
+        }
+
+        private void trackBar_musica_ValueChanged(object sender, EventArgs e)
+        {
+            double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
+        }
+
+        private void trackBar_musica_CursorChanged(object sender, EventArgs e)
+        {
+            //double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
+            //axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)

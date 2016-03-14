@@ -143,6 +143,7 @@
             this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_volume.Value = 50;
             this.trackBar_volume.Scroll += new System.EventHandler(this.trackBar_volume_Scroll);
+            this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar_volume_ValueChanged);
             // 
             // label_volume
             // 

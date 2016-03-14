@@ -47,7 +47,10 @@
             this.button_limpar_musica = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_volume = new System.Windows.Forms.Label();
+            this.trackBar_musica = new System.Windows.Forms.TrackBar();
+            this.label_duracao = new System.Windows.Forms.Label();
+            this.label_tempo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).BeginInit();
@@ -60,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_musica)).BeginInit();
             this.SuspendLayout();
             // 
             // button_play
@@ -219,7 +223,7 @@
             this.checkBox_reproduzir_tudo.AutoSize = true;
             this.checkBox_reproduzir_tudo.BackColor = System.Drawing.Color.Transparent;
             this.checkBox_reproduzir_tudo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_reproduzir_tudo.Location = new System.Drawing.Point(111, 285);
+            this.checkBox_reproduzir_tudo.Location = new System.Drawing.Point(111, 294);
             this.checkBox_reproduzir_tudo.Name = "checkBox_reproduzir_tudo";
             this.checkBox_reproduzir_tudo.Size = new System.Drawing.Size(119, 19);
             this.checkBox_reproduzir_tudo.TabIndex = 23;
@@ -241,7 +245,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(111, 269);
+            this.progressBar1.Location = new System.Drawing.Point(111, 465);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(433, 10);
             this.progressBar1.TabIndex = 25;
@@ -258,19 +262,54 @@
             this.trackBar_volume.TabIndex = 26;
             this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_volume.Value = 50;
-            this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+            this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar_volume_ValueChanged);
             // 
-            // label1
+            // label_volume
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(605, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 15);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "50%";
+            this.label_volume.AutoSize = true;
+            this.label_volume.BackColor = System.Drawing.Color.Transparent;
+            this.label_volume.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_volume.ForeColor = System.Drawing.Color.White;
+            this.label_volume.Location = new System.Drawing.Point(605, 201);
+            this.label_volume.Name = "label_volume";
+            this.label_volume.Size = new System.Drawing.Size(30, 15);
+            this.label_volume.TabIndex = 27;
+            this.label_volume.Text = "50%";
+            // 
+            // trackBar_musica
+            // 
+            this.trackBar_musica.AutoSize = false;
+            this.trackBar_musica.BackColor = System.Drawing.Color.Black;
+            this.trackBar_musica.Location = new System.Drawing.Point(111, 269);
+            this.trackBar_musica.Maximum = 1000000;
+            this.trackBar_musica.Name = "trackBar_musica";
+            this.trackBar_musica.Size = new System.Drawing.Size(433, 22);
+            this.trackBar_musica.TabIndex = 28;
+            this.trackBar_musica.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar_musica.ValueChanged += new System.EventHandler(this.trackBar_musica_ValueChanged);
+            this.trackBar_musica.CursorChanged += new System.EventHandler(this.trackBar_musica_CursorChanged);
+            // 
+            // label_duracao
+            // 
+            this.label_duracao.AutoSize = true;
+            this.label_duracao.BackColor = System.Drawing.Color.Transparent;
+            this.label_duracao.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_duracao.ForeColor = System.Drawing.Color.White;
+            this.label_duracao.Location = new System.Drawing.Point(503, 294);
+            this.label_duracao.Name = "label_duracao";
+            this.label_duracao.Size = new System.Drawing.Size(0, 19);
+            this.label_duracao.TabIndex = 29;
+            // 
+            // label_tempo
+            // 
+            this.label_tempo.AutoSize = true;
+            this.label_tempo.BackColor = System.Drawing.Color.Transparent;
+            this.label_tempo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tempo.ForeColor = System.Drawing.Color.White;
+            this.label_tempo.Location = new System.Drawing.Point(460, 294);
+            this.label_tempo.Name = "label_tempo";
+            this.label_tempo.Size = new System.Drawing.Size(0, 19);
+            this.label_tempo.TabIndex = 30;
             // 
             // Leitor_Musica
             // 
@@ -279,7 +318,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(669, 481);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_tempo);
+            this.Controls.Add(this.label_duracao);
+            this.Controls.Add(this.trackBar_musica);
+            this.Controls.Add(this.label_volume);
             this.Controls.Add(this.trackBar_volume);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button_limpar_musica);
@@ -313,6 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_musica)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,6 +379,9 @@
         private System.Windows.Forms.PictureBox button_limpar_musica;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TrackBar trackBar_volume;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_volume;
+        private System.Windows.Forms.TrackBar trackBar_musica;
+        private System.Windows.Forms.Label label_duracao;
+        private System.Windows.Forms.Label label_tempo;
     }
 }

@@ -80,6 +80,14 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
         }
 
+        private void trackBar_volume_ValueChanged(object sender, EventArgs e)
+        {
+            label_volume.Text = trackBar_volume.Value.ToString() + "%";
+
+            if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
+                axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+        }
+
         private void button_mute_Click(object sender, EventArgs e)
         {
             if (vol == 0)
@@ -112,7 +120,6 @@ namespace estudio_musica
         {
             Application.Exit();
         }
-
 
     }
 }
