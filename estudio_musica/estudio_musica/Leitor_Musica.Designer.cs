@@ -201,9 +201,9 @@
             // button_mute
             // 
             this.button_mute.BackColor = System.Drawing.Color.Transparent;
+            this.button_mute.BackgroundImage = global::estudio_musica.Properties.Resources.sound;
             this.button_mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_mute.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button_mute.Image = ((System.Drawing.Image)(resources.GetObject("button_mute.Image")));
             this.button_mute.Location = new System.Drawing.Point(591, 234);
             this.button_mute.Name = "button_mute";
             this.button_mute.Size = new System.Drawing.Size(55, 45);

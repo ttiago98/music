@@ -46,17 +46,17 @@
             // youtube_player
             // 
             this.youtube_player.Enabled = true;
-            this.youtube_player.Location = new System.Drawing.Point(32, 27);
+            this.youtube_player.Location = new System.Drawing.Point(44, 39);
             this.youtube_player.Name = "youtube_player";
             this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
-            this.youtube_player.Size = new System.Drawing.Size(427, 268);
+            this.youtube_player.Size = new System.Drawing.Size(506, 326);
             this.youtube_player.TabIndex = 0;
             // 
             // textBox_pesquisa
             // 
-            this.textBox_pesquisa.Location = new System.Drawing.Point(465, 237);
+            this.textBox_pesquisa.Location = new System.Drawing.Point(588, 284);
             this.textBox_pesquisa.Name = "textBox_pesquisa";
-            this.textBox_pesquisa.Size = new System.Drawing.Size(248, 20);
+            this.textBox_pesquisa.Size = new System.Drawing.Size(335, 20);
             this.textBox_pesquisa.TabIndex = 5;
             // 
             // button_voltar
@@ -64,7 +64,7 @@
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 350);
+            this.button_voltar.Location = new System.Drawing.Point(12, 395);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(65, 41);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -76,7 +76,7 @@
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
-            this.button_sair.Location = new System.Drawing.Point(639, 350);
+            this.button_sair.Location = new System.Drawing.Point(865, 395);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,9 +90,9 @@
             this.button_richie_campbell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_richie_campbell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_richie_campbell.ForeColor = System.Drawing.Color.White;
-            this.button_richie_campbell.Location = new System.Drawing.Point(465, 90);
+            this.button_richie_campbell.Location = new System.Drawing.Point(588, 169);
             this.button_richie_campbell.Name = "button_richie_campbell";
-            this.button_richie_campbell.Size = new System.Drawing.Size(121, 57);
+            this.button_richie_campbell.Size = new System.Drawing.Size(148, 72);
             this.button_richie_campbell.TabIndex = 21;
             this.button_richie_campbell.Text = "Richie Campbell";
             this.button_richie_campbell.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             // 
             this.button_metalica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_metalica.BackgroundImage")));
             this.button_metalica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_metalica.Location = new System.Drawing.Point(592, 27);
+            this.button_metalica.Location = new System.Drawing.Point(775, 39);
             this.button_metalica.Name = "button_metalica";
-            this.button_metalica.Size = new System.Drawing.Size(121, 57);
+            this.button_metalica.Size = new System.Drawing.Size(148, 72);
             this.button_metalica.TabIndex = 20;
             this.button_metalica.UseVisualStyleBackColor = true;
             this.button_metalica.Click += new System.EventHandler(this.button_metalica_Click);
@@ -113,9 +113,9 @@
             // 
             this.button_arctic_monkeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_arctic_monkeys.BackgroundImage")));
             this.button_arctic_monkeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_arctic_monkeys.Location = new System.Drawing.Point(465, 27);
+            this.button_arctic_monkeys.Location = new System.Drawing.Point(588, 39);
             this.button_arctic_monkeys.Name = "button_arctic_monkeys";
-            this.button_arctic_monkeys.Size = new System.Drawing.Size(121, 57);
+            this.button_arctic_monkeys.Size = new System.Drawing.Size(148, 72);
             this.button_arctic_monkeys.TabIndex = 19;
             this.button_arctic_monkeys.UseVisualStyleBackColor = true;
             this.button_arctic_monkeys.Click += new System.EventHandler(this.button_arctic_monkeys_Click);
@@ -124,7 +124,7 @@
             // 
             this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.button_pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("button_pesquisar.Image")));
-            this.button_pesquisar.Location = new System.Drawing.Point(490, 263);
+            this.button_pesquisar.Location = new System.Drawing.Point(667, 310);
             this.button_pesquisar.Name = "button_pesquisar";
             this.button_pesquisar.Size = new System.Drawing.Size(196, 68);
             this.button_pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,9 +136,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(726, 403);
+            this.ClientSize = new System.Drawing.Size(952, 448);
             this.Controls.Add(this.button_pesquisar);
             this.Controls.Add(this.button_richie_campbell);
             this.Controls.Add(this.button_metalica);

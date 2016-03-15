@@ -63,9 +63,9 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_mute {
+        internal static System.Drawing.Bitmap mute {
             get {
-                object obj = ResourceManager.GetObject("button_mute", resourceCulture);
+                object obj = ResourceManager.GetObject("mute", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_sound {
+        internal static System.Drawing.Bitmap sound {
             get {
-                object obj = ResourceManager.GetObject("button_sound", resourceCulture);
+                object obj = ResourceManager.GetObject("sound", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

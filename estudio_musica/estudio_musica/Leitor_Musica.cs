@@ -110,12 +110,17 @@ namespace estudio_musica
             {
                 axWindowsMediaPlayer1.settings.mute = true;
                 vol = 1;
+                button_mute.Image = Properties.Resources.mute;
             }
             else if (vol == 1)
             {
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
+                button_mute.Image = Properties.Resources.sound;
+
             }
+
+            
         }
 
         private void button_limpar_Click(object sender, EventArgs e)
@@ -131,16 +136,19 @@ namespace estudio_musica
             {
                 if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped)
 
-                    if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
-                    {
-                        lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
+                if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
+                {
+                    lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
 
-                        axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-                    }
-                    else
-                    {
-                        lista_musicas.SelectedIndex = lista_musicas.SelectedIndex = -1; 
-                    }
+                    axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                }
+
+                else
+                {
+
+                lista_musicas.SelectedIndex = lista_musicas.SelectedIndex = -1; 
+
+                }
 
                 label_tempo.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString();
 
