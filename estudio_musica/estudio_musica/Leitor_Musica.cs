@@ -18,7 +18,7 @@ namespace estudio_musica
         }
 
         string[] files, path;
-        int vol = 0;
+        int vol;
 
         private void button_importar_Click(object sender, EventArgs e)
         {
@@ -63,6 +63,8 @@ namespace estudio_musica
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer1.Stop();
             trackBar_musica.Value = 0;
+            label_tempo.Text = "00:00";
+
         }
 
         private void button_proxima_musica_Click(object sender, EventArgs e)
@@ -114,7 +116,6 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
             }
-            
         }
 
         private void button_limpar_Click(object sender, EventArgs e)
@@ -142,9 +143,11 @@ namespace estudio_musica
                     }
 
                 label_tempo.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPosition.ToString();
+
                 label_duracao.Text = axWindowsMediaPlayer1.currentMedia.durationString;
+
                 trackBar_musica.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
-                progressBar1.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+
             }
             catch (Exception)
             {
@@ -186,7 +189,6 @@ namespace estudio_musica
                 trackBar_musica.Maximum = (int)axWindowsMediaPlayer1.currentMedia.duration;
                 double dur = axWindowsMediaPlayer1.currentMedia.duration;
 
-                progressBar1.Maximum = (int)dur;
                 try
                 {
 
@@ -200,18 +202,17 @@ namespace estudio_musica
             }
         }
 
-        private void trackBar_musica_ValueChanged(object sender, EventArgs e)
+        private void trackBar_musica_Scroll(object sender, EventArgs e)
         {
-            try {
-                double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
-                axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
+        try {
+            double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
+            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
             }
-            catch (Exception)
+        catch(Exception)
             {
-
+    
             }
-
-       }
+        }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -45,7 +45,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBox_reproduzir_tudo = new System.Windows.Forms.CheckBox();
             this.button_limpar_musica = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
             this.label_volume = new System.Windows.Forms.Label();
             this.trackBar_musica = new System.Windows.Forms.TrackBar();
@@ -243,13 +242,6 @@
             this.button_limpar_musica.TabStop = false;
             this.button_limpar_musica.Click += new System.EventHandler(this.button_limpar_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(111, 465);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(433, 10);
-            this.progressBar1.TabIndex = 25;
-            // 
             // trackBar_volume
             // 
             this.trackBar_volume.AutoSize = false;
@@ -286,7 +278,7 @@
             this.trackBar_musica.Size = new System.Drawing.Size(433, 22);
             this.trackBar_musica.TabIndex = 28;
             this.trackBar_musica.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBar_musica.ValueChanged += new System.EventHandler(this.trackBar_musica_ValueChanged);
+            this.trackBar_musica.Scroll += new System.EventHandler(this.trackBar_musica_Scroll);
             // 
             // label_duracao
             // 
@@ -322,7 +314,6 @@
             this.Controls.Add(this.trackBar_musica);
             this.Controls.Add(this.label_volume);
             this.Controls.Add(this.trackBar_volume);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button_limpar_musica);
             this.Controls.Add(this.checkBox_reproduzir_tudo);
             this.Controls.Add(this.button_mute);
@@ -376,7 +367,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.CheckBox checkBox_reproduzir_tudo;
         private System.Windows.Forms.PictureBox button_limpar_musica;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TrackBar trackBar_volume;
         private System.Windows.Forms.Label label_volume;
         private System.Windows.Forms.TrackBar trackBar_musica;
