@@ -63,7 +63,7 @@ namespace estudio_musica
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer1.Stop();
             trackBar_musica.Value = 0;
-            label_tempo.Text = "00:00";
+            label_tempo.Text = "00:00"; 
 
         }
 
