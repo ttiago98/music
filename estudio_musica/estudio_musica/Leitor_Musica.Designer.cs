@@ -287,7 +287,6 @@
             this.trackBar_musica.TabIndex = 28;
             this.trackBar_musica.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_musica.ValueChanged += new System.EventHandler(this.trackBar_musica_ValueChanged);
-            this.trackBar_musica.CursorChanged += new System.EventHandler(this.trackBar_musica_CursorChanged);
             // 
             // label_duracao
             // 
@@ -306,7 +305,7 @@
             this.label_tempo.BackColor = System.Drawing.Color.Transparent;
             this.label_tempo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tempo.ForeColor = System.Drawing.Color.White;
-            this.label_tempo.Location = new System.Drawing.Point(460, 294);
+            this.label_tempo.Location = new System.Drawing.Point(409, 294);
             this.label_tempo.Name = "label_tempo";
             this.label_tempo.Size = new System.Drawing.Size(0, 19);
             this.label_tempo.TabIndex = 30;
