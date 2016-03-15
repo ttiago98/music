@@ -36,10 +36,11 @@
             this.button_richie_campbell = new System.Windows.Forms.Button();
             this.button_metalica = new System.Windows.Forms.Button();
             this.button_arctic_monkeys = new System.Windows.Forms.Button();
-            this.button_pesquisar = new System.Windows.Forms.Button();
+            this.button_pesquisar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_pesquisar)).BeginInit();
             this.SuspendLayout();
             // 
             // youtube_player
@@ -121,14 +122,14 @@
             // 
             // button_pesquisar
             // 
-            this.button_pesquisar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_pesquisar.BackgroundImage")));
-            this.button_pesquisar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_pesquisar.Location = new System.Drawing.Point(506, 263);
+            this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.button_pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("button_pesquisar.Image")));
+            this.button_pesquisar.Location = new System.Drawing.Point(490, 263);
             this.button_pesquisar.Name = "button_pesquisar";
-            this.button_pesquisar.Size = new System.Drawing.Size(170, 32);
-            this.button_pesquisar.TabIndex = 26;
-            this.button_pesquisar.UseVisualStyleBackColor = true;
+            this.button_pesquisar.Size = new System.Drawing.Size(196, 68);
+            this.button_pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_pesquisar.TabIndex = 27;
+            this.button_pesquisar.TabStop = false;
             this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
             // 
             // leitor_video2
@@ -147,12 +148,15 @@
             this.Controls.Add(this.textBox_pesquisa);
             this.Controls.Add(this.youtube_player);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "leitor_video2";
             this.Text = "Leitor de Vídeo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.leitor_video2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_pesquisar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +171,6 @@
         private System.Windows.Forms.Button button_richie_campbell;
         private System.Windows.Forms.Button button_metalica;
         private System.Windows.Forms.Button button_arctic_monkeys;
-        private System.Windows.Forms.Button button_pesquisar;
+        private System.Windows.Forms.PictureBox button_pesquisar;
     }
 }

@@ -34,12 +34,12 @@
             this.button_metalica = new System.Windows.Forms.Button();
             this.button_richie_campbell = new System.Windows.Forms.Button();
             this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
-            this.button_voltar = new System.Windows.Forms.PictureBox();
             this.textBox_pesquisar = new System.Windows.Forms.TextBox();
             this.button_pesquisar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_sair
@@ -99,19 +99,6 @@
             this.youtube_player.Size = new System.Drawing.Size(562, 374);
             this.youtube_player.TabIndex = 22;
             // 
-            // button_voltar
-            // 
-            this.button_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 437);
-            this.button_voltar.Name = "button_voltar";
-            this.button_voltar.Size = new System.Drawing.Size(65, 41);
-            this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_voltar.TabIndex = 23;
-            this.button_voltar.TabStop = false;
-            this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
-            // 
             // textBox_pesquisar
             // 
             this.textBox_pesquisar.Location = new System.Drawing.Point(646, 321);
@@ -131,6 +118,18 @@
             this.button_pesquisar.UseVisualStyleBackColor = true;
             this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 437);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // Leitor_video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,9 +137,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(946, 490);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_pesquisar);
             this.Controls.Add(this.textBox_pesquisar);
-            this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.youtube_player);
             this.Controls.Add(this.button_richie_campbell);
             this.Controls.Add(this.button_metalica);
@@ -154,7 +153,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_video_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,8 +165,8 @@
         private System.Windows.Forms.Button button_metalica;
         private System.Windows.Forms.Button button_richie_campbell;
         private AxShockwaveFlashObjects.AxShockwaveFlash youtube_player;
-        private System.Windows.Forms.PictureBox button_voltar;
         private System.Windows.Forms.TextBox textBox_pesquisar;
         private System.Windows.Forms.Button button_pesquisar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
