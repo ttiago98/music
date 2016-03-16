@@ -49,7 +49,7 @@ namespace estudio_musica
         private void button_play_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
-            button_pausa.Image = Properties.Resources.pausa_green;
+            button_pausa.Image = Properties.Resources.pausa_green; 
             timer1.Start();
         }
 
