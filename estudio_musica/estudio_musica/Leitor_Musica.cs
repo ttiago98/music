@@ -49,12 +49,14 @@ namespace estudio_musica
         private void button_play_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
+            button_pausa.Image = Properties.Resources.pausa_green;
             timer1.Start();
         }
 
         private void button_pausa_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
+            button_pausa.Image = Properties.Resources.pausa_red;
             timer1.Stop();
         }
 
