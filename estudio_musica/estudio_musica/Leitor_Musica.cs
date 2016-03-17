@@ -122,7 +122,6 @@ namespace estudio_musica
 
             }
 
-            
         }
 
         private void button_limpar_Click(object sender, EventArgs e)
@@ -177,20 +176,6 @@ namespace estudio_musica
             }
         }
 
-        private void button_voltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 frm = new Form1();
-            frm.Show();
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
-
-        }
-
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
             if (e.newState == 3)
@@ -222,6 +207,20 @@ namespace estudio_musica
             {
     
             }
+        }
+
+        private void button_voltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 frm = new Form1();
+            frm.Show();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)

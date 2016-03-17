@@ -94,13 +94,14 @@ namespace estudio_musica
             {
                 axWindowsMediaPlayer1.settings.mute = true;
                 vol = 1;
+                button_mute.Image = Properties.Resources.mute;
             }
             else if (vol == 1)
             {
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
+                button_mute.Image = Properties.Resources.sound;
             }
-            trackBar_volume.Value = 0;
         }
 
         private void button_voltar_Click(object sender, EventArgs e)

@@ -17,23 +17,6 @@ namespace estudio_musica
             InitializeComponent();
         }
 
-        private void leitor_video2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button_voltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 frm = new Form1();
-            frm.Show();
-        }
-
-        private void button_sair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void button_arctic_monkeys_Click(object sender, EventArgs e)
         {
             youtube_player.Movie = "https://www.youtube.com/v/bpOSxM0rNPM&list=PL3s4G5l5nwI99ZyY19i2yFbb7SrM_0yIa";
@@ -53,5 +36,24 @@ namespace estudio_musica
         {
             youtube_player.Movie = textBox_pesquisa.Text;
         }
+
+        private void button_voltar_Click(object sender, EventArgs e)
+        {
+        
+            this.Hide();
+            Form1 frm = new Form1();
+            frm.Show();
+        }
+
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void leitor_video2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
