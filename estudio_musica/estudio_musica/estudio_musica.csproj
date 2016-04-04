@@ -199,7 +199,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Resources\pausa_red.png" />
-    <EmbeddedResource Include="Resources\pausa_green.png" />
+    <None Include="Resources\pausa_green.png" />
     <EmbeddedResource Include="Resources\mute.png" />
     <EmbeddedResource Include="Resources\sound.png" />
   </ItemGroup>
