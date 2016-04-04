@@ -282,6 +282,8 @@
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.label_verificarbd);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ficha_tecnica";
             this.Text = "Ficha Tecnica";
             this.Load += new System.EventHandler(this.ficha_tecnica_Load);
