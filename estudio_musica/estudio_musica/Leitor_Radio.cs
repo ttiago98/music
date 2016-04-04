@@ -86,6 +86,11 @@ namespace estudio_musica
 
             if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
                 axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+            if (trackBar_volume.Value == 0)
+                button_mute.Image = Properties.Resources.mute;
+            else
+                button_mute.Image = Properties.Resources.sound_red;
+
         }
 
         private void button_mute_Click(object sender, EventArgs e)
@@ -100,7 +105,7 @@ namespace estudio_musica
             {
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
-                button_mute.Image = Properties.Resources.sound;
+                button_mute.Image = Properties.Resources.sound_red;
             }
         }
 

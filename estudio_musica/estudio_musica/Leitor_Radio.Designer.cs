@@ -84,11 +84,12 @@
             // button_play
             // 
             this.button_play.BackColor = System.Drawing.Color.Transparent;
-            this.button_play.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_play.BackgroundImage")));
             this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_play.Image = ((System.Drawing.Image)(resources.GetObject("button_play.Image")));
             this.button_play.Location = new System.Drawing.Point(120, 245);
             this.button_play.Name = "button_play";
             this.button_play.Size = new System.Drawing.Size(100, 89);
+            this.button_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_play.TabIndex = 9;
             this.button_play.TabStop = false;
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
@@ -96,11 +97,12 @@
             // button_pausa
             // 
             this.button_pausa.BackColor = System.Drawing.Color.Transparent;
-            this.button_pausa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_pausa.BackgroundImage")));
             this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_pausa.Image = ((System.Drawing.Image)(resources.GetObject("button_pausa.Image")));
             this.button_pausa.Location = new System.Drawing.Point(236, 267);
             this.button_pausa.Name = "button_pausa";
             this.button_pausa.Size = new System.Drawing.Size(67, 54);
+            this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_pausa.TabIndex = 10;
             this.button_pausa.TabStop = false;
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);

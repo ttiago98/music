@@ -198,9 +198,10 @@
     <Content Include="estudi_musica.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\mute.png" />
+    <None Include="Resources\sound_red.png" />
     <EmbeddedResource Include="Resources\pausa_red.png" />
     <None Include="Resources\pausa_green.png" />
-    <EmbeddedResource Include="Resources\mute.png" />
     <EmbeddedResource Include="Resources\sound.png" />
   </ItemGroup>
   <ItemGroup>
