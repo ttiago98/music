@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button_leitor_musica = new System.Windows.Forms.Button();
             this.button_leitor_radio = new System.Windows.Forms.Button();
             this.button_sair = new System.Windows.Forms.Button();
             this.button_leitor_video = new System.Windows.Forms.Button();
             this.button_artistas = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // button_leitor_musica
@@ -43,6 +45,7 @@
             this.button_leitor_musica.Size = new System.Drawing.Size(166, 52);
             this.button_leitor_musica.TabIndex = 0;
             this.button_leitor_musica.Text = "Leitor de Música";
+            this.toolTip1.SetToolTip(this.button_leitor_musica, "Leitor de Música");
             this.button_leitor_musica.UseVisualStyleBackColor = true;
             this.button_leitor_musica.Click += new System.EventHandler(this.button_leitor_musica_Click);
             // 
@@ -53,6 +56,7 @@
             this.button_leitor_radio.Size = new System.Drawing.Size(166, 52);
             this.button_leitor_radio.TabIndex = 1;
             this.button_leitor_radio.Text = "Leitor de Rádio";
+            this.toolTip1.SetToolTip(this.button_leitor_radio, "Leitor de Rádio");
             this.button_leitor_radio.UseVisualStyleBackColor = true;
             this.button_leitor_radio.Click += new System.EventHandler(this.button_leitor_radio_Click);
             // 
@@ -74,6 +78,7 @@
             this.button_leitor_video.Size = new System.Drawing.Size(166, 52);
             this.button_leitor_video.TabIndex = 3;
             this.button_leitor_video.Text = "Leitor de Vídeos";
+            this.toolTip1.SetToolTip(this.button_leitor_video, "Leitor de Vídeos");
             this.button_leitor_video.UseVisualStyleBackColor = true;
             this.button_leitor_video.Click += new System.EventHandler(this.button_leitor_video_Click);
             // 
@@ -84,6 +89,7 @@
             this.button_artistas.Size = new System.Drawing.Size(166, 52);
             this.button_artistas.TabIndex = 4;
             this.button_artistas.Text = "Artistas";
+            this.toolTip1.SetToolTip(this.button_artistas, "Artistas");
             this.button_artistas.UseVisualStyleBackColor = true;
             this.button_artistas.Click += new System.EventHandler(this.button_artistas_Click);
             // 
@@ -116,6 +122,7 @@
         private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.Button button_leitor_video;
         private System.Windows.Forms.Button button_artistas;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

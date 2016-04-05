@@ -22,13 +22,13 @@ namespace estudio_musica
         private void Leitor_Radio_Load(object sender, EventArgs e)
         {
             lista_radios.Items.Add("RFM");
-            lista_radios.Items.Add("Rádio Comercial");
-            lista_radios.Items.Add("M80");
-            lista_radios.Items.Add("Cidade FM");
+            lista_radios.Items.Add("Rádio ComercialX");
+            lista_radios.Items.Add("M80X");
+            lista_radios.Items.Add("Cidade FMX");
             lista_radios.Items.Add("Antena 1");
             lista_radios.Items.Add("Rádio Gilão");
             lista_radios.Items.Add("Total FM");
-            lista_radios.Items.Add("Mega Hits");
+            lista_radios.Items.Add("Mega HitsX");
         }
 
         private void button_play_Click(object sender, EventArgs e)
@@ -86,9 +86,17 @@ namespace estudio_musica
 
             if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
                 axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+
             if (trackBar_volume.Value == 0)
                 button_mute.Image = Properties.Resources.mute;
-            else
+
+            if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
+                button_mute.Image = Properties.Resources.pausa_green;
+
+            if (trackBar_volume.Value >= 33 && trackBar_volume.Value < 66)
+                button_mute.Image = Properties.Resources.mute;
+
+            if (trackBar_volume.Value >= 66)
                 button_mute.Image = Properties.Resources.sound_red;
 
         }
@@ -106,6 +114,15 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
                 button_mute.Image = Properties.Resources.sound_red;
+
+                if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
+                    button_mute.Image = Properties.Resources.pausa_green;
+
+                if (trackBar_volume.Value >= 33 && trackBar_volume.Value < 66)
+                    button_mute.Image = Properties.Resources.mute;
+
+                if (trackBar_volume.Value >= 66)
+                    button_mute.Image = Properties.Resources.sound_red;
             }
         }
 

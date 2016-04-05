@@ -214,7 +214,6 @@
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // checkBox_reproduzir_tudo
@@ -254,6 +253,7 @@
             this.trackBar_volume.TabIndex = 26;
             this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_volume.Value = 50;
+            this.trackBar_volume.Scroll += new System.EventHandler(this.trackBar_volume_Scroll);
             this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar_volume_ValueChanged);
             // 
             // label_volume
