@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(leitor_video2));
             this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.textBox_pesquisa = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.button_metalica = new System.Windows.Forms.Button();
             this.button_arctic_monkeys = new System.Windows.Forms.Button();
             this.button_pesquisar = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
@@ -70,6 +72,7 @@
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 14;
             this.button_voltar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_voltar, "Voltar atrás");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // button_sair
@@ -82,6 +85,7 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 15;
             this.button_sair.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_sair, "Sair do porgrama");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_richie_campbell
@@ -173,5 +177,6 @@
         private System.Windows.Forms.Button button_metalica;
         private System.Windows.Forms.Button button_arctic_monkeys;
         private System.Windows.Forms.PictureBox button_pesquisar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

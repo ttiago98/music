@@ -141,7 +141,7 @@
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
             this.button_voltar.Location = new System.Drawing.Point(12, 333);
             this.button_voltar.Name = "button_voltar";
-            this.button_voltar.Size = new System.Drawing.Size(65, 41);
+            this.button_voltar.Size = new System.Drawing.Size(83, 41);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 24;
             this.button_voltar.TabStop = false;

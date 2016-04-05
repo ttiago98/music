@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leitor_Radio));
             this.lista_radios = new System.Windows.Forms.ListBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -38,6 +39,7 @@
             this.button_mute = new System.Windows.Forms.PictureBox();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
             this.label_volume = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
@@ -79,6 +81,7 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 8;
             this.button_sair.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_sair, "Sair do programa");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_play
@@ -92,6 +95,7 @@
             this.button_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_play.TabIndex = 9;
             this.button_play.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_play, "Play");
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
             // button_pausa
@@ -105,6 +109,7 @@
             this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_pausa.TabIndex = 10;
             this.button_pausa.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_pausa, "Stop");
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
             // 
             // button_voltar
@@ -118,6 +123,7 @@
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 13;
             this.button_voltar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_voltar, "Voltar atrás");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // button_mute
@@ -131,6 +137,7 @@
             this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mute.TabIndex = 14;
             this.button_mute.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_mute, "Remover som");
             this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
             // 
             // trackBar_volume
@@ -153,7 +160,7 @@
             this.label_volume.BackColor = System.Drawing.Color.Transparent;
             this.label_volume.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_volume.ForeColor = System.Drawing.Color.White;
-            this.label_volume.Location = new System.Drawing.Point(481, 243);
+            this.label_volume.Location = new System.Drawing.Point(490, 243);
             this.label_volume.Name = "label_volume";
             this.label_volume.Size = new System.Drawing.Size(30, 15);
             this.label_volume.TabIndex = 16;
@@ -205,5 +212,6 @@
         private System.Windows.Forms.PictureBox button_mute;
         private System.Windows.Forms.TrackBar trackBar_volume;
         private System.Windows.Forms.Label label_volume;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

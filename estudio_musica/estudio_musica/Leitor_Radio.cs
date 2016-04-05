@@ -88,16 +88,16 @@ namespace estudio_musica
                 axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
 
             if (trackBar_volume.Value == 0)
-                button_mute.Image = Properties.Resources.mute;
+                button_mute.Image = Properties.Resources.but_mute_red;
 
             if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
-                button_mute.Image = Properties.Resources.pausa_green;
+                button_mute.Image = Properties.Resources.but_som_red_1;
 
             if (trackBar_volume.Value >= 33 && trackBar_volume.Value < 66)
-                button_mute.Image = Properties.Resources.mute;
+                button_mute.Image = Properties.Resources.but_som_red_2;
 
             if (trackBar_volume.Value >= 66)
-                button_mute.Image = Properties.Resources.sound_red;
+                button_mute.Image = Properties.Resources.but_som_red_3;
 
         }
 
@@ -107,22 +107,21 @@ namespace estudio_musica
             {
                 axWindowsMediaPlayer1.settings.mute = true;
                 vol = 1;
-                button_mute.Image = Properties.Resources.mute;
+                button_mute.Image = Properties.Resources.but_mute_red;
             }
             else if (vol == 1)
             {
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
-                button_mute.Image = Properties.Resources.sound_red;
 
                 if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
-                    button_mute.Image = Properties.Resources.pausa_green;
+                    button_mute.Image = Properties.Resources.but_som_red_1;
 
                 if (trackBar_volume.Value >= 33 && trackBar_volume.Value < 66)
-                    button_mute.Image = Properties.Resources.mute;
+                    button_mute.Image = Properties.Resources.but_som_red_2;
 
                 if (trackBar_volume.Value >= 66)
-                    button_mute.Image = Properties.Resources.sound_red;
+                    button_mute.Image = Properties.Resources.but_som_red_3;
             }
         }
 

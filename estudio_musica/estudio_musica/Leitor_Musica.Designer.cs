@@ -44,13 +44,15 @@
             this.button_mute = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.checkBox_reproduzir_tudo = new System.Windows.Forms.CheckBox();
-            this.button_limpar_musica = new System.Windows.Forms.PictureBox();
+            this.button_limpar_tudo = new System.Windows.Forms.PictureBox();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
             this.label_volume = new System.Windows.Forms.Label();
             this.trackBar_musica = new System.Windows.Forms.TrackBar();
             this.label_duracao = new System.Windows.Forms.Label();
             this.label_tempo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_separador = new System.Windows.Forms.Label();
+            this.button_limpar_selecionado = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).BeginInit();
@@ -61,9 +63,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_importar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_tudo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_musica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_selecionado)).BeginInit();
             this.SuspendLayout();
             // 
             // button_play
@@ -78,6 +81,7 @@
             this.button_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_play.TabIndex = 10;
             this.button_play.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_play, "Play");
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
             // button_musica_anterior
@@ -92,6 +96,7 @@
             this.button_musica_anterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_musica_anterior.TabIndex = 11;
             this.button_musica_anterior.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_musica_anterior, "Música anterior");
             this.button_musica_anterior.Click += new System.EventHandler(this.button_musica_anterior_Click);
             // 
             // button_proxima_musica
@@ -106,6 +111,7 @@
             this.button_proxima_musica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_proxima_musica.TabIndex = 12;
             this.button_proxima_musica.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_proxima_musica, "Próxima música");
             this.button_proxima_musica.Click += new System.EventHandler(this.button_proxima_musica_Click);
             // 
             // button_pausa
@@ -120,6 +126,7 @@
             this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_pausa.TabIndex = 13;
             this.button_pausa.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_pausa, "Pausa");
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
             // 
             // button_sair
@@ -132,6 +139,7 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 16;
             this.button_sair.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_sair, "Sair do programa");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_voltar
@@ -139,12 +147,13 @@
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 424);
+            this.button_voltar.Location = new System.Drawing.Point(-7, 428);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(79, 45);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 17;
             this.button_voltar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_voltar, "Voltar atrás");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // axWindowsMediaPlayer1
@@ -177,6 +186,7 @@
             this.button_importar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_importar.TabIndex = 20;
             this.button_importar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_importar, "Importar Musicas");
             this.button_importar.Click += new System.EventHandler(this.button_importar_Click);
             // 
             // openFileDialog1
@@ -197,6 +207,7 @@
             this.button_stop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_stop.TabIndex = 21;
             this.button_stop.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_stop, "Stop");
             this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
             // 
             // button_mute
@@ -211,6 +222,7 @@
             this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mute.TabIndex = 22;
             this.button_mute.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_mute, "Remover som");
             this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
             // 
             // timer1
@@ -230,17 +242,18 @@
             this.checkBox_reproduzir_tudo.UseVisualStyleBackColor = false;
             this.checkBox_reproduzir_tudo.CheckedChanged += new System.EventHandler(this.checkBox_reproduzir_tudo_CheckedChanged);
             // 
-            // button_limpar_musica
+            // button_limpar_tudo
             // 
-            this.button_limpar_musica.BackColor = System.Drawing.Color.Transparent;
-            this.button_limpar_musica.Image = ((System.Drawing.Image)(resources.GetObject("button_limpar_musica.Image")));
-            this.button_limpar_musica.Location = new System.Drawing.Point(12, 115);
-            this.button_limpar_musica.Name = "button_limpar_musica";
-            this.button_limpar_musica.Size = new System.Drawing.Size(60, 50);
-            this.button_limpar_musica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_limpar_musica.TabIndex = 24;
-            this.button_limpar_musica.TabStop = false;
-            this.button_limpar_musica.Click += new System.EventHandler(this.button_limpar_Click);
+            this.button_limpar_tudo.BackColor = System.Drawing.Color.Transparent;
+            this.button_limpar_tudo.Image = ((System.Drawing.Image)(resources.GetObject("button_limpar_tudo.Image")));
+            this.button_limpar_tudo.Location = new System.Drawing.Point(12, 166);
+            this.button_limpar_tudo.Name = "button_limpar_tudo";
+            this.button_limpar_tudo.Size = new System.Drawing.Size(60, 50);
+            this.button_limpar_tudo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_limpar_tudo.TabIndex = 24;
+            this.button_limpar_tudo.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_limpar_tudo, "Limpar lista completa");
+            this.button_limpar_tudo.Click += new System.EventHandler(this.button_limpar_tudo_Click);
             // 
             // trackBar_volume
             // 
@@ -291,6 +304,7 @@
             this.label_duracao.Size = new System.Drawing.Size(45, 19);
             this.label_duracao.TabIndex = 29;
             this.label_duracao.Text = "00:00";
+            this.label_duracao.Visible = false;
             // 
             // label_tempo
             // 
@@ -303,17 +317,32 @@
             this.label_tempo.Size = new System.Drawing.Size(45, 19);
             this.label_tempo.TabIndex = 30;
             this.label_tempo.Text = "00:00";
+            this.label_tempo.Visible = false;
             // 
-            // label1
+            // label_separador
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(483, 294);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 19);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "/";
+            this.label_separador.BackColor = System.Drawing.Color.Transparent;
+            this.label_separador.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_separador.ForeColor = System.Drawing.Color.White;
+            this.label_separador.Location = new System.Drawing.Point(483, 294);
+            this.label_separador.Name = "label_separador";
+            this.label_separador.Size = new System.Drawing.Size(16, 19);
+            this.label_separador.TabIndex = 31;
+            this.label_separador.Text = "/";
+            this.label_separador.Visible = false;
+            // 
+            // button_limpar_selecionado
+            // 
+            this.button_limpar_selecionado.BackColor = System.Drawing.Color.Transparent;
+            this.button_limpar_selecionado.Image = ((System.Drawing.Image)(resources.GetObject("button_limpar_selecionado.Image")));
+            this.button_limpar_selecionado.Location = new System.Drawing.Point(12, 91);
+            this.button_limpar_selecionado.Name = "button_limpar_selecionado";
+            this.button_limpar_selecionado.Size = new System.Drawing.Size(60, 56);
+            this.button_limpar_selecionado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_limpar_selecionado.TabIndex = 32;
+            this.button_limpar_selecionado.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_limpar_selecionado, "Remover musica selecionada");
+            this.button_limpar_selecionado.Click += new System.EventHandler(this.button_limpar_selecionado_Click);
             // 
             // Leitor_Musica
             // 
@@ -322,13 +351,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(669, 481);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button_limpar_selecionado);
+            this.Controls.Add(this.label_separador);
             this.Controls.Add(this.label_tempo);
             this.Controls.Add(this.label_duracao);
             this.Controls.Add(this.trackBar_musica);
             this.Controls.Add(this.label_volume);
             this.Controls.Add(this.trackBar_volume);
-            this.Controls.Add(this.button_limpar_musica);
+            this.Controls.Add(this.button_limpar_tudo);
             this.Controls.Add(this.checkBox_reproduzir_tudo);
             this.Controls.Add(this.button_mute);
             this.Controls.Add(this.button_stop);
@@ -357,9 +387,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_importar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_musica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_tudo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_musica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_limpar_selecionado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,12 +411,14 @@
         private System.Windows.Forms.PictureBox button_mute;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.CheckBox checkBox_reproduzir_tudo;
-        private System.Windows.Forms.PictureBox button_limpar_musica;
+        private System.Windows.Forms.PictureBox button_limpar_tudo;
         private System.Windows.Forms.TrackBar trackBar_volume;
         private System.Windows.Forms.Label label_volume;
         private System.Windows.Forms.TrackBar trackBar_musica;
         private System.Windows.Forms.Label label_duracao;
         private System.Windows.Forms.Label label_tempo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_separador;
+        private System.Windows.Forms.PictureBox button_limpar_selecionado;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -37,22 +37,25 @@ namespace estudio_musica
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-                timer1.Start();
-                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+            timer1.Start();
+            axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+            label_duracao.Visible = true;
+            label_separador.Visible = true;
+            label_tempo.Visible = true;
 
         }
 
         private void button_play_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
-            button_pausa.Image = Properties.Resources.pausa_green;
+            button_pausa.Image = Properties.Resources.but_pausa_verde;
             timer1.Start();
         }
 
         private void button_pausa_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
-            button_pausa.Image = Properties.Resources.pausa_red;
+            button_pausa.Image = Properties.Resources.but_pausa_red;
             timer1.Stop();
         }
 
@@ -100,6 +103,18 @@ namespace estudio_musica
 
             if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
                 axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+
+            if (trackBar_volume.Value == 0)
+                button_mute.Image = Properties.Resources.but_mute_verde;
+
+            if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
+                button_mute.Image = Properties.Resources.but_som_verde_1;
+
+            if (trackBar_volume.Value >= 33 && trackBar_volume.Value < 66)
+                button_mute.Image = Properties.Resources.but_som_verde_2;
+
+            if (trackBar_volume.Value >= 66)
+                button_mute.Image = Properties.Resources.but_som_verde_3;
         }
 
         private void button_mute_Click(object sender, EventArgs e)
@@ -108,22 +123,39 @@ namespace estudio_musica
             {
                 axWindowsMediaPlayer1.settings.mute = true;
                 vol = 1;
-                button_mute.Image = Properties.Resources.mute;
+                button_mute.Image = Properties.Resources.but_mute_red;
             }
             else if (vol == 1)
             {
                 axWindowsMediaPlayer1.settings.mute = false;
                 vol = 0;
-                button_mute.Image = Properties.Resources.sound;
+
+                if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
+                    button_mute.Image = Properties.Resources.but_som_verde_1;
+
+                if (trackBar_volume.Value >= 33 && trackBar_volume.Value < 66)
+                    button_mute.Image = Properties.Resources.but_som_verde_2;
+
+                if (trackBar_volume.Value >= 66)
+                    button_mute.Image = Properties.Resources.but_som_verde_3;
 
             }
 
         }
 
-        private void button_limpar_Click(object sender, EventArgs e)
+        private void button_limpar_selecionado_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             lista_musicas.Items.Remove(lista_musicas.SelectedItem);
+        }
+
+        private void button_limpar_tudo_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            lista_musicas.Items.Clear();
+            label_duracao.Visible = false;
+            label_separador.Visible = false;
+            label_tempo.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

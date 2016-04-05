@@ -232,6 +232,21 @@
     <Content Include="estudi_musica.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\but_play_verde.png" />
+    <None Include="Resources\but_play_red.png" />
+    <None Include="Resources\but_pausa_verde.png" />
+    <None Include="Resources\but_pausa_red.png" />
+    <None Include="Resources\but_mute_verde.png" />
+    <None Include="Resources\but_mute_red.png" />
+    <None Include="Resources\but_stop_verde.png" />
+    <None Include="Resources\but_stop_red.png" />
+    <None Include="Resources\but_som_verde_3.png" />
+    <None Include="Resources\but_som_verde_2.png" />
+    <None Include="Resources\but_som_verde_1.png" />
+    <None Include="Resources\but_som_red_3.png" />
+    <None Include="Resources\but_som_red_2.png" />
+    <None Include="Resources\but_som_red_1.png" />
+    <None Include="Resources\but_proximo_verde.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
