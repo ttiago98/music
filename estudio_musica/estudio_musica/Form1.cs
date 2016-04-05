@@ -19,11 +19,9 @@ namespace estudio_musica
 
         private void button_leitor_musica_Click(object sender, EventArgs e)
         {
-
             this.Hide();
             Leitor_Musica frm = new Leitor_Musica();
             frm.Show();
-
         }
 
         private void button_leitor_radio_Click(object sender, EventArgs e)
@@ -56,5 +54,6 @@ namespace estudio_musica
         {
             Application.Exit();
         }
+
     }
 }

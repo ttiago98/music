@@ -50,6 +50,7 @@
             this.trackBar_musica = new System.Windows.Forms.TrackBar();
             this.label_duracao = new System.Windows.Forms.Label();
             this.label_tempo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_musica_anterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_proxima_musica)).BeginInit();
@@ -253,7 +254,6 @@
             this.trackBar_volume.TabIndex = 26;
             this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar_volume.Value = 50;
-            this.trackBar_volume.Scroll += new System.EventHandler(this.trackBar_volume_Scroll);
             this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar_volume_ValueChanged);
             // 
             // label_volume
@@ -273,7 +273,7 @@
             this.trackBar_musica.AutoSize = false;
             this.trackBar_musica.BackColor = System.Drawing.Color.Black;
             this.trackBar_musica.Location = new System.Drawing.Point(111, 269);
-            this.trackBar_musica.Maximum = 1000000;
+            this.trackBar_musica.Maximum = 100;
             this.trackBar_musica.Name = "trackBar_musica";
             this.trackBar_musica.Size = new System.Drawing.Size(433, 22);
             this.trackBar_musica.TabIndex = 28;
@@ -286,10 +286,11 @@
             this.label_duracao.BackColor = System.Drawing.Color.Transparent;
             this.label_duracao.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_duracao.ForeColor = System.Drawing.Color.White;
-            this.label_duracao.Location = new System.Drawing.Point(503, 294);
+            this.label_duracao.Location = new System.Drawing.Point(499, 294);
             this.label_duracao.Name = "label_duracao";
-            this.label_duracao.Size = new System.Drawing.Size(0, 19);
+            this.label_duracao.Size = new System.Drawing.Size(45, 19);
             this.label_duracao.TabIndex = 29;
+            this.label_duracao.Text = "00:00";
             // 
             // label_tempo
             // 
@@ -297,10 +298,22 @@
             this.label_tempo.BackColor = System.Drawing.Color.Transparent;
             this.label_tempo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tempo.ForeColor = System.Drawing.Color.White;
-            this.label_tempo.Location = new System.Drawing.Point(409, 294);
+            this.label_tempo.Location = new System.Drawing.Point(432, 294);
             this.label_tempo.Name = "label_tempo";
-            this.label_tempo.Size = new System.Drawing.Size(0, 19);
+            this.label_tempo.Size = new System.Drawing.Size(45, 19);
             this.label_tempo.TabIndex = 30;
+            this.label_tempo.Text = "00:00";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(483, 294);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 19);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "/";
             // 
             // Leitor_Musica
             // 
@@ -309,6 +322,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(669, 481);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label_tempo);
             this.Controls.Add(this.label_duracao);
             this.Controls.Add(this.trackBar_musica);
@@ -372,5 +386,6 @@
         private System.Windows.Forms.TrackBar trackBar_musica;
         private System.Windows.Forms.Label label_duracao;
         private System.Windows.Forms.Label label_tempo;
+        private System.Windows.Forms.Label label1;
     }
 }

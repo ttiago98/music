@@ -54,7 +54,7 @@ namespace estudio_musica
 
         private void button_sair_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void ficha_tecnica_FormClosing_1(object sender, FormClosingEventArgs e)

@@ -44,6 +44,7 @@
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.generoTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.generoTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_editar = new System.Windows.Forms.Button();
             this.Button_apagar = new System.Windows.Forms.Button();
             this.button_inserir = new System.Windows.Forms.Button();
             this.textBox_carreira = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_mostrar = new System.Windows.Forms.Button();
             this.toolTip_apagar = new System.Windows.Forms.ToolTip(this.components);
-            this.button_editar = new System.Windows.Forms.Button();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
-            this.button_sair.Location = new System.Drawing.Point(708, 317);
+            this.button_sair.Location = new System.Drawing.Point(719, 333);
             this.button_sair.Name = "button_sair";
             this.button_sair.Size = new System.Drawing.Size(75, 41);
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +139,7 @@
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 317);
+            this.button_voltar.Location = new System.Drawing.Point(12, 333);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(65, 41);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,6 +200,17 @@
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informação";
+            // 
+            // button_editar
+            // 
+            this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_editar.Location = new System.Drawing.Point(23, 173);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(172, 25);
+            this.button_editar.TabIndex = 40;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
             // 
             // Button_apagar
             // 
@@ -271,17 +282,6 @@
             this.button_mostrar.Text = "Mostrar/Atualizar Tabela";
             this.button_mostrar.UseVisualStyleBackColor = true;
             this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
-            // 
-            // button_editar
-            // 
-            this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_editar.Location = new System.Drawing.Point(23, 173);
-            this.button_editar.Name = "button_editar";
-            this.button_editar.Size = new System.Drawing.Size(172, 25);
-            this.button_editar.TabIndex = 40;
-            this.button_editar.Text = "Editar";
-            this.button_editar.UseVisualStyleBackColor = true;
-            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
             // 
             // ficha_tecnica
             // 

@@ -19,7 +19,6 @@ namespace estudio_musica
 
         string[] files, path;
         int vol;
-        int volume;
 
         private void button_importar_Click(object sender, EventArgs e)
         {
@@ -38,26 +37,14 @@ namespace estudio_musica
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-            volume = trackBar_volume.Value;
-            try
-            {
                 timer1.Start();
                 axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-              
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Introduza / Selecione uma musica");
-            }
-            trackBar_volume.Value = volume;
+
         }
 
         private void button_play_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(trackBar_musica.Maximum.ToString());
-            MessageBox.Show(trackBar_musica.MaximumSize.ToString());
             axWindowsMediaPlayer1.Ctlcontrols.play();
-            trackBar_volume.Value = volume;
             button_pausa.Image = Properties.Resources.pausa_green;
             timer1.Start();
         }
@@ -71,7 +58,6 @@ namespace estudio_musica
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            volume = trackBar_volume.Value;
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer1.Stop();
             trackBar_musica.Value = 0;
@@ -193,16 +179,6 @@ namespace estudio_musica
                 trackBar_musica.Maximum = (int)axWindowsMediaPlayer1.currentMedia.duration;
                 double dur = axWindowsMediaPlayer1.currentMedia.duration;
 
-                try
-                {
-
-                 //   trackBar_volume.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
-                }
-                catch (Exception)
-                {
-
-                }
-
             }
         }
 
@@ -224,17 +200,13 @@ namespace estudio_musica
             Form1 frm = new Form1();
             frm.Show();
             axWindowsMediaPlayer1.Ctlcontrols.stop();
+            timer1.Stop();
 
         }
 
         private void button_sair_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void trackBar_volume_Scroll(object sender, EventArgs e)
-        {
-
         }
 
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
