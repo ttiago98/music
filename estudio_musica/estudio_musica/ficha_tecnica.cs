@@ -14,8 +14,9 @@ namespace estudio_musica
     public partial class ficha_tecnica : Form
     {
 
+
         //configurar o caminho para a base de dados
-        private OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=estudi_musica.accdb;
+        private OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\20253\Desktop\estudio_musica_3\estudio_musica\estudi_musica.accdb;
             Persist Security Info=False;");
         OleDbDataAdapter ad = new OleDbDataAdapter();
         DataSet ds = new DataSet();
@@ -23,8 +24,6 @@ namespace estudio_musica
         public ficha_tecnica()
         {
             InitializeComponent();
-
-
         }
 
 
@@ -79,6 +78,11 @@ namespace estudio_musica
                 ad.InsertCommand.ExecuteNonQuery();
                 connection.Close();
 
+                textBox_id.Clear();
+                textBox_nome.Clear();
+                textBox_genero.Clear();
+                textBox_carreira.Clear();
+
             }
 
             catch (Exception ex)
@@ -86,6 +90,11 @@ namespace estudio_musica
 
                 MessageBox.Show(ex.Message);
 
+            }
+
+            finally
+            {
+                connection.Close();
             }
 
         }
@@ -114,6 +123,11 @@ namespace estudio_musica
                 MessageBox.Show(ex.Message);
 
             }
+
+            finally
+            {
+                connection.Close();
+            }
         }
 
         private void Button_apagar_Click(object sender, EventArgs e)
@@ -129,6 +143,8 @@ namespace estudio_musica
                 connection.Close();
                 MessageBox.Show("Artista apagado com sucesso");
 
+                textBox_id.Clear();
+
             }
 
             catch (Exception ex)
@@ -137,10 +153,62 @@ namespace estudio_musica
                 MessageBox.Show(ex.Message);
 
             }
+
+            finally
+            {
+                connection.Close();
+            }
         }
 
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+
+            
+                try
+                {
+
+                connection.Open();
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.Connection = connection;
+                string query ="update artista set nome = nome.text= '"+textBox_nome.Text+"'genero='" +textBox_genero+ "'data_carreira= '" +textBox_carreira+ "'where ID_artista= "  +textBox_id.Text+ "";
+                MessageBox.Show(query);
+                cmd.CommandText = query;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Informação alterada com sucesso");
+                connection.Close();
+                
+
+                }
+
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+
+                }
+
+                finally
+                {
+                    connection.Close();
+                }
+
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
