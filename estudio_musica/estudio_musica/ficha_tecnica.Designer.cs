@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ficha_tecnica));
             System.Windows.Forms.Label iD_artistaLabel;
             System.Windows.Forms.Label data_carreiraLabel;
             System.Windows.Forms.Label generoLabel;
             System.Windows.Forms.Label nomeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ficha_tecnica));
             this.label_verificarbd = new System.Windows.Forms.Label();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
@@ -52,6 +52,8 @@
             this.textBox_nome = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_mostrar = new System.Windows.Forms.Button();
+            this.toolTip_apagar = new System.Windows.Forms.ToolTip(this.components);
+            this.button_editar = new System.Windows.Forms.Button();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
@@ -64,6 +66,50 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // iD_artistaLabel
+            // 
+            iD_artistaLabel.AutoSize = true;
+            iD_artistaLabel.BackColor = System.Drawing.Color.White;
+            iD_artistaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            iD_artistaLabel.Location = new System.Drawing.Point(20, 26);
+            iD_artistaLabel.Name = "iD_artistaLabel";
+            iD_artistaLabel.Size = new System.Drawing.Size(52, 13);
+            iD_artistaLabel.TabIndex = 24;
+            iD_artistaLabel.Text = "ID artista:";
+            // 
+            // data_carreiraLabel
+            // 
+            data_carreiraLabel.AutoSize = true;
+            data_carreiraLabel.BackColor = System.Drawing.Color.White;
+            data_carreiraLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            data_carreiraLabel.Location = new System.Drawing.Point(20, 104);
+            data_carreiraLabel.Name = "data_carreiraLabel";
+            data_carreiraLabel.Size = new System.Drawing.Size(69, 13);
+            data_carreiraLabel.TabIndex = 30;
+            data_carreiraLabel.Text = "data carreira:";
+            // 
+            // generoLabel
+            // 
+            generoLabel.AutoSize = true;
+            generoLabel.BackColor = System.Drawing.Color.White;
+            generoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            generoLabel.Location = new System.Drawing.Point(20, 78);
+            generoLabel.Name = "generoLabel";
+            generoLabel.Size = new System.Drawing.Size(43, 13);
+            generoLabel.TabIndex = 28;
+            generoLabel.Text = "genero:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.BackColor = System.Drawing.Color.White;
+            nomeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            nomeLabel.Location = new System.Drawing.Point(20, 52);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(36, 13);
+            nomeLabel.TabIndex = 26;
+            nomeLabel.Text = "nome:";
             // 
             // label_verificarbd
             // 
@@ -136,6 +182,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button_editar);
             this.groupBox1.Controls.Add(iD_artistaLabel);
             this.groupBox1.Controls.Add(this.Button_apagar);
             this.groupBox1.Controls.Add(data_carreiraLabel);
@@ -147,72 +194,29 @@
             this.groupBox1.Controls.Add(this.textBox_genero);
             this.groupBox1.Controls.Add(this.textBox_nome);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(30, 61);
+            this.groupBox1.Location = new System.Drawing.Point(65, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(212, 196);
+            this.groupBox1.Size = new System.Drawing.Size(212, 251);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informação";
             // 
-            // iD_artistaLabel
-            // 
-            iD_artistaLabel.AutoSize = true;
-            iD_artistaLabel.BackColor = System.Drawing.Color.White;
-            iD_artistaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            iD_artistaLabel.Location = new System.Drawing.Point(18, 16);
-            iD_artistaLabel.Name = "iD_artistaLabel";
-            iD_artistaLabel.Size = new System.Drawing.Size(52, 13);
-            iD_artistaLabel.TabIndex = 24;
-            iD_artistaLabel.Text = "ID artista:";
-            // 
             // Button_apagar
             // 
             this.Button_apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Button_apagar.Location = new System.Drawing.Point(21, 160);
+            this.Button_apagar.Location = new System.Drawing.Point(23, 204);
             this.Button_apagar.Name = "Button_apagar";
             this.Button_apagar.Size = new System.Drawing.Size(172, 25);
             this.Button_apagar.TabIndex = 39;
             this.Button_apagar.Text = "Apagar";
+            this.toolTip_apagar.SetToolTip(this.Button_apagar, "Insira o ID do artista que pretende apagar");
             this.Button_apagar.UseVisualStyleBackColor = true;
             this.Button_apagar.Click += new System.EventHandler(this.Button_apagar_Click);
-            // 
-            // data_carreiraLabel
-            // 
-            data_carreiraLabel.AutoSize = true;
-            data_carreiraLabel.BackColor = System.Drawing.Color.White;
-            data_carreiraLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            data_carreiraLabel.Location = new System.Drawing.Point(18, 94);
-            data_carreiraLabel.Name = "data_carreiraLabel";
-            data_carreiraLabel.Size = new System.Drawing.Size(69, 13);
-            data_carreiraLabel.TabIndex = 30;
-            data_carreiraLabel.Text = "data carreira:";
-            // 
-            // generoLabel
-            // 
-            generoLabel.AutoSize = true;
-            generoLabel.BackColor = System.Drawing.Color.White;
-            generoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            generoLabel.Location = new System.Drawing.Point(18, 68);
-            generoLabel.Name = "generoLabel";
-            generoLabel.Size = new System.Drawing.Size(43, 13);
-            generoLabel.TabIndex = 28;
-            generoLabel.Text = "genero:";
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.BackColor = System.Drawing.Color.White;
-            nomeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            nomeLabel.Location = new System.Drawing.Point(18, 42);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(36, 13);
-            nomeLabel.TabIndex = 26;
-            nomeLabel.Text = "nome:";
             // 
             // button_inserir
             // 
             this.button_inserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_inserir.Location = new System.Drawing.Point(21, 131);
+            this.button_inserir.Location = new System.Drawing.Point(23, 142);
             this.button_inserir.Name = "button_inserir";
             this.button_inserir.Size = new System.Drawing.Size(172, 25);
             this.button_inserir.TabIndex = 32;
@@ -222,28 +226,28 @@
             // 
             // textBox_carreira
             // 
-            this.textBox_carreira.Location = new System.Drawing.Point(93, 87);
+            this.textBox_carreira.Location = new System.Drawing.Point(95, 97);
             this.textBox_carreira.Name = "textBox_carreira";
             this.textBox_carreira.Size = new System.Drawing.Size(100, 20);
             this.textBox_carreira.TabIndex = 36;
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(93, 9);
+            this.textBox_id.Location = new System.Drawing.Point(95, 19);
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(100, 20);
             this.textBox_id.TabIndex = 33;
             // 
             // textBox_genero
             // 
-            this.textBox_genero.Location = new System.Drawing.Point(93, 61);
+            this.textBox_genero.Location = new System.Drawing.Point(95, 71);
             this.textBox_genero.Name = "textBox_genero";
             this.textBox_genero.Size = new System.Drawing.Size(100, 20);
             this.textBox_genero.TabIndex = 35;
             // 
             // textBox_nome
             // 
-            this.textBox_nome.Location = new System.Drawing.Point(93, 35);
+            this.textBox_nome.Location = new System.Drawing.Point(95, 45);
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(100, 20);
             this.textBox_nome.TabIndex = 34;
@@ -253,20 +257,31 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(317, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(349, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(445, 190);
             this.dataGridView1.TabIndex = 42;
             // 
             // button_mostrar
             // 
-            this.button_mostrar.Location = new System.Drawing.Point(392, 263);
+            this.button_mostrar.Location = new System.Drawing.Point(437, 256);
             this.button_mostrar.Name = "button_mostrar";
             this.button_mostrar.Size = new System.Drawing.Size(284, 43);
             this.button_mostrar.TabIndex = 41;
             this.button_mostrar.Text = "Mostrar/Atualizar Tabela";
             this.button_mostrar.UseVisualStyleBackColor = true;
             this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
+            // 
+            // button_editar
+            // 
+            this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_editar.Location = new System.Drawing.Point(23, 173);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(172, 25);
+            this.button_editar.TabIndex = 40;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
             // 
             // ficha_tecnica
             // 
@@ -319,5 +334,7 @@
         private System.Windows.Forms.TextBox textBox_nome;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button_mostrar;
+        private System.Windows.Forms.ToolTip toolTip_apagar;
+        private System.Windows.Forms.Button button_editar;
     }
 }
