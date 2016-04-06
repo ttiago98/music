@@ -61,7 +61,7 @@ namespace estudio_musica
                     URL = "http://www.megahits.fm/emissao_online_fl.aspx";
                     break;
                 default:
-                    MessageBox.Show("Selecione um rádio da lista e clique no botão \"Play\".");
+                    MessageBox.Show("Selecione um rádio da lista antes de clicar no botão \"Play\".");
                     break;
             }
             if (!URL.Equals("")) axWindowsMediaPlayer1.URL = URL;

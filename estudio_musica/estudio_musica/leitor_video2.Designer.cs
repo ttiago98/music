@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(leitor_video2));
             this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.textBox_pesquisa = new System.Windows.Forms.TextBox();
@@ -38,11 +37,14 @@
             this.button_metalica = new System.Windows.Forms.Button();
             this.button_arctic_monkeys = new System.Windows.Forms.Button();
             this.button_pesquisar = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button_video_player = new System.Windows.Forms.Button();
+            this.button_youtube_video_player = new System.Windows.Forms.Button();
+            this.video_player = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_pesquisar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.video_player)).BeginInit();
             this.SuspendLayout();
             // 
             // youtube_player
@@ -72,7 +74,6 @@
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 14;
             this.button_voltar.TabStop = false;
-            this.toolTip1.SetToolTip(this.button_voltar, "Voltar atrás");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // button_sair
@@ -85,7 +86,6 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 15;
             this.button_sair.TabStop = false;
-            this.toolTip1.SetToolTip(this.button_sair, "Sair do porgrama");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_richie_campbell
@@ -136,6 +136,37 @@
             this.button_pesquisar.TabStop = false;
             this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
             // 
+            // button_video_player
+            // 
+            this.button_video_player.Location = new System.Drawing.Point(202, 395);
+            this.button_video_player.Name = "button_video_player";
+            this.button_video_player.Size = new System.Drawing.Size(146, 41);
+            this.button_video_player.TabIndex = 28;
+            this.button_video_player.Text = "Video Player";
+            this.button_video_player.UseVisualStyleBackColor = true;
+            this.button_video_player.Click += new System.EventHandler(this.button_video_player_Click);
+            // 
+            // button_youtube_video_player
+            // 
+            this.button_youtube_video_player.Enabled = false;
+            this.button_youtube_video_player.Location = new System.Drawing.Point(588, 395);
+            this.button_youtube_video_player.Name = "button_youtube_video_player";
+            this.button_youtube_video_player.Size = new System.Drawing.Size(146, 41);
+            this.button_youtube_video_player.TabIndex = 29;
+            this.button_youtube_video_player.Text = "Youtube Video Player";
+            this.button_youtube_video_player.UseVisualStyleBackColor = true;
+            this.button_youtube_video_player.Click += new System.EventHandler(this.button_youtube_video_player_Click);
+            // 
+            // video_player
+            // 
+            this.video_player.Enabled = true;
+            this.video_player.Location = new System.Drawing.Point(44, 39);
+            this.video_player.Name = "video_player";
+            this.video_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("video_player.OcxState")));
+            this.video_player.Size = new System.Drawing.Size(506, 326);
+            this.video_player.TabIndex = 30;
+            this.video_player.Visible = false;
+            // 
             // leitor_video2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,6 +175,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(952, 448);
+            this.Controls.Add(this.video_player);
+            this.Controls.Add(this.button_youtube_video_player);
+            this.Controls.Add(this.button_video_player);
             this.Controls.Add(this.button_pesquisar);
             this.Controls.Add(this.button_richie_campbell);
             this.Controls.Add(this.button_metalica);
@@ -162,6 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_pesquisar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.video_player)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +212,8 @@
         private System.Windows.Forms.Button button_metalica;
         private System.Windows.Forms.Button button_arctic_monkeys;
         private System.Windows.Forms.PictureBox button_pesquisar;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button_video_player;
+        private System.Windows.Forms.Button button_youtube_video_player;
+        private AxWMPLib.AxWindowsMediaPlayer video_player;
     }
 }
