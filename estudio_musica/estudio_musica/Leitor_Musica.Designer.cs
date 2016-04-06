@@ -159,7 +159,7 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(219, 12);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(206, 12);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
             this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(226, 64);
@@ -301,9 +301,8 @@
             this.label_duracao.ForeColor = System.Drawing.Color.White;
             this.label_duracao.Location = new System.Drawing.Point(499, 294);
             this.label_duracao.Name = "label_duracao";
-            this.label_duracao.Size = new System.Drawing.Size(45, 19);
+            this.label_duracao.Size = new System.Drawing.Size(0, 19);
             this.label_duracao.TabIndex = 29;
-            this.label_duracao.Text = "00:00";
             this.label_duracao.Visible = false;
             // 
             // label_tempo
@@ -314,9 +313,8 @@
             this.label_tempo.ForeColor = System.Drawing.Color.White;
             this.label_tempo.Location = new System.Drawing.Point(432, 294);
             this.label_tempo.Name = "label_tempo";
-            this.label_tempo.Size = new System.Drawing.Size(45, 19);
+            this.label_tempo.Size = new System.Drawing.Size(0, 19);
             this.label_tempo.TabIndex = 30;
-            this.label_tempo.Text = "00:00";
             this.label_tempo.Visible = false;
             // 
             // label_separador
