@@ -37,12 +37,6 @@
             this.label_verificarbd = new System.Windows.Forms.Label();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
-            this.estudi_musicaDataSet = new estudio_musica.estudi_musicaDataSet();
-            this.artistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.artistaTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.artistaTableAdapter();
-            this.tableAdapterManager = new estudio_musica.estudi_musicaDataSetTableAdapters.TableAdapterManager();
-            this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.generoTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.generoTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_editar = new System.Windows.Forms.Button();
             this.Button_apagar = new System.Windows.Forms.Button();
@@ -54,25 +48,31 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_mostrar = new System.Windows.Forms.Button();
             this.toolTip_apagar = new System.Windows.Forms.ToolTip(this.components);
+            this.estudi_musicaDataSet = new estudio_musica.estudi_musicaDataSet();
+            this.artistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.artistaTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.artistaTableAdapter();
+            this.tableAdapterManager = new estudio_musica.estudi_musicaDataSetTableAdapters.TableAdapterManager();
+            this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.generoTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.generoTableAdapter();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estudi_musicaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // iD_artistaLabel
             // 
             iD_artistaLabel.AutoSize = true;
-            iD_artistaLabel.BackColor = System.Drawing.Color.White;
-            iD_artistaLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            iD_artistaLabel.Location = new System.Drawing.Point(20, 26);
+            iD_artistaLabel.BackColor = System.Drawing.Color.Transparent;
+            iD_artistaLabel.ForeColor = System.Drawing.Color.White;
+            iD_artistaLabel.Location = new System.Drawing.Point(6, 26);
             iD_artistaLabel.Name = "iD_artistaLabel";
             iD_artistaLabel.Size = new System.Drawing.Size(52, 13);
             iD_artistaLabel.TabIndex = 24;
@@ -81,20 +81,20 @@
             // data_carreiraLabel
             // 
             data_carreiraLabel.AutoSize = true;
-            data_carreiraLabel.BackColor = System.Drawing.Color.White;
-            data_carreiraLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            data_carreiraLabel.Location = new System.Drawing.Point(20, 104);
+            data_carreiraLabel.BackColor = System.Drawing.Color.Transparent;
+            data_carreiraLabel.ForeColor = System.Drawing.Color.White;
+            data_carreiraLabel.Location = new System.Drawing.Point(6, 104);
             data_carreiraLabel.Name = "data_carreiraLabel";
-            data_carreiraLabel.Size = new System.Drawing.Size(69, 13);
+            data_carreiraLabel.Size = new System.Drawing.Size(89, 13);
             data_carreiraLabel.TabIndex = 30;
-            data_carreiraLabel.Text = "data carreira:";
+            data_carreiraLabel.Text = "Inicio de Carreira:";
             // 
             // generoLabel
             // 
             generoLabel.AutoSize = true;
-            generoLabel.BackColor = System.Drawing.Color.White;
-            generoLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            generoLabel.Location = new System.Drawing.Point(20, 78);
+            generoLabel.BackColor = System.Drawing.Color.Transparent;
+            generoLabel.ForeColor = System.Drawing.Color.White;
+            generoLabel.Location = new System.Drawing.Point(6, 78);
             generoLabel.Name = "generoLabel";
             generoLabel.Size = new System.Drawing.Size(43, 13);
             generoLabel.TabIndex = 28;
@@ -103,9 +103,9 @@
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.BackColor = System.Drawing.Color.White;
-            nomeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            nomeLabel.Location = new System.Drawing.Point(20, 52);
+            nomeLabel.BackColor = System.Drawing.Color.Transparent;
+            nomeLabel.ForeColor = System.Drawing.Color.White;
+            nomeLabel.Location = new System.Drawing.Point(6, 52);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(36, 13);
             nomeLabel.TabIndex = 26;
@@ -147,6 +147,110 @@
             this.button_voltar.TabStop = false;
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.button_editar);
+            this.groupBox1.Controls.Add(iD_artistaLabel);
+            this.groupBox1.Controls.Add(this.Button_apagar);
+            this.groupBox1.Controls.Add(data_carreiraLabel);
+            this.groupBox1.Controls.Add(generoLabel);
+            this.groupBox1.Controls.Add(nomeLabel);
+            this.groupBox1.Controls.Add(this.button_inserir);
+            this.groupBox1.Controls.Add(this.textBox_carreira);
+            this.groupBox1.Controls.Add(this.textBox_id);
+            this.groupBox1.Controls.Add(this.textBox_genero);
+            this.groupBox1.Controls.Add(this.textBox_nome);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Location = new System.Drawing.Point(65, 48);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(232, 241);
+            this.groupBox1.TabIndex = 43;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informação";
+            // 
+            // button_editar
+            // 
+            this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_editar.Location = new System.Drawing.Point(35, 173);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(172, 25);
+            this.button_editar.TabIndex = 40;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
+            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
+            // 
+            // Button_apagar
+            // 
+            this.Button_apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Button_apagar.Location = new System.Drawing.Point(35, 204);
+            this.Button_apagar.Name = "Button_apagar";
+            this.Button_apagar.Size = new System.Drawing.Size(172, 25);
+            this.Button_apagar.TabIndex = 39;
+            this.Button_apagar.Text = "Apagar";
+            this.toolTip_apagar.SetToolTip(this.Button_apagar, "Insira o ID do artista que pretende apagar");
+            this.Button_apagar.UseVisualStyleBackColor = true;
+            this.Button_apagar.Click += new System.EventHandler(this.Button_apagar_Click);
+            // 
+            // button_inserir
+            // 
+            this.button_inserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_inserir.Location = new System.Drawing.Point(35, 142);
+            this.button_inserir.Name = "button_inserir";
+            this.button_inserir.Size = new System.Drawing.Size(172, 25);
+            this.button_inserir.TabIndex = 32;
+            this.button_inserir.Text = "Inserir";
+            this.button_inserir.UseVisualStyleBackColor = true;
+            this.button_inserir.Click += new System.EventHandler(this.button_inserir_Click);
+            // 
+            // textBox_carreira
+            // 
+            this.textBox_carreira.Location = new System.Drawing.Point(121, 97);
+            this.textBox_carreira.Name = "textBox_carreira";
+            this.textBox_carreira.Size = new System.Drawing.Size(100, 20);
+            this.textBox_carreira.TabIndex = 36;
+            // 
+            // textBox_id
+            // 
+            this.textBox_id.Location = new System.Drawing.Point(121, 19);
+            this.textBox_id.Name = "textBox_id";
+            this.textBox_id.Size = new System.Drawing.Size(100, 20);
+            this.textBox_id.TabIndex = 33;
+            // 
+            // textBox_genero
+            // 
+            this.textBox_genero.Location = new System.Drawing.Point(121, 71);
+            this.textBox_genero.Name = "textBox_genero";
+            this.textBox_genero.Size = new System.Drawing.Size(100, 20);
+            this.textBox_genero.TabIndex = 35;
+            // 
+            // textBox_nome
+            // 
+            this.textBox_nome.Location = new System.Drawing.Point(121, 45);
+            this.textBox_nome.Name = "textBox_nome";
+            this.textBox_nome.Size = new System.Drawing.Size(100, 20);
+            this.textBox_nome.TabIndex = 34;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
+            this.dataGridView1.Location = new System.Drawing.Point(349, 60);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(445, 190);
+            this.dataGridView1.TabIndex = 42;
+            // 
+            // button_mostrar
+            // 
+            this.button_mostrar.Location = new System.Drawing.Point(437, 256);
+            this.button_mostrar.Name = "button_mostrar";
+            this.button_mostrar.Size = new System.Drawing.Size(284, 43);
+            this.button_mostrar.TabIndex = 41;
+            this.button_mostrar.Text = "Mostrar/Atualizar Tabela";
+            this.button_mostrar.UseVisualStyleBackColor = true;
+            this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
+            // 
             // estudi_musicaDataSet
             // 
             this.estudi_musicaDataSet.DataSetName = "estudi_musicaDataSet";
@@ -179,110 +283,6 @@
             // 
             this.generoTableAdapter.ClearBeforeFill = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button_editar);
-            this.groupBox1.Controls.Add(iD_artistaLabel);
-            this.groupBox1.Controls.Add(this.Button_apagar);
-            this.groupBox1.Controls.Add(data_carreiraLabel);
-            this.groupBox1.Controls.Add(generoLabel);
-            this.groupBox1.Controls.Add(nomeLabel);
-            this.groupBox1.Controls.Add(this.button_inserir);
-            this.groupBox1.Controls.Add(this.textBox_carreira);
-            this.groupBox1.Controls.Add(this.textBox_id);
-            this.groupBox1.Controls.Add(this.textBox_genero);
-            this.groupBox1.Controls.Add(this.textBox_nome);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(65, 48);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(212, 251);
-            this.groupBox1.TabIndex = 43;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informação";
-            // 
-            // button_editar
-            // 
-            this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_editar.Location = new System.Drawing.Point(23, 173);
-            this.button_editar.Name = "button_editar";
-            this.button_editar.Size = new System.Drawing.Size(172, 25);
-            this.button_editar.TabIndex = 40;
-            this.button_editar.Text = "Editar";
-            this.button_editar.UseVisualStyleBackColor = true;
-            this.button_editar.Click += new System.EventHandler(this.button_editar_Click);
-            // 
-            // Button_apagar
-            // 
-            this.Button_apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Button_apagar.Location = new System.Drawing.Point(23, 204);
-            this.Button_apagar.Name = "Button_apagar";
-            this.Button_apagar.Size = new System.Drawing.Size(172, 25);
-            this.Button_apagar.TabIndex = 39;
-            this.Button_apagar.Text = "Apagar";
-            this.toolTip_apagar.SetToolTip(this.Button_apagar, "Insira o ID do artista que pretende apagar");
-            this.Button_apagar.UseVisualStyleBackColor = true;
-            this.Button_apagar.Click += new System.EventHandler(this.Button_apagar_Click);
-            // 
-            // button_inserir
-            // 
-            this.button_inserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_inserir.Location = new System.Drawing.Point(23, 142);
-            this.button_inserir.Name = "button_inserir";
-            this.button_inserir.Size = new System.Drawing.Size(172, 25);
-            this.button_inserir.TabIndex = 32;
-            this.button_inserir.Text = "Inserir";
-            this.button_inserir.UseVisualStyleBackColor = true;
-            this.button_inserir.Click += new System.EventHandler(this.button_inserir_Click);
-            // 
-            // textBox_carreira
-            // 
-            this.textBox_carreira.Location = new System.Drawing.Point(95, 97);
-            this.textBox_carreira.Name = "textBox_carreira";
-            this.textBox_carreira.Size = new System.Drawing.Size(100, 20);
-            this.textBox_carreira.TabIndex = 36;
-            // 
-            // textBox_id
-            // 
-            this.textBox_id.Location = new System.Drawing.Point(95, 19);
-            this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(100, 20);
-            this.textBox_id.TabIndex = 33;
-            // 
-            // textBox_genero
-            // 
-            this.textBox_genero.Location = new System.Drawing.Point(95, 71);
-            this.textBox_genero.Name = "textBox_genero";
-            this.textBox_genero.Size = new System.Drawing.Size(100, 20);
-            this.textBox_genero.TabIndex = 35;
-            // 
-            // textBox_nome
-            // 
-            this.textBox_nome.Location = new System.Drawing.Point(95, 45);
-            this.textBox_nome.Name = "textBox_nome";
-            this.textBox_nome.Size = new System.Drawing.Size(100, 20);
-            this.textBox_nome.TabIndex = 34;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(349, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(445, 190);
-            this.dataGridView1.TabIndex = 42;
-            // 
-            // button_mostrar
-            // 
-            this.button_mostrar.Location = new System.Drawing.Point(437, 256);
-            this.button_mostrar.Name = "button_mostrar";
-            this.button_mostrar.Size = new System.Drawing.Size(284, 43);
-            this.button_mostrar.TabIndex = 41;
-            this.button_mostrar.Text = "Mostrar/Atualizar Tabela";
-            this.button_mostrar.UseVisualStyleBackColor = true;
-            this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
-            // 
             // ficha_tecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,12 +304,12 @@
             this.Load += new System.EventHandler(this.ficha_tecnica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudi_musicaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estudi_musicaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
