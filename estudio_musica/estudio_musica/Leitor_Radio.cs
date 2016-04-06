@@ -65,6 +65,9 @@ namespace estudio_musica
                     break;
             }
             if (!URL.Equals("")) axWindowsMediaPlayer1.URL = URL;
+
+            button_pausa.Image = Properties.Resources.but_pausa_red;
+            button_pausa.Enabled = true;
         }
 
         private void button_pausa_Click(object sender, EventArgs e)

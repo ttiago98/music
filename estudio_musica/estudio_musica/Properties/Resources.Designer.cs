@@ -63,6 +63,16 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_anterior_verde {
+            get {
+                object obj = ResourceManager.GetObject("but_anterior_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_mute_red {
             get {
                 object obj = ResourceManager.GetObject("but_mute_red", resourceCulture);

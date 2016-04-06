@@ -33,6 +33,21 @@ namespace estudio_musica
                     lista_musicas.Items.Add(files[i]);
                 }
             }
+
+            button_pausa.Image = Properties.Resources.but_pausa_verde;
+            button_play.Image = Properties.Resources.but_play_verde;
+            button_proxima_musica.Image = Properties.Resources.but_proximo_verde;
+            button_musica_anterior.Image = Properties.Resources.but_anterior_verde;
+            button_stop.Image = Properties.Resources.but_stop_verde;
+
+            button_pausa.Enabled = true;
+            button_play.Enabled = true;
+            button_proxima_musica.Enabled = true;
+            button_musica_anterior.Enabled = true;
+            button_stop.Enabled = true;
+
+            button_limpar_selecionado.Visible = true;
+            button_limpar_tudo.Visible = true;
         }
 
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -40,7 +55,7 @@ namespace estudio_musica
 
             //timer1.Start();
             //axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-           // label_duracao.Visible = true;
+            //label_duracao.Visible = true;
             //label_separador.Visible = true;
             //label_tempo.Visible = true;
 
@@ -54,6 +69,7 @@ namespace estudio_musica
                 label_duracao.Visible = true;
                 label_separador.Visible = true;
                 label_tempo.Visible = true;
+                
             }
             catch (Exception)
             {

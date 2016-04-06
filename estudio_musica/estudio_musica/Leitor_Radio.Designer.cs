@@ -102,6 +102,7 @@
             // 
             this.button_pausa.BackColor = System.Drawing.Color.Transparent;
             this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_pausa.Enabled = false;
             this.button_pausa.Image = ((System.Drawing.Image)(resources.GetObject("button_pausa.Image")));
             this.button_pausa.Location = new System.Drawing.Point(236, 267);
             this.button_pausa.Name = "button_pausa";

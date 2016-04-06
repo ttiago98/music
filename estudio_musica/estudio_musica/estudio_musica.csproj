@@ -223,6 +223,8 @@
     <Content Include="estudi_musica.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\but_anterior_verde.png" />
+    <None Include="Resources\but_anterior.png" />
     <None Include="Resources\but_play_verde.png" />
     <None Include="Resources\but_play_red.png" />
     <None Include="Resources\but_pausa_verde.png" />

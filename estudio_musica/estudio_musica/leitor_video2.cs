@@ -41,9 +41,36 @@ namespace estudio_musica
             youtube_player.Play();
         }
 
+        private void button_video_player_Click(object sender, EventArgs e)
+        {
+            youtube_player.Visible = false;
+            button_arctic_monkeys.Visible = false;
+            button_metalica.Visible = false;
+            button_richie_campbell.Visible = false;
+            button_pesquisar.Visible = false;
+            textBox_pesquisa.Visible = false;
+
+            button_video_player.Enabled = false;
+            button_youtube_player.Enabled = true;
+        }
+
+        private void button_youtube_player_Click(object sender, EventArgs e)
+        {
+            youtube_player.Visible = true;
+            button_arctic_monkeys.Visible = true;
+            button_metalica.Visible = true;
+            button_richie_campbell.Visible = true;
+            button_pesquisar.Visible = true;
+            textBox_pesquisa.Visible = true;
+            youtube_player.Visible = false;
+
+            button_youtube_player.Enabled = false;
+            button_video_player.Enabled = true;
+        }
+
         private void button_voltar_Click(object sender, EventArgs e)
         {
-        
+
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
@@ -57,32 +84,6 @@ namespace estudio_musica
         private void leitor_video2_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button_video_player_Click(object sender, EventArgs e)
-        {
-            youtube_player.Visible = false;
-            button_arctic_monkeys.Visible = false;
-            button_metalica.Visible = false;
-            button_richie_campbell.Visible = false;
-            button_pesquisar.Visible = false;
-            button_youtube_video_player.Enabled = true;
-            textBox_pesquisa.Visible = false;
-            button_video_player.Enabled = false;
-            youtube_player.Visible = true;
-        }
-
-        private void button_youtube_video_player_Click(object sender, EventArgs e)
-        {
-            youtube_player.Visible = true;
-            button_arctic_monkeys.Visible = true;
-            button_metalica.Visible = true;
-            button_richie_campbell.Visible = true;
-            button_pesquisar.Visible = true;
-            button_youtube_video_player.Enabled = false;
-            textBox_pesquisa.Visible = true;
-            button_video_player.Enabled = true;
-            youtube_player.Visible = false;
         }
     }
 }

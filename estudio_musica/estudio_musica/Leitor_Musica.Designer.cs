@@ -74,6 +74,7 @@
             this.button_play.BackColor = System.Drawing.Color.Transparent;
             this.button_play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_play.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_play.Enabled = false;
             this.button_play.Image = ((System.Drawing.Image)(resources.GetObject("button_play.Image")));
             this.button_play.Location = new System.Drawing.Point(300, 312);
             this.button_play.Name = "button_play";
@@ -89,6 +90,7 @@
             this.button_musica_anterior.BackColor = System.Drawing.Color.Transparent;
             this.button_musica_anterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_musica_anterior.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_musica_anterior.Enabled = false;
             this.button_musica_anterior.Image = ((System.Drawing.Image)(resources.GetObject("button_musica_anterior.Image")));
             this.button_musica_anterior.Location = new System.Drawing.Point(239, 363);
             this.button_musica_anterior.Name = "button_musica_anterior";
@@ -104,6 +106,7 @@
             this.button_proxima_musica.BackColor = System.Drawing.Color.Transparent;
             this.button_proxima_musica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_proxima_musica.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_proxima_musica.Enabled = false;
             this.button_proxima_musica.Image = ((System.Drawing.Image)(resources.GetObject("button_proxima_musica.Image")));
             this.button_proxima_musica.Location = new System.Drawing.Point(362, 363);
             this.button_proxima_musica.Name = "button_proxima_musica";
@@ -119,6 +122,7 @@
             this.button_pausa.BackColor = System.Drawing.Color.Transparent;
             this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_pausa.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_pausa.Enabled = false;
             this.button_pausa.Image = ((System.Drawing.Image)(resources.GetObject("button_pausa.Image")));
             this.button_pausa.Location = new System.Drawing.Point(300, 414);
             this.button_pausa.Name = "button_pausa";
@@ -200,6 +204,7 @@
             this.button_stop.BackColor = System.Drawing.Color.Transparent;
             this.button_stop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_stop.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button_stop.Enabled = false;
             this.button_stop.Image = ((System.Drawing.Image)(resources.GetObject("button_stop.Image")));
             this.button_stop.Location = new System.Drawing.Point(300, 363);
             this.button_stop.Name = "button_stop";
@@ -253,6 +258,7 @@
             this.button_limpar_tudo.TabIndex = 24;
             this.button_limpar_tudo.TabStop = false;
             this.toolTip1.SetToolTip(this.button_limpar_tudo, "Limpar lista completa");
+            this.button_limpar_tudo.Visible = false;
             this.button_limpar_tudo.Click += new System.EventHandler(this.button_limpar_tudo_Click);
             // 
             // trackBar_volume
@@ -340,6 +346,7 @@
             this.button_limpar_selecionado.TabIndex = 32;
             this.button_limpar_selecionado.TabStop = false;
             this.toolTip1.SetToolTip(this.button_limpar_selecionado, "Remover musica selecionada");
+            this.button_limpar_selecionado.Visible = false;
             this.button_limpar_selecionado.Click += new System.EventHandler(this.button_limpar_selecionado_Click);
             // 
             // Leitor_Musica
