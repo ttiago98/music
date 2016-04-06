@@ -23,6 +23,7 @@ namespace estudio_musica
         private void button_importar_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
+            open.Multiselect = true;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog1.SafeFileNames;
@@ -37,19 +38,31 @@ namespace estudio_musica
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-            timer1.Start();
-            axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-            label_duracao.Visible = true;
-            label_separador.Visible = true;
-            label_tempo.Visible = true;
+            //timer1.Start();
+            //axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+           // label_duracao.Visible = true;
+            //label_separador.Visible = true;
+            //label_tempo.Visible = true;
 
         }
 
         private void button_play_Click(object sender, EventArgs e)
         {
+            try {
+                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                timer1.Start();
+                label_duracao.Visible = true;
+                label_separador.Visible = true;
+                label_tempo.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione uma música");
+            }
+
             axWindowsMediaPlayer1.Ctlcontrols.play();
             button_pausa.Image = Properties.Resources.but_pausa_verde;
-            timer1.Start();
+            
         }
 
         private void button_pausa_Click(object sender, EventArgs e)
@@ -145,8 +158,20 @@ namespace estudio_musica
 
         private void button_limpar_selecionado_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
-            lista_musicas.Items.Remove(lista_musicas.SelectedItem);
+            
+            {
+                try
+
+                {
+                    lista_musicas.Items.Remove(lista_musicas.SelectedItem);
+                    axWindowsMediaPlayer1.Ctlcontrols.stop();
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("Selecione a música que pretende eliminar");
+                }
+            }
         }
 
         private void button_limpar_tudo_Click(object sender, EventArgs e)
@@ -193,11 +218,7 @@ namespace estudio_musica
 
         private void checkBox_reproduzir_tudo_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox_reproduzir_tudo.Checked == true)
-            {
-                timer1.Start();
-            }
-            else
+            if (checkBox_reproduzir_tudo.Checked == false)
             {
                 timer1.Stop();
             }
