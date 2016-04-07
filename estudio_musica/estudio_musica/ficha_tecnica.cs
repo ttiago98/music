@@ -29,9 +29,7 @@ namespace estudio_musica
 
         private void ficha_tecnica_Load(object sender, EventArgs e)
         {
-
-            //testar conexão
-            label_verificarbd.Text = "Conectado com Base de Dados";
+            
 
         }
 
@@ -181,13 +179,20 @@ namespace estudio_musica
                 update.ExecuteNonQuery();
                 connection.Close();
 
+                MessageBox.Show("Dados alterados com sucesso!");
+
+                textBox_id.Clear();
+                textBox_nome.Clear();
+                textBox_genero.Clear();
+                textBox_carreira.Clear(); 
+
 
             }
 
-            catch (Exception ex)
+            catch 
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Não pode deixar nenhum campo em branco");
 
             }
 

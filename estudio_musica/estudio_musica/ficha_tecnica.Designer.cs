@@ -34,7 +34,6 @@
             System.Windows.Forms.Label generoLabel;
             System.Windows.Forms.Label nomeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ficha_tecnica));
-            this.label_verificarbd = new System.Windows.Forms.Label();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -47,9 +46,12 @@
             this.textBox_nome = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_mostrar = new System.Windows.Forms.Button();
-            this.toolTip_apagar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip_fichatecnica = new System.Windows.Forms.ToolTip(this.components);
             this.artistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox_add = new System.Windows.Forms.PictureBox();
+            this.pictureBox_edit = new System.Windows.Forms.PictureBox();
+            this.pictureBox_remove = new System.Windows.Forms.PictureBox();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
@@ -60,6 +62,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_remove)).BeginInit();
             this.SuspendLayout();
             // 
             // iD_artistaLabel
@@ -106,17 +111,6 @@
             nomeLabel.TabIndex = 26;
             nomeLabel.Text = "nome:";
             // 
-            // label_verificarbd
-            // 
-            this.label_verificarbd.AutoSize = true;
-            this.label_verificarbd.BackColor = System.Drawing.Color.Transparent;
-            this.label_verificarbd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label_verificarbd.Location = new System.Drawing.Point(10, 11);
-            this.label_verificarbd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_verificarbd.Name = "label_verificarbd";
-            this.label_verificarbd.Size = new System.Drawing.Size(0, 13);
-            this.label_verificarbd.TabIndex = 0;
-            // 
             // button_sair
             // 
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
@@ -145,6 +139,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.pictureBox_remove);
+            this.groupBox1.Controls.Add(this.pictureBox_edit);
+            this.groupBox1.Controls.Add(this.pictureBox_add);
             this.groupBox1.Controls.Add(this.button_editar);
             this.groupBox1.Controls.Add(iD_artistaLabel);
             this.groupBox1.Controls.Add(this.Button_apagar);
@@ -167,7 +164,7 @@
             // button_editar
             // 
             this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_editar.Location = new System.Drawing.Point(35, 173);
+            this.button_editar.Location = new System.Drawing.Point(49, 173);
             this.button_editar.Name = "button_editar";
             this.button_editar.Size = new System.Drawing.Size(172, 25);
             this.button_editar.TabIndex = 40;
@@ -178,19 +175,19 @@
             // Button_apagar
             // 
             this.Button_apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Button_apagar.Location = new System.Drawing.Point(35, 204);
+            this.Button_apagar.Location = new System.Drawing.Point(49, 204);
             this.Button_apagar.Name = "Button_apagar";
             this.Button_apagar.Size = new System.Drawing.Size(172, 25);
             this.Button_apagar.TabIndex = 39;
             this.Button_apagar.Text = "Apagar";
-            this.toolTip_apagar.SetToolTip(this.Button_apagar, "Insira o ID do artista que pretende apagar");
+            this.toolTip_fichatecnica.SetToolTip(this.Button_apagar, "Insira o ID do artista que pretende apagar");
             this.Button_apagar.UseVisualStyleBackColor = true;
             this.Button_apagar.Click += new System.EventHandler(this.Button_apagar_Click);
             // 
             // button_inserir
             // 
             this.button_inserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_inserir.Location = new System.Drawing.Point(35, 142);
+            this.button_inserir.Location = new System.Drawing.Point(49, 142);
             this.button_inserir.Name = "button_inserir";
             this.button_inserir.Size = new System.Drawing.Size(172, 25);
             this.button_inserir.TabIndex = 32;
@@ -238,13 +235,43 @@
             // 
             // button_mostrar
             // 
-            this.button_mostrar.Location = new System.Drawing.Point(437, 256);
+            this.button_mostrar.Location = new System.Drawing.Point(436, 256);
             this.button_mostrar.Name = "button_mostrar";
             this.button_mostrar.Size = new System.Drawing.Size(284, 43);
             this.button_mostrar.TabIndex = 41;
             this.button_mostrar.Text = "Mostrar/Atualizar Tabela";
             this.button_mostrar.UseVisualStyleBackColor = true;
             this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
+            // 
+            // pictureBox_add
+            // 
+            this.pictureBox_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_add.BackgroundImage")));
+            this.pictureBox_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_add.Location = new System.Drawing.Point(9, 142);
+            this.pictureBox_add.Name = "pictureBox_add";
+            this.pictureBox_add.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox_add.TabIndex = 44;
+            this.pictureBox_add.TabStop = false;
+            // 
+            // pictureBox_edit
+            // 
+            this.pictureBox_edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_edit.BackgroundImage")));
+            this.pictureBox_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_edit.Location = new System.Drawing.Point(9, 173);
+            this.pictureBox_edit.Name = "pictureBox_edit";
+            this.pictureBox_edit.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox_edit.TabIndex = 45;
+            this.pictureBox_edit.TabStop = false;
+            // 
+            // pictureBox_remove
+            // 
+            this.pictureBox_remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_remove.BackgroundImage")));
+            this.pictureBox_remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_remove.Location = new System.Drawing.Point(9, 204);
+            this.pictureBox_remove.Name = "pictureBox_remove";
+            this.pictureBox_remove.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox_remove.TabIndex = 46;
+            this.pictureBox_remove.TabStop = false;
             // 
             // ficha_tecnica
             // 
@@ -258,7 +285,6 @@
             this.Controls.Add(this.button_mostrar);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_sair);
-            this.Controls.Add(this.label_verificarbd);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -272,13 +298,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_remove)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label_verificarbd;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_voltar;
         private System.Windows.Forms.BindingSource artistaBindingSource;
@@ -292,7 +319,10 @@
         private System.Windows.Forms.TextBox textBox_nome;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button_mostrar;
-        private System.Windows.Forms.ToolTip toolTip_apagar;
+        private System.Windows.Forms.ToolTip toolTip_fichatecnica;
         private System.Windows.Forms.Button button_editar;
+        private System.Windows.Forms.PictureBox pictureBox_remove;
+        private System.Windows.Forms.PictureBox pictureBox_edit;
+        private System.Windows.Forms.PictureBox pictureBox_add;
     }
 }
