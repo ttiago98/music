@@ -41,6 +41,7 @@
             this.button_youtube_player = new System.Windows.Forms.PictureBox();
             this.button_video_player = new System.Windows.Forms.PictureBox();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
+            this.label_volume = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
@@ -195,11 +196,28 @@
             this.trackBar_volume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar_volume.AutoSize = false;
             this.trackBar_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.trackBar_volume.Location = new System.Drawing.Point(729, 587);
+            this.trackBar_volume.Location = new System.Drawing.Point(729, 578);
+            this.trackBar_volume.Maximum = 100;
             this.trackBar_volume.Name = "trackBar_volume";
             this.trackBar_volume.Size = new System.Drawing.Size(120, 23);
             this.trackBar_volume.TabIndex = 0;
             this.trackBar_volume.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar_volume.Value = 50;
+            this.trackBar_volume.Visible = false;
+            this.trackBar_volume.Scroll += new System.EventHandler(this.trackBar_volume_Scroll);
+            this.trackBar_volume.ValueChanged += new System.EventHandler(this.trackBar_volume_ValueChanged);
+            // 
+            // label_volume
+            // 
+            this.label_volume.AutoSize = true;
+            this.label_volume.BackColor = System.Drawing.Color.Transparent;
+            this.label_volume.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_volume.ForeColor = System.Drawing.Color.White;
+            this.label_volume.Location = new System.Drawing.Point(772, 601);
+            this.label_volume.Name = "label_volume";
+            this.label_volume.Size = new System.Drawing.Size(33, 18);
+            this.label_volume.TabIndex = 33;
+            this.label_volume.Text = "50%";
             // 
             // leitor_video
             // 
@@ -209,6 +227,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(958, 631);
+            this.Controls.Add(this.label_volume);
             this.Controls.Add(this.trackBar_volume);
             this.Controls.Add(this.button_video_player);
             this.Controls.Add(this.button_youtube_player);
@@ -253,5 +272,6 @@
         private System.Windows.Forms.PictureBox button_video_player;
         private System.Windows.Forms.TrackBar trackBar_volume;
         private AxWMPLib.AxWindowsMediaPlayer video_player;
+        private System.Windows.Forms.Label label_volume;
     }
 }

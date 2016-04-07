@@ -50,6 +50,7 @@ namespace estudio_musica
             button_pesquisar.Visible = false;
             textBox_pesquisa.Visible = false;
             video_player.Visible = true;
+            trackBar_volume.Visible = true;
 
             video_player.Visible = true;
 
@@ -69,6 +70,7 @@ namespace estudio_musica
             button_pesquisar.Visible = true;
             textBox_pesquisa.Visible = true;
             video_player.Visible = false;
+            trackBar_volume.Visible = false;
 
             button_youtube_player.Enabled = false;
             button_video_player.Enabled = true;
@@ -96,5 +98,16 @@ namespace estudio_musica
             Application.Exit();
         }
 
+        private void trackBar_volume_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar_volume_ValueChanged(object sender, EventArgs e)
+        {
+            label_volume.Text = trackBar_volume.Value.ToString() + "%";
+
+
+        }
     }
 }
