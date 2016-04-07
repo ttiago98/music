@@ -1,6 +1,6 @@
 ﻿namespace estudio_musica
 {
-    partial class leitor_video2
+    partial class leitor_video
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(leitor_video2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(leitor_video));
             this.youtube_player = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.textBox_pesquisa = new System.Windows.Forms.TextBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
@@ -51,6 +51,7 @@
             // 
             // youtube_player
             // 
+            this.youtube_player.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.youtube_player.Enabled = true;
             this.youtube_player.Location = new System.Drawing.Point(35, 178);
             this.youtube_player.Name = "youtube_player";
@@ -60,6 +61,7 @@
             // 
             // textBox_pesquisa
             // 
+            this.textBox_pesquisa.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBox_pesquisa.Location = new System.Drawing.Point(588, 409);
             this.textBox_pesquisa.Name = "textBox_pesquisa";
             this.textBox_pesquisa.Size = new System.Drawing.Size(335, 20);
@@ -67,6 +69,7 @@
             // 
             // button_voltar
             // 
+            this.button_voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
@@ -80,6 +83,7 @@
             // 
             // button_sair
             // 
+            this.button_sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_sair.BackColor = System.Drawing.Color.Transparent;
             this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
             this.button_sair.Location = new System.Drawing.Point(871, 578);
@@ -92,6 +96,7 @@
             // 
             // button_richie_campbell
             // 
+            this.button_richie_campbell.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_richie_campbell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_richie_campbell.BackgroundImage")));
             this.button_richie_campbell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_richie_campbell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +111,7 @@
             // 
             // button_metalica
             // 
+            this.button_metalica.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_metalica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_metalica.BackgroundImage")));
             this.button_metalica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_metalica.Location = new System.Drawing.Point(775, 178);
@@ -117,6 +123,7 @@
             // 
             // button_arctic_monkeys
             // 
+            this.button_arctic_monkeys.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_arctic_monkeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_arctic_monkeys.BackgroundImage")));
             this.button_arctic_monkeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_arctic_monkeys.Location = new System.Drawing.Point(588, 178);
@@ -128,6 +135,7 @@
             // 
             // button_pesquisar
             // 
+            this.button_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.button_pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("button_pesquisar.Image")));
             this.button_pesquisar.Location = new System.Drawing.Point(668, 455);
@@ -140,8 +148,11 @@
             // 
             // video_player
             // 
+            this.video_player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.video_player.Enabled = true;
-            this.video_player.Location = new System.Drawing.Point(83, 95);
+            this.video_player.Location = new System.Drawing.Point(56, 90);
             this.video_player.Name = "video_player";
             this.video_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("video_player.OcxState")));
             this.video_player.Size = new System.Drawing.Size(840, 442);
@@ -150,6 +161,7 @@
             // 
             // button_youtube_player
             // 
+            this.button_youtube_player.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_youtube_player.BackColor = System.Drawing.Color.Transparent;
             this.button_youtube_player.Image = ((System.Drawing.Image)(resources.GetObject("button_youtube_player.Image")));
             this.button_youtube_player.Location = new System.Drawing.Point(317, 12);
@@ -162,6 +174,7 @@
             // 
             // button_video_player
             // 
+            this.button_video_player.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_video_player.BackColor = System.Drawing.Color.Transparent;
             this.button_video_player.Image = ((System.Drawing.Image)(resources.GetObject("button_video_player.Image")));
             this.button_video_player.Location = new System.Drawing.Point(553, 12);
@@ -172,7 +185,7 @@
             this.button_video_player.TabStop = false;
             this.button_video_player.Click += new System.EventHandler(this.button_video_player_Click);
             // 
-            // leitor_video2
+            // leitor_video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,10 +204,11 @@
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.textBox_pesquisa);
             this.Controls.Add(this.youtube_player);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "leitor_video2";
+            this.Name = "leitor_video";
             this.Text = "Leitor de Vídeo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.leitor_video2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).EndInit();
