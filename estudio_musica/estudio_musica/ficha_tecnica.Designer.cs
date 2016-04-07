@@ -48,12 +48,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_mostrar = new System.Windows.Forms.Button();
             this.toolTip_apagar = new System.Windows.Forms.ToolTip(this.components);
-            this.estudi_musicaDataSet = new estudio_musica.estudi_musicaDataSet();
             this.artistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.artistaTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.artistaTableAdapter();
-            this.tableAdapterManager = new estudio_musica.estudi_musicaDataSetTableAdapters.TableAdapterManager();
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.generoTableAdapter = new estudio_musica.estudi_musicaDataSetTableAdapters.generoTableAdapter();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
@@ -62,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudi_musicaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -251,38 +246,6 @@
             this.button_mostrar.UseVisualStyleBackColor = true;
             this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
             // 
-            // estudi_musicaDataSet
-            // 
-            this.estudi_musicaDataSet.DataSetName = "estudi_musicaDataSet";
-            this.estudi_musicaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // artistaBindingSource
-            // 
-            this.artistaBindingSource.DataMember = "artista";
-            this.artistaBindingSource.DataSource = this.estudi_musicaDataSet;
-            // 
-            // artistaTableAdapter
-            // 
-            this.artistaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.albumTableAdapter = null;
-            this.tableAdapterManager.artistaTableAdapter = this.artistaTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.generoTableAdapter = null;
-            this.tableAdapterManager.musicaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = estudio_musica.estudi_musicaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // generoBindingSource
-            // 
-            this.generoBindingSource.DataMember = "genero";
-            this.generoBindingSource.DataSource = this.estudi_musicaDataSet;
-            // 
-            // generoTableAdapter
-            // 
-            this.generoTableAdapter.ClearBeforeFill = true;
-            // 
             // ficha_tecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,7 +270,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estudi_musicaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -319,12 +281,8 @@
         private System.Windows.Forms.Label label_verificarbd;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_voltar;
-        private estudi_musicaDataSet estudi_musicaDataSet;
         private System.Windows.Forms.BindingSource artistaBindingSource;
-        private estudi_musicaDataSetTableAdapters.artistaTableAdapter artistaTableAdapter;
-        private estudi_musicaDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource generoBindingSource;
-        private estudi_musicaDataSetTableAdapters.generoTableAdapter generoTableAdapter;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Button_apagar;
         private System.Windows.Forms.Button button_inserir;
