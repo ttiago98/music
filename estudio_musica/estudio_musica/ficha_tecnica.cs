@@ -170,7 +170,17 @@ namespace estudio_musica
             try
             {
 
-              
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.Connection = connection;
+
+                // 	oleDbCommand update = new oleDbCommand("UPDATE contactList  SET fname = '" + fnameTextBox.Text + "', lname = '" + lnameTextBox.Text + "', <and so on...> WHERE id = '" + recordnumb + "', oleDbConnection);
+
+                OleDbCommand update = new OleDbCommand("UPDATE artista  SET nome = '" + textBox_nome.Text + "' ,genero = '" + textBox_genero.Text + "' ,data_carreira= '" +textBox_carreira.Text+ "'  WHERE ID_artista = " + textBox_id.Text+ "" ,connection);
+
+                connection.Open();
+                update.ExecuteNonQuery();
+                connection.Close();
+
 
             }
 
