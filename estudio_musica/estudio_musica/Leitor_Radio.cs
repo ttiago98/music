@@ -66,13 +66,15 @@ namespace estudio_musica
             }
             if (!URL.Equals("")) axWindowsMediaPlayer1.URL = URL;
 
-            button_pausa.Image = Properties.Resources.but_pausa_red;
-            button_pausa.Enabled = true;
+            button_stop.Image = Properties.Resources.but_stop_red;
+            button_stop.Enabled = true;
         }
 
-        private void button_pausa_Click(object sender, EventArgs e)
+        private void button_stop_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.pause();
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            button_stop.Image = Properties.Resources.but_stop_red_oculto;
+            button_stop.Enabled = false;
         }
 
         private void trackBar_volume_Scroll(object sender, EventArgs e)
@@ -145,6 +147,5 @@ namespace estudio_musica
         {
             Application.Exit();
         }
-
     }
 }

@@ -17,7 +17,8 @@ namespace estudio_musica
             InitializeComponent();
         }
 
-        string[] files, path;
+        string[] files;
+        List <string> path = new List <string> ();
         int vol;
 
         private void button_importar_Click(object sender, EventArgs e)
@@ -27,7 +28,12 @@ namespace estudio_musica
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog1.SafeFileNames;
-                path = openFileDialog1.FileNames;
+                //path = openFileDialog1.FileNames;
+                foreach  (string s in openFileDialog1.FileNames) {
+                    path.Add(s);
+                }
+
+               
                 for (int i = 0; i < files.Length; i++)
                 {
                     lista_musicas.Items.Add(files[i]);
@@ -53,18 +59,17 @@ namespace estudio_musica
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
-            //timer1.Start();
-            //axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-            //label_duracao.Visible = true;
-            //label_separador.Visible = true;
-            //label_tempo.Visible = true;
+            timer1.Start();
+            axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+            label_duracao.Visible = true;
+            label_separador.Visible = true;
+            label_tempo.Visible = true;
 
         }
 
         private void button_play_Click(object sender, EventArgs e)
         {
             try {
-                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
                 timer1.Start();
                 label_duracao.Visible = true;
                 label_separador.Visible = true;
@@ -179,7 +184,9 @@ namespace estudio_musica
                 try
 
                 {
+                    path.RemoveAt(lista_musicas.SelectedIndex);
                     lista_musicas.Items.Remove(lista_musicas.SelectedItem);
+                   
                     axWindowsMediaPlayer1.Ctlcontrols.stop();
                 }
 
@@ -194,6 +201,7 @@ namespace estudio_musica
         {
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             lista_musicas.Items.Clear();
+            path.Clear();
             label_duracao.Visible = false;
             label_separador.Visible = false;
             label_tempo.Visible = false;

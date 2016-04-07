@@ -223,6 +223,12 @@
     <Content Include="estudi_musica.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\but_stop_red_oculto.png" />
+    <None Include="Resources\but_video_player.png" />
+    <None Include="Resources\but_youtube.png" />
+    <None Include="Resources\d3d9e342a83a1117b0_p3m6bxusq.png" />
+    <None Include="Resources\but_youtube_oculto.png" />
+    <None Include="Resources\but_video_player_oculto.png" />
     <None Include="Resources\but_anterior_verde.png" />
     <None Include="Resources\but_anterior.png" />
     <None Include="Resources\but_play_verde.png" />

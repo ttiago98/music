@@ -50,8 +50,13 @@ namespace estudio_musica
             button_pesquisar.Visible = false;
             textBox_pesquisa.Visible = false;
 
+            video_player.Visible = true;
+
             button_video_player.Enabled = false;
             button_youtube_player.Enabled = true;
+
+            button_youtube_player.Image = Properties.Resources.but_youtube;
+            button_video_player.Image = Properties.Resources.but_video_player_oculto;
         }
 
         private void button_youtube_player_Click(object sender, EventArgs e)
@@ -62,10 +67,14 @@ namespace estudio_musica
             button_richie_campbell.Visible = true;
             button_pesquisar.Visible = true;
             textBox_pesquisa.Visible = true;
-            youtube_player.Visible = false;
+            video_player.Visible = false;
 
             button_youtube_player.Enabled = false;
             button_video_player.Enabled = true;
+
+            button_video_player.Image = Properties.Resources.but_video_player;
+            button_youtube_player.Image = Properties.Resources.but_youtube_oculto;
+
         }
 
         private void button_voltar_Click(object sender, EventArgs e)
