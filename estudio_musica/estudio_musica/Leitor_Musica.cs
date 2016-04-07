@@ -28,16 +28,16 @@ namespace estudio_musica
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog1.SafeFileNames;
-                //path = openFileDialog1.FileNames;
                 foreach  (string s in openFileDialog1.FileNames) {
                     path.Add(s);
                 }
 
-               
                 for (int i = 0; i < files.Length; i++)
                 {
                     lista_musicas.Items.Add(files[i]);
                 }
+
+
             }
 
             button_pausa.Image = Properties.Resources.but_pausa_verde;

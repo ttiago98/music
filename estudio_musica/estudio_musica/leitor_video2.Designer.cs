@@ -53,7 +53,9 @@
             // 
             // youtube_player
             // 
-            this.youtube_player.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.youtube_player.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.youtube_player.Enabled = true;
             this.youtube_player.Location = new System.Drawing.Point(41, 137);
             this.youtube_player.Name = "youtube_player";
@@ -63,6 +65,7 @@
             // 
             // textBox_pesquisa
             // 
+            this.textBox_pesquisa.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBox_pesquisa.Location = new System.Drawing.Point(588, 373);
             this.textBox_pesquisa.Name = "textBox_pesquisa";
             this.textBox_pesquisa.Size = new System.Drawing.Size(335, 20);
@@ -153,10 +156,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.video_player.Enabled = true;
-            this.video_player.Location = new System.Drawing.Point(12, 102);
+            this.video_player.Location = new System.Drawing.Point(12, 118);
             this.video_player.Name = "video_player";
             this.video_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("video_player.OcxState")));
-            this.video_player.Size = new System.Drawing.Size(923, 442);
+            this.video_player.Size = new System.Drawing.Size(934, 442);
             this.video_player.TabIndex = 30;
             this.video_player.Visible = false;
             // 
@@ -189,6 +192,7 @@
             // 
             // trackBar_volume
             // 
+            this.trackBar_volume.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar_volume.AutoSize = false;
             this.trackBar_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.trackBar_volume.Location = new System.Drawing.Point(729, 587);
@@ -219,8 +223,6 @@
             this.Controls.Add(this.youtube_player);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "leitor_video";
             this.Text = "Leitor de Vídeo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.leitor_video2_FormClosing);
