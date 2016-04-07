@@ -34,7 +34,7 @@
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_play = new System.Windows.Forms.PictureBox();
-            this.button_pausa = new System.Windows.Forms.PictureBox();
+            this.button_stop = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.button_mute = new System.Windows.Forms.PictureBox();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
@@ -43,7 +43,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).BeginInit();
@@ -98,20 +98,20 @@
             this.toolTip1.SetToolTip(this.button_play, "Play");
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
-            // button_pausa
+            // button_stop
             // 
-            this.button_pausa.BackColor = System.Drawing.Color.Transparent;
-            this.button_pausa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_pausa.Enabled = false;
-            this.button_pausa.Image = ((System.Drawing.Image)(resources.GetObject("button_pausa.Image")));
-            this.button_pausa.Location = new System.Drawing.Point(236, 267);
-            this.button_pausa.Name = "button_pausa";
-            this.button_pausa.Size = new System.Drawing.Size(67, 54);
-            this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_pausa.TabIndex = 10;
-            this.button_pausa.TabStop = false;
-            this.toolTip1.SetToolTip(this.button_pausa, "Stop");
-            this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
+            this.button_stop.BackColor = System.Drawing.Color.Transparent;
+            this.button_stop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_stop.Enabled = false;
+            this.button_stop.Image = ((System.Drawing.Image)(resources.GetObject("button_stop.Image")));
+            this.button_stop.Location = new System.Drawing.Point(236, 267);
+            this.button_stop.Name = "button_stop";
+            this.button_stop.Size = new System.Drawing.Size(67, 54);
+            this.button_stop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_stop.TabIndex = 10;
+            this.button_stop.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_stop, "Stop");
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
             // 
             // button_voltar
             // 
@@ -178,7 +178,7 @@
             this.Controls.Add(this.trackBar_volume);
             this.Controls.Add(this.button_mute);
             this.Controls.Add(this.button_voltar);
-            this.Controls.Add(this.button_pausa);
+            this.Controls.Add(this.button_stop);
             this.Controls.Add(this.button_play);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.axWindowsMediaPlayer1);
@@ -188,13 +188,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Leitor_Radio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leitor de Rádio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Radio_FormClosing);
             this.Load += new System.EventHandler(this.Leitor_Radio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_volume)).EndInit();
@@ -208,7 +209,7 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_play;
-        private System.Windows.Forms.PictureBox button_pausa;
+        private System.Windows.Forms.PictureBox button_stop;
         private System.Windows.Forms.PictureBox button_voltar;
         private System.Windows.Forms.PictureBox button_mute;
         private System.Windows.Forms.TrackBar trackBar_volume;

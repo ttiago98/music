@@ -213,9 +213,59 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_stop_red_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_stop_red_oculto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_stop_verde {
             get {
                 object obj = ResourceManager.GetObject("but_stop_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_video_player {
+            get {
+                object obj = ResourceManager.GetObject("but_video_player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_video_player_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_video_player_oculto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_youtube {
+            get {
+                object obj = ResourceManager.GetObject("but_youtube", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_youtube_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_youtube_oculto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

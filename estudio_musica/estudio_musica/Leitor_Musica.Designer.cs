@@ -380,6 +380,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Leitor_Musica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leitor de Música";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Musica_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).EndInit();
