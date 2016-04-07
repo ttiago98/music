@@ -133,7 +133,7 @@
   <data name="button_sair.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKAAAABaCAYAAAA/xl1SAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACw8AAAsPAZL5A6UAAA/ySURBVHhe7Z1bbB1HHcZDmhba
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACw4AAAsOAUC+4UEAAA/ySURBVHhe7Z1bbB1HHcZDmhba
         qpdQoKTlARAVgkZFqPACVL1QWgq0VCAkJFQhEC1PPCCEeABEkZBAIB4ACQneIp6AF9rUSXxc58RJW/cS
         tUnsNEnTNDUkTZPm4sZO49iOl/833jnenf1mZ2bP7h5f9pM+Jd6dnd2z8zv/+c/snHNWlaEoiq4XPyD+
         i/hZ8RHxuHhaPJMw/m68dHxBfF58VvyG+Bnxn8X3ia+Lm783kgu4UvwN8WbxKTEueC52o+Uh3Z5JXxQj
@@ -208,7 +208,7 @@
   <data name="button_voltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKAAAABaCAYAAAA/xl1SAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAoiSURBVHhe7d17jFxlGQZwingF
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACw4AAAsOAUC+4UEAAAoiSURBVHhe7d17jFxlGQZwingF
         Q6qgeElFMRWjIuEPokYRTLwhWg2IIaAJakCJEo0YlYC3eMEQ8JZIjHL5wyhBo6HR9A/UCHS2N0rbdGlt
         aVN3t7vb7qXNdrVst919fd7v2zNz5swzu7O7M7vznDlf8kt7nvlmZ+a8b87M7J7LaWZWKCwbGnaoc2FV
         Jiu0GA070Eo4BJelssISoGGHWQHbwMcrgM0ptAgNO8jrYSv4OA4vBzav0CI07BDXw3OQjGNwNrC5hRah
@@ -258,23 +258,14 @@
   <metadata name="toolTip_apagar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 56</value>
   </metadata>
-  <metadata name="estudi_musicaDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="toolTip_apagar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>185, 11</value>
   </metadata>
   <metadata name="artistaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>187, 17</value>
-  </metadata>
-  <metadata name="artistaTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>351, 17</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>509, 17</value>
+    <value>13, 22</value>
   </metadata>
   <metadata name="generoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>680, 17</value>
-  </metadata>
-  <metadata name="generoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>317, 3</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

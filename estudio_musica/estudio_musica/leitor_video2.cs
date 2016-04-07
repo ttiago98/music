@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace estudio_musica
 {
-    public partial class leitor_video2 : Form
+    public partial class leitor_video : Form
     {
-        public leitor_video2()
+        public leitor_video()
         {
             InitializeComponent();
         }
@@ -49,6 +49,7 @@ namespace estudio_musica
             button_richie_campbell.Visible = false;
             button_pesquisar.Visible = false;
             textBox_pesquisa.Visible = false;
+            video_player.Visible = true;
 
             video_player.Visible = true;
 

@@ -34,7 +34,7 @@ namespace estudio_musica
         private void button_leitor_video_Click(object sender, EventArgs e)
         {
             this.Hide();
-            leitor_video2 frm = new leitor_video2();
+            leitor_video frm = new leitor_video();
             frm.Show();
         }
 

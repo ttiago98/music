@@ -62,20 +62,22 @@ namespace estudio_musica
 
         private void button_inserir_Click(object sender, EventArgs e)
         {
-            ad.InsertCommand = new OleDbCommand("insert into artista values(@ID_artista, @nome, @genero, @data_carreira)", connection);
+            OleDbCommand cmd = new OleDbCommand("insert into artista values(@ID_artista, @nome, @genero, @data_carreira)", connection);
+            cmd.Connection = connection;
 
-            try
+            connection.Open();
+
+                try
             {
 
-                ad.InsertCommand.Parameters.Add("@ID_artista", OleDbType.VarChar).Value = textBox_id.Text.ToString();
-                ad.InsertCommand.Parameters.Add("@nome", OleDbType.VarChar).Value = textBox_nome.Text.ToString();
-                ad.InsertCommand.Parameters.Add("@genero", OleDbType.VarChar).Value = textBox_genero.Text.ToString();
-                ad.InsertCommand.Parameters.Add("@data_carreira", OleDbType.VarChar).Value = textBox_carreira.Text.ToString();
+                cmd.Parameters.AddWithValue("@ID_artista", OleDbType.VarChar).Value = textBox_id.Text.ToString();
+                cmd.Parameters.AddWithValue("@nome", OleDbType.VarChar).Value = textBox_nome.Text.ToString();
+                cmd.Parameters.AddWithValue("@genero", OleDbType.VarChar).Value = textBox_genero.Text.ToString();
+                cmd.Parameters.AddWithValue("@data_carreira", OleDbType.VarChar).Value = textBox_carreira.Text.ToString();
 
-                connection.Open();
-                ad.InsertCommand.ExecuteNonQuery();
+
+                cmd.ExecuteNonQuery();
                 connection.Close();
-
 
                     MessageBox.Show("Dados inseridos com Sucesso!");
 
