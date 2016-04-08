@@ -191,6 +191,15 @@
     <Content Include="estudi_musica.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\but_mute_azul.png" />
+    <None Include="Resources\but_som_azul_3.png" />
+    <None Include="Resources\but_som_azul_2.png" />
+    <None Include="Resources\but_som_azul_1.png" />
+    <None Include="Resources\but_proximo_azul.png" />
+    <None Include="Resources\but_play_azul.png" />
+    <None Include="Resources\but_pausa_azul.png" />
+    <None Include="Resources\but_anterior_azul.png" />
+    <None Include="Resources\but_stop_azul.png" />
     <None Include="Resources\but_stop_red_oculto.png" />
     <None Include="Resources\but_video_player.png" />
     <None Include="Resources\but_youtube.png" />

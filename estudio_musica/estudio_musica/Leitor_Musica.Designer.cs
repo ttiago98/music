@@ -38,7 +38,7 @@
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.lista_musicas = new System.Windows.Forms.ListBox();
-            this.button_importar = new System.Windows.Forms.PictureBox();
+            this.button_abrir = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_stop = new System.Windows.Forms.PictureBox();
             this.button_mute = new System.Windows.Forms.PictureBox();
@@ -60,7 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_importar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_abrir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_limpar_tudo)).BeginInit();
@@ -180,23 +180,22 @@
             this.lista_musicas.TabIndex = 19;
             this.lista_musicas.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lista_musicas_MouseDoubleClick);
             // 
-            // button_importar
+            // button_abrir
             // 
-            this.button_importar.BackColor = System.Drawing.Color.Transparent;
-            this.button_importar.Image = ((System.Drawing.Image)(resources.GetObject("button_importar.Image")));
-            this.button_importar.Location = new System.Drawing.Point(12, 25);
-            this.button_importar.Name = "button_importar";
-            this.button_importar.Size = new System.Drawing.Size(60, 51);
-            this.button_importar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.button_importar.TabIndex = 20;
-            this.button_importar.TabStop = false;
-            this.toolTip1.SetToolTip(this.button_importar, "Importar Musicas");
-            this.button_importar.Click += new System.EventHandler(this.button_importar_Click);
+            this.button_abrir.BackColor = System.Drawing.Color.Transparent;
+            this.button_abrir.Image = ((System.Drawing.Image)(resources.GetObject("button_abrir.Image")));
+            this.button_abrir.Location = new System.Drawing.Point(12, 25);
+            this.button_abrir.Name = "button_abrir";
+            this.button_abrir.Size = new System.Drawing.Size(60, 51);
+            this.button_abrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_abrir.TabIndex = 20;
+            this.button_abrir.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_abrir, "Abrir Musicas");
+            this.button_abrir.Click += new System.EventHandler(this.button_abrir_Click);
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "MP3 files|*.mp3|WAV files|*.wav";
+            this.openFileDialog1.Filter = "Ficheiros MP3|*.mp3|Ficheiros WAV|*.wav";
             this.openFileDialog1.Multiselect = true;
             // 
             // button_stop
@@ -367,7 +366,7 @@
             this.Controls.Add(this.checkBox_reproduzir_tudo);
             this.Controls.Add(this.button_mute);
             this.Controls.Add(this.button_stop);
-            this.Controls.Add(this.button_importar);
+            this.Controls.Add(this.button_abrir);
             this.Controls.Add(this.lista_musicas);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.button_voltar);
@@ -390,7 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_importar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_abrir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_limpar_tudo)).EndInit();
@@ -411,7 +410,7 @@
         private System.Windows.Forms.PictureBox button_voltar;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.ListBox lista_musicas;
-        private System.Windows.Forms.PictureBox button_importar;
+        private System.Windows.Forms.PictureBox button_abrir;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox button_stop;
         private System.Windows.Forms.PictureBox button_mute;

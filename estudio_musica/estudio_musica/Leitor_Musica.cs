@@ -21,14 +21,15 @@ namespace estudio_musica
         List <string> path = new List <string> ();
         int vol;
 
-        private void button_importar_Click(object sender, EventArgs e)
+        private void button_abrir_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Multiselect = true;
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 files = openFileDialog1.SafeFileNames;
-                foreach  (string s in openFileDialog1.FileNames) {
+                foreach (string s in openFileDialog1.FileNames)
+                {
                     path.Add(s);
                 }
 
@@ -36,7 +37,6 @@ namespace estudio_musica
                 {
                     lista_musicas.Items.Add(files[i]);
                 }
-
 
             }
 
@@ -290,5 +290,6 @@ namespace estudio_musica
         {
             Application.Exit();
         }
+
     }
 }
