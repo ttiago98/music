@@ -15,6 +15,7 @@ namespace estudio_musica
         public Leitor_Musica()
         {
             InitializeComponent();
+            axWindowsMediaPlayer1.uiMode = "none";
         }
 
         string[] files;
@@ -41,16 +42,12 @@ namespace estudio_musica
             }
 
             button_pausa.Image = Properties.Resources.but_pausa_verde;
-            button_play.Image = Properties.Resources.but_play_verde;
             button_proxima_musica.Image = Properties.Resources.but_proximo_verde;
             button_musica_anterior.Image = Properties.Resources.but_anterior_verde;
-            button_stop.Image = Properties.Resources.but_stop_verde;
 
             button_pausa.Enabled = true;
-            button_play.Enabled = true;
             button_proxima_musica.Enabled = true;
             button_musica_anterior.Enabled = true;
-            button_stop.Enabled = true;
 
             button_limpar_selecionado.Visible = true;
             button_limpar_tudo.Visible = true;
@@ -61,6 +58,10 @@ namespace estudio_musica
 
             timer1.Start();
             axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+
+            button_stop.Image = Properties.Resources.but_stop_verde;
+            button_stop.Enabled = true;
+
             label_duracao.Visible = true;
             label_separador.Visible = true;
             label_tempo.Visible = true;
@@ -71,26 +72,32 @@ namespace estudio_musica
         {
             try {
                 timer1.Start();
-                label_duracao.Visible = true;
-                label_separador.Visible = true;
-                label_tempo.Visible = true;
-                
+                axWindowsMediaPlayer1.Ctlcontrols.play();
             }
             catch (Exception)
             {
                 MessageBox.Show("Selecione uma música");
             }
-
-            axWindowsMediaPlayer1.Ctlcontrols.play();
+            button_play.Image = Properties.Resources.but_play_verde_oculto;
             button_pausa.Image = Properties.Resources.but_pausa_verde;
-            
+            button_stop.Image = Properties.Resources.but_stop_verde;
+            button_stop.Enabled = true;
+            button_pausa.Enabled = true;
+            button_play.Enabled = false;
         }
 
         private void button_pausa_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
-            button_pausa.Image = Properties.Resources.but_pausa_red;
             timer1.Stop();
+
+            button_pausa.Image = Properties.Resources.but_pausa_verde_oculto;
+            button_play.Image = Properties.Resources.but_play_verde;
+            button_stop.Image = Properties.Resources.but_stop_verde;
+            button_stop.Enabled = true;
+            button_play.Enabled = true;
+            button_pausa.Enabled = false;
+
         }
 
         private void button_stop_Click(object sender, EventArgs e)
@@ -98,7 +105,15 @@ namespace estudio_musica
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             timer1.Stop();
             trackBar_musica.Value = 0;
-            label_tempo.Text = "00:00"; 
+            label_tempo.Text = "00:00";
+
+            button_play.Image = Properties.Resources.but_play_verde;
+            button_pausa.Image = Properties.Resources.but_pausa_verde;
+            button_stop.Image = Properties.Resources.but_stop_verde_oculto;
+            button_stop.Enabled = false;
+            button_pausa.Enabled = true;
+            button_play.Enabled = true;
+
 
         }
 
@@ -290,6 +305,5 @@ namespace estudio_musica
         {
             Application.Exit();
         }
-
     }
 }

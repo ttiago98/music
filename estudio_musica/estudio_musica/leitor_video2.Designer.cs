@@ -78,7 +78,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.youtube_player.Enabled = true;
-            this.youtube_player.Location = new System.Drawing.Point(41, 137);
+            this.youtube_player.Location = new System.Drawing.Point(43, 169);
             this.youtube_player.Name = "youtube_player";
             this.youtube_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("youtube_player.OcxState")));
             this.youtube_player.Size = new System.Drawing.Size(622, 372);
@@ -87,7 +87,7 @@
             // textBox_pesquisa
             // 
             this.textBox_pesquisa.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox_pesquisa.Location = new System.Drawing.Point(702, 387);
+            this.textBox_pesquisa.Location = new System.Drawing.Point(711, 438);
             this.textBox_pesquisa.Name = "textBox_pesquisa";
             this.textBox_pesquisa.Size = new System.Drawing.Size(335, 20);
             this.textBox_pesquisa.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.button_richie_campbell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_richie_campbell.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_richie_campbell.ForeColor = System.Drawing.Color.White;
-            this.button_richie_campbell.Location = new System.Drawing.Point(702, 276);
+            this.button_richie_campbell.Location = new System.Drawing.Point(711, 327);
             this.button_richie_campbell.Name = "button_richie_campbell";
             this.button_richie_campbell.Size = new System.Drawing.Size(148, 72);
             this.button_richie_campbell.TabIndex = 21;
@@ -139,7 +139,7 @@
             this.button_metalica.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_metalica.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_metalica.BackgroundImage")));
             this.button_metalica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_metalica.Location = new System.Drawing.Point(889, 151);
+            this.button_metalica.Location = new System.Drawing.Point(898, 191);
             this.button_metalica.Name = "button_metalica";
             this.button_metalica.Size = new System.Drawing.Size(148, 72);
             this.button_metalica.TabIndex = 20;
@@ -151,7 +151,7 @@
             this.button_arctic_monkeys.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_arctic_monkeys.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_arctic_monkeys.BackgroundImage")));
             this.button_arctic_monkeys.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_arctic_monkeys.Location = new System.Drawing.Point(702, 151);
+            this.button_arctic_monkeys.Location = new System.Drawing.Point(711, 191);
             this.button_arctic_monkeys.Name = "button_arctic_monkeys";
             this.button_arctic_monkeys.Size = new System.Drawing.Size(148, 72);
             this.button_arctic_monkeys.TabIndex = 19;
@@ -163,7 +163,7 @@
             this.button_pesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button_pesquisar.BackColor = System.Drawing.Color.Transparent;
             this.button_pesquisar.Image = ((System.Drawing.Image)(resources.GetObject("button_pesquisar.Image")));
-            this.button_pesquisar.Location = new System.Drawing.Point(767, 428);
+            this.button_pesquisar.Location = new System.Drawing.Point(771, 473);
             this.button_pesquisar.Name = "button_pesquisar";
             this.button_pesquisar.Size = new System.Drawing.Size(196, 68);
             this.button_pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,6 +266,7 @@
             this.button_recuar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_recuar.TabIndex = 35;
             this.button_recuar.TabStop = false;
+            this.button_recuar.Visible = false;
             this.button_recuar.Click += new System.EventHandler(this.button_recuar_Click);
             // 
             // button_avancar
@@ -279,6 +280,7 @@
             this.button_avancar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_avancar.TabIndex = 36;
             this.button_avancar.TabStop = false;
+            this.button_avancar.Visible = false;
             this.button_avancar.Click += new System.EventHandler(this.button_avancar_Click);
             // 
             // button_pausa
@@ -293,6 +295,7 @@
             this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_pausa.TabIndex = 37;
             this.button_pausa.TabStop = false;
+            this.button_pausa.Visible = false;
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
             // 
             // button_mute
@@ -306,6 +309,7 @@
             this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mute.TabIndex = 38;
             this.button_mute.TabStop = false;
+            this.button_mute.Visible = false;
             this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
             // 
             // button_abrir
@@ -318,6 +322,7 @@
             this.button_abrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_abrir.TabIndex = 39;
             this.button_abrir.TabStop = false;
+            this.button_abrir.Visible = false;
             this.button_abrir.Click += new System.EventHandler(this.button_abrir_Click);
             // 
             // trackBar_video
@@ -332,6 +337,7 @@
             this.trackBar_video.Size = new System.Drawing.Size(1048, 25);
             this.trackBar_video.TabIndex = 40;
             this.trackBar_video.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar_video.Visible = false;
             this.trackBar_video.Scroll += new System.EventHandler(this.trackBar_video_Scroll);
             // 
             // openFileDialog1

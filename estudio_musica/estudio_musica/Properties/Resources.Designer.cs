@@ -73,6 +73,16 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_anterior_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_anterior_oculto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_anterior_verde {
             get {
                 object obj = ResourceManager.GetObject("but_anterior_verde", resourceCulture);
@@ -143,6 +153,16 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_pausa_verde_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_pausa_verde_oculto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_play_azul {
             get {
                 object obj = ResourceManager.GetObject("but_play_azul", resourceCulture);
@@ -173,6 +193,16 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_play_verde_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_play_verde_oculto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_proximo_azul {
             get {
                 object obj = ResourceManager.GetObject("but_proximo_azul", resourceCulture);
@@ -186,6 +216,16 @@ namespace estudio_musica.Properties {
         internal static System.Drawing.Bitmap but_proximo_verde {
             get {
                 object obj = ResourceManager.GetObject("but_proximo_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_proximo_verde_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_proximo_verde_oculto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -316,6 +356,16 @@ namespace estudio_musica.Properties {
         internal static System.Drawing.Bitmap but_stop_verde {
             get {
                 object obj = ResourceManager.GetObject("but_stop_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_stop_verde_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_stop_verde_oculto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

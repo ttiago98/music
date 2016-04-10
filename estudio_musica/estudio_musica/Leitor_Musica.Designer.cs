@@ -163,20 +163,24 @@
             // axWindowsMediaPlayer1
             // 
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(206, 12);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(111, 215);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(226, 64);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(433, 64);
             this.axWindowsMediaPlayer1.TabIndex = 18;
-            this.axWindowsMediaPlayer1.Visible = false;
             this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
             // 
             // lista_musicas
             // 
+            this.lista_musicas.BackColor = System.Drawing.Color.Black;
+            this.lista_musicas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lista_musicas.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lista_musicas.ForeColor = System.Drawing.Color.White;
             this.lista_musicas.FormattingEnabled = true;
+            this.lista_musicas.ItemHeight = 15;
             this.lista_musicas.Location = new System.Drawing.Point(111, 25);
             this.lista_musicas.Name = "lista_musicas";
-            this.lista_musicas.Size = new System.Drawing.Size(433, 238);
+            this.lista_musicas.Size = new System.Drawing.Size(433, 195);
             this.lista_musicas.TabIndex = 19;
             this.lista_musicas.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lista_musicas_MouseDoubleClick);
             // 

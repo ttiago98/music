@@ -59,21 +59,29 @@ namespace estudio_musica
 
             video_player.Visible = true;
             trackBar_volume.Visible = true;
+            trackBar_video.Visible = true;
+            button_abrir.Visible = true;
+            button_pausa.Visible = true;
+            button_avancar.Visible = true;
+            button_recuar.Visible = true;
+            button_mute.Visible = true;
             label_volume.Visible = true;
 
-            video_player.Visible = true;
+            //youtube_player.Controls.();
+
 
             button_video_player.Enabled = false;
             button_youtube_player.Enabled = true;
 
-            button_youtube_player.Image = Properties.Resources.but_youtube;
             button_video_player.Image = Properties.Resources.but_video_player_oculto;
+            button_youtube_player.Image = Properties.Resources.but_youtube;
 
-            video_player.Ctlenabled = false;
         }
 
         private void button_youtube_player_Click(object sender, EventArgs e)
         {
+            video_player.Ctlcontrols.stop();
+
             youtube_player.Visible = true;
             button_arctic_monkeys.Visible = true;
             button_metalica.Visible = true;
@@ -83,13 +91,23 @@ namespace estudio_musica
 
             video_player.Visible = false;
             trackBar_volume.Visible = false;
+            trackBar_video.Visible = false;
+            button_abrir.Visible = false;
+            button_pausa.Visible = false;
+            button_play.Visible = false;
+            button_avancar.Visible = false;
+            button_recuar.Visible = false;
+            button_mute.Visible = false;
+            label_duracao.Visible = false;
+            label_separador.Visible = false;
+            label_tempo.Visible = false;
             label_volume.Visible = false;
 
             button_youtube_player.Enabled = false;
             button_video_player.Enabled = true;
 
-            button_video_player.Image = Properties.Resources.but_video_player;
             button_youtube_player.Image = Properties.Resources.but_youtube_oculto;
+            button_video_player.Image = Properties.Resources.but_video_player;
 
         }
 
@@ -108,7 +126,6 @@ namespace estudio_musica
             button_recuar.Image = Properties.Resources.but_anterior_azul;
 
             button_pausa.Enabled = true;
-            button_play.Enabled = true;
             button_avancar.Enabled = true;
             button_recuar.Enabled = true;
 
@@ -228,6 +245,7 @@ namespace estudio_musica
 
         private void button_voltar_Click(object sender, EventArgs e)
         {
+            video_player.Ctlcontrols.stop();
 
             this.Hide();
             Form1 frm = new Form1();
