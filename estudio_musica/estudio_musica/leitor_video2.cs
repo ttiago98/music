@@ -238,7 +238,17 @@ namespace estudio_musica
         private void timer1_Tick(object sender, EventArgs e)
         {
             label_tempo.Text = video_player.Ctlcontrols.currentPositionString;
-            label_duracao.Text = video_player.currentMedia.durationString;
+
+            try
+            {
+                label_duracao.Text = video_player.currentMedia.durationString;
+            }
+
+            catch
+            {
+                
+            }
+            
 
             trackBar_video.Value = (int)video_player.Ctlcontrols.currentPosition;
         }
