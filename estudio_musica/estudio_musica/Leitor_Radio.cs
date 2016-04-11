@@ -22,13 +22,9 @@ namespace estudio_musica
         private void Leitor_Radio_Load(object sender, EventArgs e)
         {
             lista_radios.Items.Add("RFM");
-            lista_radios.Items.Add("Rádio ComercialX");
-            lista_radios.Items.Add("M80X");
-            lista_radios.Items.Add("Cidade FMX");
             lista_radios.Items.Add("Antena 1");
             lista_radios.Items.Add("Rádio Gilão");
             lista_radios.Items.Add("Total FM");
-            lista_radios.Items.Add("Mega HitsX");
         }
 
         private void button_play_Click(object sender, EventArgs e)
@@ -40,25 +36,13 @@ namespace estudio_musica
                     URL = "http://rfm.sapo.pt/live/stream_rfm_stw.asx";
                     break;
                 case 1:
-                    URL = "";
-                    break;
-                case 2:
-                    URL = "";
-                    break;
-                case 3:
-                    URL = "";
-                    break;
-                case 4:
                     URL = "mms://rdp.oninet.pt/antena1";
                     break;
-                case 5:
+                case 2:
                     URL = "http://centova.radios.pt:9440/stream";
                     break;
-                case 6:
+                case 3:
                     URL = "http://www.totalfm.pt:8000/";
-                    break;
-                case 7:
-                    URL = "http://www.megahits.fm/emissao_online_fl.aspx";
                     break;
                 default:
                     MessageBox.Show("Selecione um rádio da lista antes de clicar no botão \"Play\".");

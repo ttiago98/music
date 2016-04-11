@@ -4662,7 +4662,7 @@
   <data name="button_video_player.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGeYUxB9wAAACBjSFJNAAB6
-        JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAAACXBIWXMAACH8AAAh/AFgeX+IAAD/hklE
+        JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAAACXBIWXMAACH7AAAh+wEyPdn3AAD/hklE
         QVR4XuydBXQcV/b0Z8RmtgwyO06cODEzM8TMILCYmS1LZma2zMzMzMyMMcWBxS+0YVv3q3rdPRrJ42yy
         /03iZN3n1OlRi2Z6un637nvdPSYRea3Xeq3/Udnc+Fqv9Vr/G7K58bVe67X+N2Rz42v95/r+++9Mn3/x
         menR40emK5cvmfbt22davXqVadq0aaahQ4eaYmKiTYGBgSafgd4mL09Pk7u7u6n/AHfTgAEDTAP6DzD1
@@ -11001,7 +11001,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEwAACxMBAJqcGAAA9UFJREFUeF7s/Qe4XMW1
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALEgAACxIB0t1+/AAA9UFJREFUeF7s/Qe4XMW1
         rgsviRxNxkQTbAMm2wSbnMFkRBKIIESOIiOBAJGzwdiADSYZG4MxCOWchQIZ7G3vaHvnfc7e5+57z69z
         /3v/899Td7yz+ls9ulZ1r9Qras7n+TS7e7V6zu5ZNcZbY4yq2RJCKFWqVKlSpUqt4or/lFu5lduA2T7+
         +OMdTEdUdLppfKL5dRS6qc9Muc9Nj8856fx2qJx2ufXAlhr0UqW6o/hPuZVbufX5Zs5zo4oT9U5eThdn
@@ -13158,7 +13158,7 @@
   <data name="button_abrir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUgAAAD2CAYAAAC0ox6CAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxMAAAsTAQCanBgAAP+WSURBVHhe7J0HnFRF+rVbV0Ew
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxIAAAsSAdLdfvwAAP+WSURBVHhe7J0HnFRF+rVbV0Ew
         YM4Szdk15+yurjmgophzzopgDigCkjOTA3mIwzABJufEMDDkNDnnHN7vnLr9DpexUVGW/zLfsHt+Vbeq
         bt2ea/fT562qW+0QkS51qUtd6pILuSzsUpe61KUudQGyS13qUpf2KJeFXepSl7rUpS5AdqlLXerSHuWy
         sEtd6lKXutQFyC51qUtd2qNcFnapS13qUpe6ANmlLnWpS3uUy8IudalLXepSFyC71KUudWmPclnYpS51
