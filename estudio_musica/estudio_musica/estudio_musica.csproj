@@ -188,9 +188,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="estudi_musica.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\but_stop_verde_oculto.png" />
     <None Include="Resources\but_anterior_oculto.png" />
     <None Include="Resources\but_proximo_verde_oculto.png" />

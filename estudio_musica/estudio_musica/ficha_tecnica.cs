@@ -27,11 +27,6 @@ namespace estudio_musica
         }
 
 
-        private void ficha_tecnica_Load(object sender, EventArgs e)
-        {
-            
-
-        }
 
 
 
@@ -86,10 +81,10 @@ namespace estudio_musica
 
             }
 
-            catch (Exception ex)
+            catch 
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Tem de preencher todos os campos com o tipo de dados correto");
 
             }
 
@@ -148,10 +143,10 @@ namespace estudio_musica
 
             }
 
-            catch (Exception ex)
+            catch 
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Tem de preencher todos os campos com o tipo de dados correto");
 
             }
 
@@ -170,8 +165,6 @@ namespace estudio_musica
 
                 OleDbCommand cmd = new OleDbCommand();
                 cmd.Connection = connection;
-
-                // 	oleDbCommand update = new oleDbCommand("UPDATE contactList  SET fname = '" + fnameTextBox.Text + "', lname = '" + lnameTextBox.Text + "', <and so on...> WHERE id = '" + recordnumb + "', oleDbConnection);
 
                 OleDbCommand update = new OleDbCommand("UPDATE artista  SET nome = '" + textBox_nome.Text + "' ,genero = '" + textBox_genero.Text + "' ,data_carreira= '" +textBox_carreira.Text+ "'  WHERE ID_artista = " + textBox_id.Text+ "" ,connection);
 
@@ -192,7 +185,7 @@ namespace estudio_musica
             catch 
             {
 
-                MessageBox.Show("Não pode deixar nenhum campo em branco");
+                MessageBox.Show("Tem de preencher todos os campos com o tipo de dados correto");
 
             }
 

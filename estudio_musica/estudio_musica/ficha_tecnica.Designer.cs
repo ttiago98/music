@@ -37,6 +37,9 @@
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox_remove = new System.Windows.Forms.PictureBox();
+            this.pictureBox_edit = new System.Windows.Forms.PictureBox();
+            this.pictureBox_add = new System.Windows.Forms.PictureBox();
             this.button_editar = new System.Windows.Forms.Button();
             this.Button_apagar = new System.Windows.Forms.Button();
             this.button_inserir = new System.Windows.Forms.Button();
@@ -49,9 +52,6 @@
             this.toolTip_fichatecnica = new System.Windows.Forms.ToolTip(this.components);
             this.artistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox_add = new System.Windows.Forms.PictureBox();
-            this.pictureBox_edit = new System.Windows.Forms.PictureBox();
-            this.pictureBox_remove = new System.Windows.Forms.PictureBox();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
@@ -59,12 +59,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_remove)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_edit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_edit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_remove)).BeginInit();
             this.SuspendLayout();
             // 
             // iD_artistaLabel
@@ -159,7 +159,37 @@
             this.groupBox1.Size = new System.Drawing.Size(232, 241);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informação";
+            this.groupBox1.Text = "Registo de Artistas";
+            // 
+            // pictureBox_remove
+            // 
+            this.pictureBox_remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_remove.BackgroundImage")));
+            this.pictureBox_remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_remove.Location = new System.Drawing.Point(9, 204);
+            this.pictureBox_remove.Name = "pictureBox_remove";
+            this.pictureBox_remove.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox_remove.TabIndex = 46;
+            this.pictureBox_remove.TabStop = false;
+            // 
+            // pictureBox_edit
+            // 
+            this.pictureBox_edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_edit.BackgroundImage")));
+            this.pictureBox_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_edit.Location = new System.Drawing.Point(9, 173);
+            this.pictureBox_edit.Name = "pictureBox_edit";
+            this.pictureBox_edit.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox_edit.TabIndex = 45;
+            this.pictureBox_edit.TabStop = false;
+            // 
+            // pictureBox_add
+            // 
+            this.pictureBox_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_add.BackgroundImage")));
+            this.pictureBox_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_add.Location = new System.Drawing.Point(9, 142);
+            this.pictureBox_add.Name = "pictureBox_add";
+            this.pictureBox_add.Size = new System.Drawing.Size(34, 25);
+            this.pictureBox_add.TabIndex = 44;
+            this.pictureBox_add.TabStop = false;
             // 
             // button_editar
             // 
@@ -243,36 +273,6 @@
             this.button_mostrar.UseVisualStyleBackColor = true;
             this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
             // 
-            // pictureBox_add
-            // 
-            this.pictureBox_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_add.BackgroundImage")));
-            this.pictureBox_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_add.Location = new System.Drawing.Point(9, 142);
-            this.pictureBox_add.Name = "pictureBox_add";
-            this.pictureBox_add.Size = new System.Drawing.Size(34, 25);
-            this.pictureBox_add.TabIndex = 44;
-            this.pictureBox_add.TabStop = false;
-            // 
-            // pictureBox_edit
-            // 
-            this.pictureBox_edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_edit.BackgroundImage")));
-            this.pictureBox_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_edit.Location = new System.Drawing.Point(9, 173);
-            this.pictureBox_edit.Name = "pictureBox_edit";
-            this.pictureBox_edit.Size = new System.Drawing.Size(34, 25);
-            this.pictureBox_edit.TabIndex = 45;
-            this.pictureBox_edit.TabStop = false;
-            // 
-            // pictureBox_remove
-            // 
-            this.pictureBox_remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_remove.BackgroundImage")));
-            this.pictureBox_remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_remove.Location = new System.Drawing.Point(9, 204);
-            this.pictureBox_remove.Name = "pictureBox_remove";
-            this.pictureBox_remove.Size = new System.Drawing.Size(34, 25);
-            this.pictureBox_remove.TabIndex = 46;
-            this.pictureBox_remove.TabStop = false;
-            // 
             // ficha_tecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -290,17 +290,16 @@
             this.MinimizeBox = false;
             this.Name = "ficha_tecnica";
             this.Text = "Ficha Tecnica";
-            this.Load += new System.EventHandler(this.ficha_tecnica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_remove)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_edit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artistaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_add)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_edit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_remove)).EndInit();
             this.ResumeLayout(false);
 
         }
