@@ -93,6 +93,26 @@ namespace estudio_musica.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap but_fullscreen_azul {
+            get {
+                object obj = ResourceManager.GetObject("but_fullscreen_azul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap but_fullscreen_azul_oculto {
+            get {
+                object obj = ResourceManager.GetObject("but_fullscreen_azul_oculto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but_mute_azul {
             get {
                 object obj = ResourceManager.GetObject("but_mute_azul", resourceCulture);

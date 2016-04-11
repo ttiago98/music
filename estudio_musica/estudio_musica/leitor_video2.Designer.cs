@@ -55,6 +55,8 @@
             this.label_duracao = new System.Windows.Forms.Label();
             this.label_tempo = new System.Windows.Forms.Label();
             this.label_separador = new System.Windows.Forms.Label();
+            this.button_fullscreen = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_abrir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_video)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_fullscreen)).BeginInit();
             this.SuspendLayout();
             // 
             // youtube_player
@@ -104,6 +107,7 @@
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 14;
             this.button_voltar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_voltar, "Voltar ao Menu");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // button_sair
@@ -117,6 +121,7 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 15;
             this.button_sair.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_sair, "Fechar o Programa");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_richie_campbell
@@ -131,6 +136,7 @@
             this.button_richie_campbell.Size = new System.Drawing.Size(148, 72);
             this.button_richie_campbell.TabIndex = 21;
             this.button_richie_campbell.Text = "Richie Campbell";
+            this.toolTip1.SetToolTip(this.button_richie_campbell, "Richie Campbell");
             this.button_richie_campbell.UseVisualStyleBackColor = true;
             this.button_richie_campbell.Click += new System.EventHandler(this.button_richie_campbell_Click);
             // 
@@ -143,6 +149,7 @@
             this.button_metalica.Name = "button_metalica";
             this.button_metalica.Size = new System.Drawing.Size(148, 72);
             this.button_metalica.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.button_metalica, "Metalica");
             this.button_metalica.UseVisualStyleBackColor = true;
             this.button_metalica.Click += new System.EventHandler(this.button_metalica_Click);
             // 
@@ -155,6 +162,7 @@
             this.button_arctic_monkeys.Name = "button_arctic_monkeys";
             this.button_arctic_monkeys.Size = new System.Drawing.Size(148, 72);
             this.button_arctic_monkeys.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.button_arctic_monkeys, "Arctic Monkeys");
             this.button_arctic_monkeys.UseVisualStyleBackColor = true;
             this.button_arctic_monkeys.Click += new System.EventHandler(this.button_arctic_monkeys_Click);
             // 
@@ -169,6 +177,7 @@
             this.button_pesquisar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_pesquisar.TabIndex = 27;
             this.button_pesquisar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_pesquisar, "Pesquisar");
             this.button_pesquisar.Click += new System.EventHandler(this.button_pesquisar_Click);
             // 
             // video_player
@@ -197,6 +206,7 @@
             this.button_youtube_player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_youtube_player.TabIndex = 31;
             this.button_youtube_player.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_youtube_player, "Youtube Player");
             this.button_youtube_player.Click += new System.EventHandler(this.button_youtube_player_Click);
             // 
             // button_video_player
@@ -252,6 +262,7 @@
             this.button_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_play.TabIndex = 34;
             this.button_play.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_play, "Play");
             this.button_play.Visible = false;
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
             // 
@@ -266,6 +277,7 @@
             this.button_recuar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_recuar.TabIndex = 35;
             this.button_recuar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_recuar, "Recuar");
             this.button_recuar.Visible = false;
             this.button_recuar.Click += new System.EventHandler(this.button_recuar_Click);
             // 
@@ -280,6 +292,7 @@
             this.button_avancar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_avancar.TabIndex = 36;
             this.button_avancar.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_avancar, "Avançar");
             this.button_avancar.Visible = false;
             this.button_avancar.Click += new System.EventHandler(this.button_avancar_Click);
             // 
@@ -295,6 +308,7 @@
             this.button_pausa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_pausa.TabIndex = 37;
             this.button_pausa.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_pausa, "Pausa");
             this.button_pausa.Visible = false;
             this.button_pausa.Click += new System.EventHandler(this.button_pausa_Click);
             // 
@@ -309,6 +323,7 @@
             this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_mute.TabIndex = 38;
             this.button_mute.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_mute, "Sem Som");
             this.button_mute.Visible = false;
             this.button_mute.Click += new System.EventHandler(this.button_mute_Click);
             // 
@@ -322,6 +337,7 @@
             this.button_abrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_abrir.TabIndex = 39;
             this.button_abrir.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_abrir, "Abrir");
             this.button_abrir.Visible = false;
             this.button_abrir.Click += new System.EventHandler(this.button_abrir_Click);
             // 
@@ -390,6 +406,22 @@
             this.label_separador.Text = "/";
             this.label_separador.Visible = false;
             // 
+            // button_fullscreen
+            // 
+            this.button_fullscreen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_fullscreen.BackColor = System.Drawing.Color.Transparent;
+            this.button_fullscreen.Enabled = false;
+            this.button_fullscreen.Image = ((System.Drawing.Image)(resources.GetObject("button_fullscreen.Image")));
+            this.button_fullscreen.Location = new System.Drawing.Point(260, 591);
+            this.button_fullscreen.Name = "button_fullscreen";
+            this.button_fullscreen.Size = new System.Drawing.Size(55, 45);
+            this.button_fullscreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_fullscreen.TabIndex = 45;
+            this.button_fullscreen.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_fullscreen, "Ecrã Completo");
+            this.button_fullscreen.Visible = false;
+            this.button_fullscreen.Click += new System.EventHandler(this.button_fullscreen_Click);
+            // 
             // leitor_video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +430,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1072, 658);
+            this.Controls.Add(this.button_fullscreen);
             this.Controls.Add(this.label_separador);
             this.Controls.Add(this.label_tempo);
             this.Controls.Add(this.label_duracao);
@@ -441,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_abrir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_video)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_fullscreen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,5 +507,7 @@
         private System.Windows.Forms.Label label_duracao;
         private System.Windows.Forms.Label label_tempo;
         private System.Windows.Forms.Label label_separador;
+        private System.Windows.Forms.PictureBox button_fullscreen;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -19,7 +19,7 @@ namespace estudio_musica
         }
 
         string[] files;
-        List <string> path = new List <string> ();
+        List<string> path = new List<string>();
         int vol;
 
         private void button_abrir_Click(object sender, EventArgs e)
@@ -40,17 +40,6 @@ namespace estudio_musica
                 }
 
             }
-
-            button_pausa.Image = Properties.Resources.but_pausa_verde;
-            button_proxima_musica.Image = Properties.Resources.but_proximo_verde;
-            button_musica_anterior.Image = Properties.Resources.but_anterior_verde;
-
-            button_pausa.Enabled = true;
-            button_proxima_musica.Enabled = true;
-            button_musica_anterior.Enabled = true;
-
-            button_limpar_selecionado.Visible = true;
-            button_limpar_tudo.Visible = true;
         }
 
         private void lista_musicas_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -70,7 +59,8 @@ namespace estudio_musica
 
         private void button_play_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 timer1.Start();
                 axWindowsMediaPlayer1.Ctlcontrols.play();
             }
@@ -194,14 +184,12 @@ namespace estudio_musica
 
         private void button_limpar_selecionado_Click(object sender, EventArgs e)
         {
-            
             {
                 try
-
                 {
                     path.RemoveAt(lista_musicas.SelectedIndex);
                     lista_musicas.Items.Remove(lista_musicas.SelectedItem);
-                   
+
                     axWindowsMediaPlayer1.Ctlcontrols.stop();
                 }
 
@@ -217,6 +205,19 @@ namespace estudio_musica
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             lista_musicas.Items.Clear();
             path.Clear();
+
+            button_pausa.Image = Properties.Resources.but_pausa_verde_oculto;
+            button_proxima_musica.Image = Properties.Resources.but_proximo_verde_oculto;
+            button_musica_anterior.Image = Properties.Resources.but_anterior_oculto;
+            button_stop.Image = Properties.Resources.but_stop_verde_oculto;
+
+            button_pausa.Enabled = false;
+            button_proxima_musica.Enabled = false;
+            button_musica_anterior.Enabled = false;
+            button_stop.Enabled = false;
+
+            button_limpar_selecionado.Visible = false;
+            button_limpar_tudo.Visible = false;
             label_duracao.Visible = false;
             label_separador.Visible = false;
             label_tempo.Visible = false;
@@ -224,24 +225,23 @@ namespace estudio_musica
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
             try
             {
                 if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped)
 
-                if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
-                {
-                    lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
+                    if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
+                    {
+                        lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
 
-                    axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
-                }
+                        axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                    }
 
-                else
-                {
+                    else
+                    {
 
-                lista_musicas.SelectedIndex = lista_musicas.SelectedIndex = -1; 
+                        lista_musicas.SelectedIndex = lista_musicas.SelectedIndex = -1;
 
-                }
+                    }
 
                 label_tempo.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
                 label_duracao.Text = axWindowsMediaPlayer1.currentMedia.durationString;
@@ -271,18 +271,30 @@ namespace estudio_musica
                 trackBar_musica.Maximum = (int)axWindowsMediaPlayer1.currentMedia.duration;
                 double dur = axWindowsMediaPlayer1.currentMedia.duration;
 
+                button_pausa.Image = Properties.Resources.but_pausa_verde;
+                button_proxima_musica.Image = Properties.Resources.but_proximo_verde;
+                button_musica_anterior.Image = Properties.Resources.but_anterior_verde;
+
+                button_pausa.Enabled = true;
+                button_proxima_musica.Enabled = true;
+                button_musica_anterior.Enabled = true;
+
+                button_limpar_selecionado.Visible = true;
+                button_limpar_tudo.Visible = true;
+
             }
         }
 
         private void trackBar_musica_Scroll(object sender, EventArgs e)
         {
-        try {
-            double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
-            axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
-            }
-        catch(Exception)
+            try
             {
-    
+                double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
+                axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
+            }
+            catch (Exception)
+            {
+
             }
         }
 
