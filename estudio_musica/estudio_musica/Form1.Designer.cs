@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button_sair = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_leitor_musica = new System.Windows.Forms.PictureBox();
             this.button_leitor_radio = new System.Windows.Forms.PictureBox();
             this.button_artistas = new System.Windows.Forms.PictureBox();
             this.button_leitor_video = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_leitor_musica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_leitor_radio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_artistas)).BeginInit();
@@ -44,13 +45,16 @@
             // 
             // button_sair
             // 
-            this.button_sair.Location = new System.Drawing.Point(574, 426);
+            this.button_sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_sair.BackColor = System.Drawing.Color.Transparent;
+            this.button_sair.Image = ((System.Drawing.Image)(resources.GetObject("button_sair.Image")));
+            this.button_sair.Location = new System.Drawing.Point(574, 408);
             this.button_sair.Name = "button_sair";
-            this.button_sair.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button_sair.Size = new System.Drawing.Size(75, 23);
-            this.button_sair.TabIndex = 2;
-            this.button_sair.Text = "Sair";
-            this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Size = new System.Drawing.Size(75, 41);
+            this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.button_sair.TabIndex = 16;
+            this.button_sair.TabStop = false;
+            this.toolTip1.SetToolTip(this.button_sair, "Fechar o Programa");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_leitor_musica
@@ -108,11 +112,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(661, 461);
+            this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_leitor_video);
             this.Controls.Add(this.button_artistas);
             this.Controls.Add(this.button_leitor_radio);
             this.Controls.Add(this.button_leitor_musica);
-            this.Controls.Add(this.button_sair);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -120,6 +124,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estúdio Música";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_leitor_musica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_leitor_radio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_artistas)).EndInit();
@@ -129,12 +134,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button_sair;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox button_leitor_musica;
         private System.Windows.Forms.PictureBox button_leitor_radio;
         private System.Windows.Forms.PictureBox button_artistas;
         private System.Windows.Forms.PictureBox button_leitor_video;
+        private System.Windows.Forms.PictureBox button_sair;
     }
 }
 

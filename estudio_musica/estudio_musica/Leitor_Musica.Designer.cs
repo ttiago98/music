@@ -36,7 +36,7 @@
             this.button_pausa = new System.Windows.Forms.PictureBox();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_voltar = new System.Windows.Forms.PictureBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.player_musica = new AxWMPLib.AxWindowsMediaPlayer();
             this.lista_musicas = new System.Windows.Forms.ListBox();
             this.button_abrir = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player_musica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_abrir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).BeginInit();
@@ -160,15 +160,15 @@
             this.toolTip1.SetToolTip(this.button_voltar, "Voltar atrás");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
-            // axWindowsMediaPlayer1
+            // player_musica
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(111, 215);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(433, 64);
-            this.axWindowsMediaPlayer1.TabIndex = 18;
-            this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
+            this.player_musica.Enabled = true;
+            this.player_musica.Location = new System.Drawing.Point(111, 215);
+            this.player_musica.Name = "player_musica";
+            this.player_musica.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_musica.OcxState")));
+            this.player_musica.Size = new System.Drawing.Size(433, 64);
+            this.player_musica.TabIndex = 18;
+            this.player_musica.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
             // 
             // lista_musicas
             // 
@@ -372,7 +372,7 @@
             this.Controls.Add(this.button_stop);
             this.Controls.Add(this.button_abrir);
             this.Controls.Add(this.lista_musicas);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.player_musica);
             this.Controls.Add(this.button_voltar);
             this.Controls.Add(this.button_sair);
             this.Controls.Add(this.button_pausa);
@@ -392,7 +392,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.button_pausa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player_musica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_abrir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_mute)).EndInit();
@@ -412,7 +412,7 @@
         private System.Windows.Forms.PictureBox button_pausa;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_voltar;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer player_musica;
         private System.Windows.Forms.ListBox lista_musicas;
         private System.Windows.Forms.PictureBox button_abrir;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

@@ -15,6 +15,7 @@ namespace estudio_musica
         public Leitor_Radio()
         {
             InitializeComponent();
+            radio_player.uiMode = "none";
         }
 
         int vol;
@@ -25,6 +26,9 @@ namespace estudio_musica
             lista_radios.Items.Add("Antena 1");
             lista_radios.Items.Add("Rádio Gilão");
             lista_radios.Items.Add("Total FM");
+            lista_radios.Items.Add("Antena 3");
+            lista_radios.Items.Add("Rádoio BBC");
+
         }
 
         private void button_play_Click(object sender, EventArgs e)
@@ -44,11 +48,17 @@ namespace estudio_musica
                 case 3:
                     URL = "http://www.totalfm.pt:8000/";
                     break;
+                case 4:
+                    URL = "http://www.bbc.co.uk/1xtra/realmedia/1xtra.asx";
+                    break;
+                case 5:
+                    URL = "mms://rdp.oninet.pt/antena3";
+                    break;
                 default:
                     MessageBox.Show("Selecione um rádio da lista antes de clicar no botão \"Play\".");
                     break;
             }
-            if (!URL.Equals("")) axWindowsMediaPlayer1.URL = URL;
+            if (!URL.Equals("")) radio_player.URL = URL;
 
             button_stop.Image = Properties.Resources.but_stop_red;
             button_stop.Enabled = true;
@@ -56,7 +66,7 @@ namespace estudio_musica
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            radio_player.Ctlcontrols.stop();
             button_stop.Image = Properties.Resources.but_stop_red_oculto;
             button_stop.Enabled = false;
         }
@@ -65,16 +75,16 @@ namespace estudio_musica
         {
             label_volume.Text = trackBar_volume.Value.ToString() + "%";
 
-            if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
-                axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+            if (radio_player != null && trackBar_volume != null)
+                radio_player.settings.volume = trackBar_volume.Value * 1;
         }
 
         private void trackBar_volume_ValueChanged(object sender, EventArgs e)
         {
             label_volume.Text = trackBar_volume.Value.ToString() + "%";
 
-            if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
-                axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+            if (radio_player != null && trackBar_volume != null)
+                radio_player.settings.volume = trackBar_volume.Value * 1;
 
             if (trackBar_volume.Value == 0)
                 button_mute.Image = Properties.Resources.but_mute_red;
@@ -94,13 +104,13 @@ namespace estudio_musica
         {
             if (vol == 0)
             {
-                axWindowsMediaPlayer1.settings.mute = true;
+                radio_player.settings.mute = true;
                 vol = 1;
                 button_mute.Image = Properties.Resources.but_mute_red;
             }
             else if (vol == 1)
             {
-                axWindowsMediaPlayer1.settings.mute = false;
+                radio_player.settings.mute = false;
                 vol = 0;
 
                 if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
@@ -119,7 +129,7 @@ namespace estudio_musica
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            radio_player.Ctlcontrols.stop();
         }
 
         private void button_sair_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leitor_Radio));
             this.lista_radios = new System.Windows.Forms.ListBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.radio_player = new AxWMPLib.AxWindowsMediaPlayer();
             this.button_sair = new System.Windows.Forms.PictureBox();
             this.button_play = new System.Windows.Forms.PictureBox();
             this.button_stop = new System.Windows.Forms.PictureBox();
@@ -40,7 +40,7 @@
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
             this.label_volume = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radio_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).BeginInit();
@@ -52,24 +52,24 @@
             // lista_radios
             // 
             this.lista_radios.BackColor = System.Drawing.Color.Black;
+            this.lista_radios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lista_radios.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lista_radios.ForeColor = System.Drawing.Color.White;
             this.lista_radios.FormattingEnabled = true;
             this.lista_radios.ItemHeight = 15;
             this.lista_radios.Location = new System.Drawing.Point(12, 12);
             this.lista_radios.Name = "lista_radios";
-            this.lista_radios.Size = new System.Drawing.Size(556, 154);
+            this.lista_radios.Size = new System.Drawing.Size(556, 150);
             this.lista_radios.TabIndex = 6;
             // 
-            // axWindowsMediaPlayer1
+            // radio_player
             // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 172);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(556, 28);
-            this.axWindowsMediaPlayer1.TabIndex = 7;
-            this.axWindowsMediaPlayer1.Visible = false;
+            this.radio_player.Enabled = true;
+            this.radio_player.Location = new System.Drawing.Point(12, 141);
+            this.radio_player.Name = "radio_player";
+            this.radio_player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("radio_player.OcxState")));
+            this.radio_player.Size = new System.Drawing.Size(556, 68);
+            this.radio_player.TabIndex = 7;
             // 
             // button_sair
             // 
@@ -132,7 +132,7 @@
             this.button_mute.BackColor = System.Drawing.Color.Transparent;
             this.button_mute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_mute.Image = ((System.Drawing.Image)(resources.GetObject("button_mute.Image")));
-            this.button_mute.Location = new System.Drawing.Point(369, 206);
+            this.button_mute.Location = new System.Drawing.Point(369, 228);
             this.button_mute.Name = "button_mute";
             this.button_mute.Size = new System.Drawing.Size(55, 45);
             this.button_mute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,7 +145,7 @@
             // 
             this.trackBar_volume.AutoSize = false;
             this.trackBar_volume.BackColor = System.Drawing.Color.Black;
-            this.trackBar_volume.Location = new System.Drawing.Point(430, 215);
+            this.trackBar_volume.Location = new System.Drawing.Point(430, 239);
             this.trackBar_volume.Maximum = 100;
             this.trackBar_volume.Name = "trackBar_volume";
             this.trackBar_volume.Size = new System.Drawing.Size(138, 25);
@@ -161,7 +161,7 @@
             this.label_volume.BackColor = System.Drawing.Color.Transparent;
             this.label_volume.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_volume.ForeColor = System.Drawing.Color.White;
-            this.label_volume.Location = new System.Drawing.Point(490, 243);
+            this.label_volume.Location = new System.Drawing.Point(490, 267);
             this.label_volume.Name = "label_volume";
             this.label_volume.Size = new System.Drawing.Size(30, 15);
             this.label_volume.TabIndex = 16;
@@ -181,7 +181,7 @@
             this.Controls.Add(this.button_stop);
             this.Controls.Add(this.button_play);
             this.Controls.Add(this.button_sair);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.radio_player);
             this.Controls.Add(this.lista_radios);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -192,7 +192,7 @@
             this.Text = "Leitor de Rádio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leitor_Radio_FormClosing);
             this.Load += new System.EventHandler(this.Leitor_Radio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radio_player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_stop)).EndInit();
@@ -206,7 +206,7 @@
 
         #endregion
         private System.Windows.Forms.ListBox lista_radios;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private AxWMPLib.AxWindowsMediaPlayer radio_player;
         private System.Windows.Forms.PictureBox button_sair;
         private System.Windows.Forms.PictureBox button_play;
         private System.Windows.Forms.PictureBox button_stop;

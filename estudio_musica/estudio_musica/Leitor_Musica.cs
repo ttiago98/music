@@ -15,7 +15,7 @@ namespace estudio_musica
         public Leitor_Musica()
         {
             InitializeComponent();
-            axWindowsMediaPlayer1.uiMode = "none";
+            player_musica.uiMode = "none";
         }
 
         string[] files;
@@ -38,7 +38,6 @@ namespace estudio_musica
                 {
                     lista_musicas.Items.Add(files[i]);
                 }
-
             }
         }
 
@@ -46,7 +45,7 @@ namespace estudio_musica
         {
 
             timer1.Start();
-            axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+            player_musica.URL = path[lista_musicas.SelectedIndex];
 
             button_stop.Image = Properties.Resources.but_stop_verde;
             button_stop.Enabled = true;
@@ -62,7 +61,7 @@ namespace estudio_musica
             try
             {
                 timer1.Start();
-                axWindowsMediaPlayer1.Ctlcontrols.play();
+                player_musica.Ctlcontrols.play();
             }
             catch (Exception)
             {
@@ -78,7 +77,7 @@ namespace estudio_musica
 
         private void button_pausa_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.pause();
+            player_musica.Ctlcontrols.pause();
             timer1.Stop();
 
             button_pausa.Image = Properties.Resources.but_pausa_verde_oculto;
@@ -92,7 +91,7 @@ namespace estudio_musica
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            player_musica.Ctlcontrols.stop();
             timer1.Stop();
             trackBar_musica.Value = 0;
             label_tempo.Text = "00:00";
@@ -111,11 +110,11 @@ namespace estudio_musica
         {
             if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
             {
-                axWindowsMediaPlayer1.Ctlcontrols.next();
+                player_musica.Ctlcontrols.next();
 
                 lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
 
-                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                player_musica.URL = path[lista_musicas.SelectedIndex];
 
             }
         }
@@ -124,11 +123,11 @@ namespace estudio_musica
         {
             try
             {
-                axWindowsMediaPlayer1.Ctlcontrols.previous();
+                player_musica.Ctlcontrols.previous();
 
                 lista_musicas.SelectedIndex = lista_musicas.SelectedIndex - 1;
 
-                axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                player_musica.URL = path[lista_musicas.SelectedIndex];
             }
             catch (Exception)
             {
@@ -140,8 +139,8 @@ namespace estudio_musica
         {
             label_volume.Text = trackBar_volume.Value.ToString() + "%";
 
-            if (axWindowsMediaPlayer1 != null && trackBar_volume != null)
-                axWindowsMediaPlayer1.settings.volume = trackBar_volume.Value * 1;
+            if (player_musica != null && trackBar_volume != null)
+                player_musica.settings.volume = trackBar_volume.Value * 1;
 
             if (trackBar_volume.Value == 0)
                 button_mute.Image = Properties.Resources.but_mute_verde;
@@ -160,13 +159,13 @@ namespace estudio_musica
         {
             if (vol == 0)
             {
-                axWindowsMediaPlayer1.settings.mute = true;
+                player_musica.settings.mute = true;
                 vol = 1;
                 button_mute.Image = Properties.Resources.but_mute_red;
             }
             else if (vol == 1)
             {
-                axWindowsMediaPlayer1.settings.mute = false;
+                player_musica.settings.mute = false;
                 vol = 0;
 
                 if (trackBar_volume.Value >= 1 && trackBar_volume.Value < 33)
@@ -190,7 +189,7 @@ namespace estudio_musica
                     path.RemoveAt(lista_musicas.SelectedIndex);
                     lista_musicas.Items.Remove(lista_musicas.SelectedItem);
 
-                    axWindowsMediaPlayer1.Ctlcontrols.stop();
+                    player_musica.Ctlcontrols.stop();
                 }
 
                 catch (Exception)
@@ -202,7 +201,7 @@ namespace estudio_musica
 
         private void button_limpar_tudo_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            player_musica.Ctlcontrols.stop();
             lista_musicas.Items.Clear();
             path.Clear();
 
@@ -227,13 +226,13 @@ namespace estudio_musica
         {
             try
             {
-                if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsStopped)
+                if (player_musica.playState == WMPLib.WMPPlayState.wmppsStopped)
 
                     if (lista_musicas.SelectedIndex < lista_musicas.Items.Count - 1)
                     {
                         lista_musicas.SelectedIndex = lista_musicas.SelectedIndex + 1;
 
-                        axWindowsMediaPlayer1.URL = path[lista_musicas.SelectedIndex];
+                        player_musica.URL = path[lista_musicas.SelectedIndex];
                     }
 
                     else
@@ -243,10 +242,10 @@ namespace estudio_musica
 
                     }
 
-                label_tempo.Text = axWindowsMediaPlayer1.Ctlcontrols.currentPositionString;
-                label_duracao.Text = axWindowsMediaPlayer1.currentMedia.durationString;
+                label_tempo.Text = player_musica.Ctlcontrols.currentPositionString;
+                label_duracao.Text = player_musica.currentMedia.durationString;
 
-                trackBar_musica.Value = (int)axWindowsMediaPlayer1.Ctlcontrols.currentPosition;
+                trackBar_musica.Value = (int)player_musica.Ctlcontrols.currentPosition;
 
             }
             catch (Exception)
@@ -268,8 +267,8 @@ namespace estudio_musica
             if (e.newState == 3)
 
             {
-                trackBar_musica.Maximum = (int)axWindowsMediaPlayer1.currentMedia.duration;
-                double dur = axWindowsMediaPlayer1.currentMedia.duration;
+                trackBar_musica.Maximum = (int)player_musica.currentMedia.duration;
+                double dur = player_musica.currentMedia.duration;
 
                 button_pausa.Image = Properties.Resources.but_pausa_verde;
                 button_proxima_musica.Image = Properties.Resources.but_proximo_verde;
@@ -290,7 +289,7 @@ namespace estudio_musica
             try
             {
                 double duration = double.Parse(trackBar_musica.Value.ToString()) / double.Parse(trackBar_musica.Maximum.ToString());
-                axWindowsMediaPlayer1.Ctlcontrols.currentPosition = axWindowsMediaPlayer1.currentMedia.duration * duration;
+                player_musica.Ctlcontrols.currentPosition = player_musica.currentMedia.duration * duration;
             }
             catch (Exception)
             {
@@ -303,7 +302,7 @@ namespace estudio_musica
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
+            player_musica.Ctlcontrols.stop();
             timer1.Stop();
 
         }
