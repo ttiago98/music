@@ -43,7 +43,6 @@
             this.button_stop = new System.Windows.Forms.PictureBox();
             this.button_mute = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.checkBox_reproduzir_tudo = new System.Windows.Forms.CheckBox();
             this.button_limpar_tudo = new System.Windows.Forms.PictureBox();
             this.trackBar_volume = new System.Windows.Forms.TrackBar();
             this.label_volume = new System.Windows.Forms.Label();
@@ -237,19 +236,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // checkBox_reproduzir_tudo
-            // 
-            this.checkBox_reproduzir_tudo.AutoSize = true;
-            this.checkBox_reproduzir_tudo.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox_reproduzir_tudo.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_reproduzir_tudo.Location = new System.Drawing.Point(111, 294);
-            this.checkBox_reproduzir_tudo.Name = "checkBox_reproduzir_tudo";
-            this.checkBox_reproduzir_tudo.Size = new System.Drawing.Size(119, 19);
-            this.checkBox_reproduzir_tudo.TabIndex = 23;
-            this.checkBox_reproduzir_tudo.Text = "Reproduzir Todas";
-            this.checkBox_reproduzir_tudo.UseVisualStyleBackColor = false;
-            this.checkBox_reproduzir_tudo.CheckedChanged += new System.EventHandler(this.checkBox_reproduzir_tudo_CheckedChanged);
-            // 
             // button_limpar_tudo
             // 
             this.button_limpar_tudo.BackColor = System.Drawing.Color.Transparent;
@@ -367,7 +353,6 @@
             this.Controls.Add(this.label_volume);
             this.Controls.Add(this.trackBar_volume);
             this.Controls.Add(this.button_limpar_tudo);
-            this.Controls.Add(this.checkBox_reproduzir_tudo);
             this.Controls.Add(this.button_mute);
             this.Controls.Add(this.button_stop);
             this.Controls.Add(this.button_abrir);
@@ -419,7 +404,6 @@
         private System.Windows.Forms.PictureBox button_stop;
         private System.Windows.Forms.PictureBox button_mute;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.CheckBox checkBox_reproduzir_tudo;
         private System.Windows.Forms.PictureBox button_limpar_tudo;
         private System.Windows.Forms.TrackBar trackBar_volume;
         private System.Windows.Forms.Label label_volume;

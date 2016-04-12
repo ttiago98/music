@@ -254,14 +254,6 @@ namespace estudio_musica
             }
         }
 
-        private void checkBox_reproduzir_tudo_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_reproduzir_tudo.Checked == false)
-            {
-                timer1.Stop();
-            }
-        }
-
         private void axWindowsMediaPlayer1_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
             if (e.newState == 3)
