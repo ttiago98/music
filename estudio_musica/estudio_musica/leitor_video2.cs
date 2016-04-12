@@ -155,7 +155,7 @@ namespace estudio_musica
 
             if (controls.get_isAvailable("fastForward"))
             {
-                controls.fastForward();
+                controls.fastForward() ;
             }
 
             
