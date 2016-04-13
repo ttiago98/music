@@ -225,6 +225,11 @@ namespace estudio_musica
             {
                 video_player.fullScreen = true;
             }
+
+            button_play.Visible = true;
+            button_pausa.Visible = false;
+            button_play.Enabled = true;
+            button_pausa.Enabled = false; 
         }
 
         private void trackBar_video_Scroll(object sender, EventArgs e)
