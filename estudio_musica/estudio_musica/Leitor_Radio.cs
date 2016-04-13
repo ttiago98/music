@@ -19,15 +19,18 @@ namespace estudio_musica
         }
 
         int vol;
+        private Icon ico;
 
         private void Leitor_Radio_Load(object sender, EventArgs e)
         {
+            ico = notifyIcon.Icon;
+
             lista_radios.Items.Add("RFM");
             lista_radios.Items.Add("Antena 1");
             lista_radios.Items.Add("Rádio Gilão");
             lista_radios.Items.Add("Total FM");
             lista_radios.Items.Add("Antena 3");
-            lista_radios.Items.Add("Rádoio BBC");
+            lista_radios.Items.Add("Rádio BBC");
 
         }
 
@@ -49,10 +52,10 @@ namespace estudio_musica
                     URL = "http://www.totalfm.pt:8000/";
                     break;
                 case 4:
-                    URL = "http://www.bbc.co.uk/1xtra/realmedia/1xtra.asx";
+                    URL = "mms://rdp.oninet.pt/antena3";
                     break;
                 case 5:
-                    URL = "mms://rdp.oninet.pt/antena3";
+                    URL = "http://www.bbc.co.uk/1xtra/realmedia/1xtra.asx";
                     break;
                 default:
                     MessageBox.Show("Selecione um rádio da lista antes de clicar no botão \"Play\".");
@@ -138,6 +141,32 @@ namespace estudio_musica
         }
 
         private void Leitor_Radio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void fechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            notifyIcon.ShowBalloonTip(100, "Leitor de Rádio", "Aplicação está exeutada em segundo plano", ToolTipIcon.Info);
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void abrirAplicaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

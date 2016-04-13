@@ -242,6 +242,16 @@ namespace estudio_musica
                 connection.Close();
             }
         }
+
+        private void fechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

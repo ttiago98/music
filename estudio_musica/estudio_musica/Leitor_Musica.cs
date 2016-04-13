@@ -327,6 +327,32 @@ namespace estudio_musica
             Close();
         }
 
+        private void fechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            notifyIcon.ShowBalloonTip(100, "Leitor de Música", "Aplicação está exeutada em segundo plano", ToolTipIcon.Info);
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Leitor_Musica_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

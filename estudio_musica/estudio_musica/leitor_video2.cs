@@ -306,6 +306,49 @@ namespace estudio_musica
             Application.Exit();
         }
 
+        private void fechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
+        private void minimizar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            notifyIcon.ShowBalloonTip(100, "Leitor de Vídeo", "Aplicação está exeutada em segundo plano", ToolTipIcon.Info);
+        }
+
+        private void maximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            maximizar.Visible = false;
+            maximizar.Enabled = false;
+            normal.Visible = true;
+            normal.Enabled = true;
+        }
+
+        private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void fecharToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void normal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            maximizar.Visible = true;
+            maximizar.Enabled = true;
+            normal.Visible = false;
+            normal.Enabled = false;
+        }
     }
 }
