@@ -52,6 +52,7 @@
             this.toolTip_fichatecnica = new System.Windows.Forms.ToolTip(this.components);
             this.artistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox_artista = new System.Windows.Forms.ComboBox();
             iD_artistaLabel = new System.Windows.Forms.Label();
             data_carreiraLabel = new System.Windows.Forms.Label();
             generoLabel = new System.Windows.Forms.Label();
@@ -262,6 +263,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(445, 190);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // button_mostrar
             // 
@@ -273,6 +275,14 @@
             this.button_mostrar.UseVisualStyleBackColor = true;
             this.button_mostrar.Click += new System.EventHandler(this.button_mostrar_Click);
             // 
+            // comboBox_artista
+            // 
+            this.comboBox_artista.FormattingEnabled = true;
+            this.comboBox_artista.Location = new System.Drawing.Point(349, 12);
+            this.comboBox_artista.Name = "comboBox_artista";
+            this.comboBox_artista.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_artista.TabIndex = 44;
+            // 
             // ficha_tecnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,6 +290,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(806, 386);
+            this.Controls.Add(this.comboBox_artista);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_mostrar);
@@ -290,6 +301,7 @@
             this.MinimizeBox = false;
             this.Name = "ficha_tecnica";
             this.Text = "Ficha Tecnica";
+            this.Load += new System.EventHandler(this.ficha_tecnica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -323,5 +335,6 @@
         private System.Windows.Forms.PictureBox pictureBox_remove;
         private System.Windows.Forms.PictureBox pictureBox_edit;
         private System.Windows.Forms.PictureBox pictureBox_add;
+        private System.Windows.Forms.ComboBox comboBox_artista;
     }
 }

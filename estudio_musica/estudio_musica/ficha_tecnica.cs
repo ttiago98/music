@@ -146,7 +146,7 @@ namespace estudio_musica
             catch 
             {
 
-                MessageBox.Show("Tem de preencher todos os campos com o tipo de dados correto");
+                MessageBox.Show("Tem de preencher o campo ID Artistas");
 
             }
 
@@ -195,6 +195,58 @@ namespace estudio_musica
             }
 
 
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewCell cell = null;
+            foreach (DataGridViewCell selectedCell in dataGridView1.SelectedCells)
+            {
+                cell = selectedCell;
+                break;
+            }
+            if (cell != null)
+            {
+                DataGridViewRow row = cell.OwningRow;
+                textBox_id.Text = row.Cells["ID_artista"].Value.ToString();
+                textBox_nome.Text = row.Cells["nome"].Value.ToString();
+                textBox_genero.Text = row.Cells["genero"].Value.ToString();
+                textBox_carreira.Text = row.Cells["data_carreira"].Value.ToString();
+                
+            }
+        }
+
+        private void ficha_tecnica_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+                connection.Open();
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.Connection = connection;
+                string query = "Select * from artista";
+                cmd.CommandText = query;
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBox_artista.Items.Add(reader["nome"].ToString());
+                }
+
+                connection.Close();
+            }
+
+            catch
+            {
+
+                MessageBox.Show("");
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
         }
 
 
