@@ -51,8 +51,6 @@ namespace estudio_musica
             Application.Exit();            
         }
 
-
-
         private void button_inserir_Click(object sender, EventArgs e)
         {
             OleDbCommand cmd = new OleDbCommand("insert into artista values(@ID_artista, @nome, @genero, @data_carreira)", connection);
@@ -67,7 +65,6 @@ namespace estudio_musica
                 cmd.Parameters.AddWithValue("@nome", OleDbType.VarChar).Value = textBox_nome.Text.ToString();
                 cmd.Parameters.AddWithValue("@genero", OleDbType.VarChar).Value = textBox_genero.Text.ToString();
                 cmd.Parameters.AddWithValue("@data_carreira", OleDbType.VarChar).Value = textBox_carreira.Text.ToString();
-
 
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -159,7 +156,6 @@ namespace estudio_musica
         private void button_editar_Click(object sender, EventArgs e)
         {
 
-
             try
             {
 
@@ -179,7 +175,6 @@ namespace estudio_musica
                 textBox_genero.Clear();
                 textBox_carreira.Clear(); 
 
-
             }
 
             catch 
@@ -193,7 +188,6 @@ namespace estudio_musica
             {
                 connection.Close();
             }
-
 
         }
 
@@ -248,8 +242,6 @@ namespace estudio_musica
                 connection.Close();
             }
         }
-
-
     }
 }
 
