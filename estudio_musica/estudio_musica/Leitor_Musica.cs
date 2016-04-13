@@ -190,6 +190,27 @@ namespace estudio_musica
                     lista_musicas.Items.Remove(lista_musicas.SelectedItem);
 
                     player_musica.Ctlcontrols.stop();
+
+                    if (lista_musicas.Items.Count == 0)
+                    {
+                        button_pausa.Image = Properties.Resources.but_pausa_verde_oculto;
+                        button_play.Image = Properties.Resources.but_play_verde_oculto;
+                        button_proxima_musica.Image = Properties.Resources.but_proximo_verde_oculto;
+                        button_musica_anterior.Image = Properties.Resources.but_anterior_oculto;
+                        button_stop.Image = Properties.Resources.but_stop_verde_oculto;
+
+                        button_pausa.Enabled = false;
+                        button_play.Enabled = false;
+                        button_proxima_musica.Enabled = false;
+                        button_musica_anterior.Enabled = false;
+                        button_stop.Enabled = false;
+
+                        button_limpar_selecionado.Visible = false;
+                        button_limpar_tudo.Visible = false;
+                        label_duracao.Visible = false;
+                        label_separador.Visible = false;
+                        label_tempo.Visible = false;
+                    }
                 }
 
                 catch (Exception)
@@ -206,11 +227,13 @@ namespace estudio_musica
             path.Clear();
 
             button_pausa.Image = Properties.Resources.but_pausa_verde_oculto;
+            button_play.Image = Properties.Resources.but_play_verde_oculto;
             button_proxima_musica.Image = Properties.Resources.but_proximo_verde_oculto;
             button_musica_anterior.Image = Properties.Resources.but_anterior_oculto;
             button_stop.Image = Properties.Resources.but_stop_verde_oculto;
 
             button_pausa.Enabled = false;
+            button_play.Enabled = false;
             button_proxima_musica.Enabled = false;
             button_musica_anterior.Enabled = false;
             button_stop.Enabled = false;
