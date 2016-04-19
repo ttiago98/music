@@ -54,5 +54,10 @@ namespace estudio_musica
         {
             Application.Exit();
         }
+
+        private void fechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

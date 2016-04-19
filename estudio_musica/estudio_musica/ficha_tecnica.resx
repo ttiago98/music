@@ -205,6 +205,9 @@
         rkJggg==
 </value>
   </data>
+  <metadata name="toolTip_fichatecnica.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>168, 6</value>
+  </metadata>
   <data name="button_voltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKAAAABaCAYAAAA/xl1SAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
@@ -560,9 +563,6 @@
         AAAAAAAAAAAAAAAAAAAAwGT/+c//B8adCkwTcLvWAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="toolTip_fichatecnica.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 6</value>
-  </metadata>
   <metadata name="artistaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>16, 8</value>
   </metadata>

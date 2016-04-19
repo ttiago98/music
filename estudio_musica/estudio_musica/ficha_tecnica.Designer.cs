@@ -78,10 +78,11 @@
             // 
             iD_artistaLabel.AutoSize = true;
             iD_artistaLabel.BackColor = System.Drawing.Color.Transparent;
+            iD_artistaLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             iD_artistaLabel.ForeColor = System.Drawing.Color.White;
             iD_artistaLabel.Location = new System.Drawing.Point(6, 26);
             iD_artistaLabel.Name = "iD_artistaLabel";
-            iD_artistaLabel.Size = new System.Drawing.Size(52, 13);
+            iD_artistaLabel.Size = new System.Drawing.Size(60, 15);
             iD_artistaLabel.TabIndex = 24;
             iD_artistaLabel.Text = "ID artista:";
             // 
@@ -89,10 +90,11 @@
             // 
             data_carreiraLabel.AutoSize = true;
             data_carreiraLabel.BackColor = System.Drawing.Color.Transparent;
+            data_carreiraLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             data_carreiraLabel.ForeColor = System.Drawing.Color.White;
-            data_carreiraLabel.Location = new System.Drawing.Point(6, 104);
+            data_carreiraLabel.Location = new System.Drawing.Point(6, 117);
             data_carreiraLabel.Name = "data_carreiraLabel";
-            data_carreiraLabel.Size = new System.Drawing.Size(89, 13);
+            data_carreiraLabel.Size = new System.Drawing.Size(103, 15);
             data_carreiraLabel.TabIndex = 30;
             data_carreiraLabel.Text = "Inicio de Carreira:";
             // 
@@ -100,23 +102,25 @@
             // 
             generoLabel.AutoSize = true;
             generoLabel.BackColor = System.Drawing.Color.Transparent;
+            generoLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             generoLabel.ForeColor = System.Drawing.Color.White;
-            generoLabel.Location = new System.Drawing.Point(6, 78);
+            generoLabel.Location = new System.Drawing.Point(6, 85);
             generoLabel.Name = "generoLabel";
-            generoLabel.Size = new System.Drawing.Size(43, 13);
+            generoLabel.Size = new System.Drawing.Size(52, 15);
             generoLabel.TabIndex = 28;
-            generoLabel.Text = "genero:";
+            generoLabel.Text = "Genero:";
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.BackColor = System.Drawing.Color.Transparent;
+            nomeLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nomeLabel.ForeColor = System.Drawing.Color.White;
-            nomeLabel.Location = new System.Drawing.Point(6, 52);
+            nomeLabel.Location = new System.Drawing.Point(6, 53);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(36, 13);
+            nomeLabel.Size = new System.Drawing.Size(45, 15);
             nomeLabel.TabIndex = 26;
-            nomeLabel.Text = "nome:";
+            nomeLabel.Text = "Nome:";
             // 
             // button_sair
             // 
@@ -128,6 +132,7 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 9;
             this.button_sair.TabStop = false;
+            this.toolTip_fichatecnica.SetToolTip(this.button_sair, "Sair do Programa");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_voltar
@@ -135,12 +140,13 @@
             this.button_voltar.BackColor = System.Drawing.Color.Transparent;
             this.button_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_voltar.Image = ((System.Drawing.Image)(resources.GetObject("button_voltar.Image")));
-            this.button_voltar.Location = new System.Drawing.Point(12, 368);
+            this.button_voltar.Location = new System.Drawing.Point(-1, 368);
             this.button_voltar.Name = "button_voltar";
             this.button_voltar.Size = new System.Drawing.Size(83, 41);
             this.button_voltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_voltar.TabIndex = 24;
             this.button_voltar.TabStop = false;
+            this.toolTip_fichatecnica.SetToolTip(this.button_voltar, "Voltar Atrás");
             this.button_voltar.Click += new System.EventHandler(this.button_voltar_Click);
             // 
             // groupBox1
@@ -160,10 +166,11 @@
             this.groupBox1.Controls.Add(this.textBox_id);
             this.groupBox1.Controls.Add(this.textBox_genero);
             this.groupBox1.Controls.Add(this.textBox_nome);
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(65, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(232, 241);
+            this.groupBox1.Size = new System.Drawing.Size(232, 251);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registo de Artistas";
@@ -172,7 +179,7 @@
             // 
             this.pictureBox_remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_remove.BackgroundImage")));
             this.pictureBox_remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_remove.Location = new System.Drawing.Point(9, 204);
+            this.pictureBox_remove.Location = new System.Drawing.Point(9, 214);
             this.pictureBox_remove.Name = "pictureBox_remove";
             this.pictureBox_remove.Size = new System.Drawing.Size(34, 25);
             this.pictureBox_remove.TabIndex = 46;
@@ -182,7 +189,7 @@
             // 
             this.pictureBox_edit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_edit.BackgroundImage")));
             this.pictureBox_edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_edit.Location = new System.Drawing.Point(9, 173);
+            this.pictureBox_edit.Location = new System.Drawing.Point(9, 183);
             this.pictureBox_edit.Name = "pictureBox_edit";
             this.pictureBox_edit.Size = new System.Drawing.Size(34, 25);
             this.pictureBox_edit.TabIndex = 45;
@@ -192,7 +199,7 @@
             // 
             this.pictureBox_add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_add.BackgroundImage")));
             this.pictureBox_add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_add.Location = new System.Drawing.Point(9, 142);
+            this.pictureBox_add.Location = new System.Drawing.Point(9, 152);
             this.pictureBox_add.Name = "pictureBox_add";
             this.pictureBox_add.Size = new System.Drawing.Size(34, 25);
             this.pictureBox_add.TabIndex = 44;
@@ -201,7 +208,7 @@
             // button_editar
             // 
             this.button_editar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_editar.Location = new System.Drawing.Point(49, 173);
+            this.button_editar.Location = new System.Drawing.Point(49, 183);
             this.button_editar.Name = "button_editar";
             this.button_editar.Size = new System.Drawing.Size(172, 25);
             this.button_editar.TabIndex = 40;
@@ -212,7 +219,7 @@
             // Button_apagar
             // 
             this.Button_apagar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Button_apagar.Location = new System.Drawing.Point(49, 204);
+            this.Button_apagar.Location = new System.Drawing.Point(49, 214);
             this.Button_apagar.Name = "Button_apagar";
             this.Button_apagar.Size = new System.Drawing.Size(172, 25);
             this.Button_apagar.TabIndex = 39;
@@ -224,7 +231,7 @@
             // button_inserir
             // 
             this.button_inserir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_inserir.Location = new System.Drawing.Point(49, 142);
+            this.button_inserir.Location = new System.Drawing.Point(49, 152);
             this.button_inserir.Name = "button_inserir";
             this.button_inserir.Size = new System.Drawing.Size(172, 25);
             this.button_inserir.TabIndex = 32;
@@ -234,30 +241,30 @@
             // 
             // textBox_carreira
             // 
-            this.textBox_carreira.Location = new System.Drawing.Point(121, 97);
+            this.textBox_carreira.Location = new System.Drawing.Point(115, 114);
             this.textBox_carreira.Name = "textBox_carreira";
-            this.textBox_carreira.Size = new System.Drawing.Size(100, 20);
+            this.textBox_carreira.Size = new System.Drawing.Size(63, 23);
             this.textBox_carreira.TabIndex = 36;
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(121, 19);
+            this.textBox_id.Location = new System.Drawing.Point(78, 21);
             this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(100, 20);
+            this.textBox_id.Size = new System.Drawing.Size(47, 23);
             this.textBox_id.TabIndex = 33;
             // 
             // textBox_genero
             // 
-            this.textBox_genero.Location = new System.Drawing.Point(121, 71);
+            this.textBox_genero.Location = new System.Drawing.Point(78, 82);
             this.textBox_genero.Name = "textBox_genero";
-            this.textBox_genero.Size = new System.Drawing.Size(100, 20);
+            this.textBox_genero.Size = new System.Drawing.Size(100, 23);
             this.textBox_genero.TabIndex = 35;
             // 
             // textBox_nome
             // 
-            this.textBox_nome.Location = new System.Drawing.Point(121, 45);
+            this.textBox_nome.Location = new System.Drawing.Point(78, 50);
             this.textBox_nome.Name = "textBox_nome";
-            this.textBox_nome.Size = new System.Drawing.Size(100, 20);
+            this.textBox_nome.Size = new System.Drawing.Size(143, 23);
             this.textBox_nome.TabIndex = 34;
             // 
             // dataGridView1

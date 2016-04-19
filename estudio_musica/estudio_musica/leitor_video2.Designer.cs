@@ -68,6 +68,8 @@
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normal = new System.Windows.Forms.Button();
+            this.label_info = new System.Windows.Forms.Label();
+            this.button_david_carreira = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_voltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_sair)).BeginInit();
@@ -135,7 +137,7 @@
             this.button_sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.button_sair.TabIndex = 15;
             this.button_sair.TabStop = false;
-            this.toolTip1.SetToolTip(this.button_sair, "Fechar o Programa");
+            this.toolTip1.SetToolTip(this.button_sair, "Sair do Programa");
             this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_richie_campbell
@@ -562,6 +564,34 @@
             this.normal.Visible = false;
             this.normal.Click += new System.EventHandler(this.normal_Click);
             // 
+            // label_info
+            // 
+            this.label_info.AutoSize = true;
+            this.label_info.BackColor = System.Drawing.Color.Transparent;
+            this.label_info.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_info.ForeColor = System.Drawing.Color.White;
+            this.label_info.Location = new System.Drawing.Point(708, 470);
+            this.label_info.Name = "label_info";
+            this.label_info.Size = new System.Drawing.Size(212, 19);
+            this.label_info.TabIndex = 54;
+            this.label_info.Text = "Intoduza um link do youtube:";
+            // 
+            // button_david_carreira
+            // 
+            this.button_david_carreira.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button_david_carreira.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_david_carreira.BackgroundImage")));
+            this.button_david_carreira.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_david_carreira.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_david_carreira.ForeColor = System.Drawing.Color.White;
+            this.button_david_carreira.Location = new System.Drawing.Point(898, 368);
+            this.button_david_carreira.Name = "button_david_carreira";
+            this.button_david_carreira.Size = new System.Drawing.Size(148, 72);
+            this.button_david_carreira.TabIndex = 55;
+            this.button_david_carreira.Text = "David Carreira";
+            this.toolTip1.SetToolTip(this.button_david_carreira, "David Carreira");
+            this.button_david_carreira.UseVisualStyleBackColor = true;
+            this.button_david_carreira.Click += new System.EventHandler(this.button_david_carreira_Click);
+            // 
             // leitor_video
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +600,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1072, 741);
+            this.Controls.Add(this.button_david_carreira);
+            this.Controls.Add(this.label_info);
             this.Controls.Add(this.normal);
             this.Controls.Add(this.maximizar);
             this.Controls.Add(this.label);
@@ -604,6 +636,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "leitor_video";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Leitor de Vídeo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.leitor_video2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.youtube_player)).EndInit();
@@ -670,5 +703,7 @@
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fecharToolStripMenuItem;
         private System.Windows.Forms.Button normal;
+        private System.Windows.Forms.Label label_info;
+        private System.Windows.Forms.Button button_david_carreira;
     }
 }
