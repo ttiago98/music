@@ -40,9 +40,9 @@ namespace estudio_musica
             youtube_player.Play();
         }
 
-        private void button_david_carreira_Click(object sender, EventArgs e)
+        private void button_kura_Click(object sender, EventArgs e)
         {
-            youtube_player.Movie = "https://www.youtube.com/v/ez7_3G8Q2fQ&list=RDEMQsq5g3fVhs6iq53rhmkLTQ";
+            youtube_player.Movie = "https://www.youtube.com/v/Crg7D3uxRiE&list=PLcKdbdLP8Vf1c8zY8LqRZ1Er3BDCVi_10";
             youtube_player.Play();
         }
 
@@ -60,7 +60,7 @@ namespace estudio_musica
             button_arctic_monkeys.Visible = false;
             button_metalica.Visible = false;
             button_richie_campbell.Visible = false;
-            button_david_carreira.Visible = false;
+            button_kura.Visible = false;
             button_pesquisar.Visible = false;
             label_info.Visible = false;
             textBox_pesquisa.Visible = false;
@@ -92,7 +92,7 @@ namespace estudio_musica
             button_arctic_monkeys.Visible = true;
             button_metalica.Visible = true;
             button_richie_campbell.Visible = true;
-            button_david_carreira.Visible = true;
+            button_kura.Visible = true;
             button_pesquisar.Visible = true;
             label_info.Visible = true;
             textBox_pesquisa.Visible = true;
